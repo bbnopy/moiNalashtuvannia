@@ -1,0 +1,55 @@
+{
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage",
+	],
+	"auto_complete_triggers":[
+		{
+			"characters": "<",
+			"selector": "text.html",
+		},
+		{
+			"characters": "/",
+			"selector": "string.quoted.html,string.quoted.html, source.css",
+		}
+	],
+	"highlight_modified_tabs": true,
+	"theme": "Adaptive.sublime-theme",
+	"add_space_between_categories": false,
+	"always_show_minimap_viewport": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields":true,
+	"bold_folder_labels": true,
+	"caret_style": "blink",    // blink. phase, smooth, sold,
+	"detect_indentation":false,
+	"draw_minimap_border": true,
+	"draw_white_space": "all",
+	"font_size":12,
+	"highlight_line":true,
+	"highlight_modified_tabs":true,
+	"hot_exit":true,
+	"indent_guide_options":[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_top":3,
+	"line_padding_bottom":3,
+	"margin":0,
+	"open_files_in_new_window":false,
+	"overlay_scroll_bars":"enabled",
+	"reindent_on_save":[
+		"json"
+	],
+	"rulers":[
+		80
+	],
+	"save_on_focus_lost":true,
+	"show_encoding":true,
+	"show_line_endings":true,
+	"spell_check":true,
+	"tab_size":4,
+	"translate_tabs_to_spaces":true,
+	"trim_trailing_white_space_on_save":true,
+	"word_wrap":false
+}
