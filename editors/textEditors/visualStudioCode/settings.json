@@ -1,0 +1,110 @@
+{
+    // Main editor
+    "editor.fontSize": 18,
+    "editor.fontFamily":"Fira Code", // ==> Anonymous Pro, monospace
+    "editor.fontLigatures": true,
+    // Autosave
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    // Spaces or Tab
+    "editor.insertSpaces": true,
+    // Render whitespace
+    "editor.renderWhitespace": "all",
+    // minimap
+    "editor.minimap.side": "left",
+    // quicksuggestions
+    "editor.quickSuggestions": true,
+    "editor.quickSuggestionsDelay": 0,
+    // TabSize
+    "editor.tabSize": 4,
+    // WordWrap
+    "editor.wordWrap": "on",
+
+    // Workbench
+    "workbench.editor.openPositioning": "right",
+    "workbench.editor.openSideBySideDirection": "down",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.settings.useSplitJSON": true,
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
+    "workbench.tree.indent": 16,
+    "workbench.colorTheme": "Aramok's GLX Black",
+    "workbench.iconTheme": "aramoks-focus",
+    // Git
+    "git.autofetch": true,
+
+    // Terminal panel
+    "terminal.integrated.fontSize":14,
+    // Output panel
+    "[log]": {
+        "editor.fontSize": 15
+    },
+
+    // TypeScript
+    "typescript.tsserver.watchOptions": {
+    
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
+
+    // Markdown
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.formatOnSave":true,
+        "editor.renderWhitespace":"all",
+        "editor.acceptSuggestionOnEnter":"off"
+    },
+
+    // Emmet
+    "emmet.triggerExpansionOnTab": true,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.remotePlatform": {
+        "luca.lucafilm.com.ua": "linux"
+    },
+
+    "editor.accessibilitySupport": "on",
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+
+    // BetterComments
+    "better-comments.multilineComments": true,
+    "better-comments.tags":[
+        {"tag":"!", "color":"#ff2d00", "strikethrough":false, "underline":false, "backgroundColor":"transperent", "bold":false, "italic":false},
+        {"tag":"?", "color":"#3498db", "strikethrough":false, "underline":false, "backgroundColor":"transperent", "bold":false, "italic":false},
+        {"tag":"//", "color":"#474747", "strikethrough":false, "underline":false, "backgroundColor":"transperent", "bold":false, "italic":false},
+        {"tag":"todo", "color":"#ff8c00", "strikethrough":false, "underline":false, "backgroundColor":"transperent", "bold":false, "italic":false},
+        {"tag":"*", "color":"#98c379", "strikethrough":false, "underline":false, "backgroundColor":"transperent", "bold":false, "italic":false}
+    ],
+    // BracketPairColorizer 2
+    "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "bracket-pair-colorizer-2.rulerPosition": "Center",
+    "bracket-pair-colorizer-2.showVerticalScopeLine": true,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
+    "bracket-pair-colorizer-2.scopeLineCSS": ["borderStyle : solid", "borderWidth : 1px", "borderColor : {color}; opacity: 0.5"],
+    // CodeSpellChecker
+    "cSpell.language": "en,uk",
+    // ColorTabs
+    "colorTabs.activityBarBackground": true,
+    "colorTabs.ignoreCase": true,
+    "colorTabs.statusBarBackground": true,
+    "colorTabs.tabBorder": true,
+    "colorTabs.titleBackground": true,
+    "colorTabs.titleLabel": true,
+    // Cucumber
+    "cucumberautocomplete.customParameters": [],
+    // Gitignore
+    "gitignore.cacheExpirationInterval": 3600
+}
