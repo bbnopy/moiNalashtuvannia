@@ -1,0 +1,201 @@
+{
+    "extensionsHyperJS":[
+        {
+            "id":1,
+            "name":"hypercwd",
+            "description":"+ hyper i hypercwd"
+        },
+        {
+            "id":2,
+            "name":"hyper-search",
+            "description":"+ hyper i hyper-search"
+        },
+        {
+            "id":3,
+            "name":"hyper-pane",
+            "description":"hyper i hyper-pane"
+        },
+        {
+            "id":4,
+            "name":"hyperpower",
+            "description":"hyper i hyperpower"
+        },
+        {
+            "id":5,
+            "name":"hyper-highlight-active-pane",
+            "description":"hyper i hyper-highlight-active-pane"
+        }
+    ],
+    "themesHyperJS":[
+        {
+            "id":6,
+            "name":"hyper-aura-theme",
+            "description":"hyper i hyper-aura-theme"
+        },
+        {
+            "id":7,
+            "name":"hyper-rose-pine",
+            "description":"hyper i hyper-rose-pine"
+        },
+        {
+            "id":8,
+            "name":"hyper-hypest",
+            "description":"hyper i hyper-hypest"
+        },
+        {
+            "id":9,
+            "name":"hyper-cyberpunk",
+            "description":"hyper i hyper-cyberpunk"
+        },
+        {
+            "id":10,
+            "name":"hyper-npm-theme",
+            "description":"hyper i hyper-npm-theme"
+        },
+        {
+            "id":11,
+            "name":"hyper-afterglow",
+            "description":"hyper i hyper-afterglow"
+        },
+        {
+            "id":12,
+            "name":"xi-hyper",
+            "description":"hyper i xi-hyper"
+        },
+        {
+            "id":13,
+            "name":"hyper-named-css-colors",
+            "description":"hyper i hyper-named-css-colors"
+        },
+        {
+            "id":14,
+            "name":"hyperocean",
+            "description":"hyper i hyperocean"
+        },
+        {
+            "id":15,
+            "name":"hyper-solarized",
+            "description":"hyper i hyper-solarized"
+        },
+        {
+            "id":16,
+            "name":"hyper-subliminal-theme",
+            "description":"hyper i hyper-subliminal-theme"
+        },
+        {
+            "id":17,
+            "name":"hyper-night-owl",
+            "description":"hyper i hyper-night-owl"
+        },
+        {
+            "id":18,
+            "name":"hyper-pokemon",
+            "description":"hyper i hyper-pokemon"
+        },
+        {
+            "id":19,
+            "name":"hyper-oceanic-next",
+            "description":"hyper i hyper-oceanic-next"
+        },
+        {
+            "id":20,
+            "name":"hyper-relaxed",
+            "description":"hyper i hyper-relaxed"
+        },
+        {
+            "id":21,
+            "name":"an-old-hype",
+            "description":"hyper i an-old-hype"
+        },
+        {
+            "id":22,
+            "name":"hyper-whimsy",
+            "description":"hyper i hyper-whimsy"
+        },
+        {
+            "id":23,
+            "name":"hyper-electron-highlughter",
+            "description":"hyper i hyper-electron-highlighter"
+        },
+        {
+            "id":24,
+            "name":"hyper-website-theme",
+            "description":"hyper i hyper-website-theme"
+        },
+        {
+            "id":25,
+            "name":"hyper-firefox-devtools",
+            "description":"hyper i hyper-firefox-devtools"
+        },
+        {
+            "id":26,
+            "name":"hyper-mono-christmas",
+            "description":"hyper i hyper-mono-christmas"
+        },
+        {
+            "id":27,
+            "name":"shafes-of-purple-hyper",
+            "description":"hyper i shades-of-purple-hyper"
+        },
+        {
+            "id":28,
+            "name":"hyper-flat",
+            "description":"hyper i hyper-flat"
+        },
+        {
+            "id":29,
+            "name":"hyper-one-dark",
+            "description":"hyper i hyper-one-dark"
+        },
+        {
+            "id":30,
+            "name":"hyper-one-light",
+            "description":"hyper i hyper-one-light"
+        },
+        {
+            "id":31,
+            "name":"hyper-solarized-light",
+            "description":"hyper i hyper-solarized-light"
+        },
+        {
+            "id":32,
+            "name":"hyper-solarized-dark",
+            "description":"hyper i hyper-solarized-dark"
+        },
+        {
+            "id":33,
+            "name":"hyper-chesterish",
+            "description":"hyper i hyper-chesterish"
+        },
+        {
+            "id":34,
+            "name":"verminal",
+            "description":"hyper i verminal"
+        },
+        {
+            "id":35,
+            "name":"hyper-material-theme",
+            "description":"hyper i hyper-material-theme"
+        },
+        {
+            "id":36,
+            "name":"hyper-native",
+            "description":"hyper i hyper-native"
+        },
+        {
+            "id":37,
+            "name":"hyper-snazzy",
+            "description":"hyper i hyper-snazzy"
+        },
+        {
+            "id":38,
+            "name":"hyper-dracula",
+            "description":"hyper i hyper-dracula"
+        },
+        {
+            "id":39,
+            "name":"hyper-corubo",
+            "description":"hyper i hyper-corubo"
+        }
+    ]
+}

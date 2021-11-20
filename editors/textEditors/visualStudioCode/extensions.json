@@ -72,14 +72,14 @@
         {"id":66, "name":"Live Server", "description":"Launch a development local Server with live reload feature for static & dynamic pages"},
         {"id":67, "name":"Marquee", "description":"Stay organized with minimal context switching, all inside your VS Code"},
         {"id":68, "name":"Power Mode", "description":"Your code is powerful, unleash it! The extension made popular by Code in the Dark has finally made its way to VS Code"},
-        {"id":52, "name":"Vibrancy", "description":"Vibrancy Effect for Visual Studio Code"}
+        {"id":69, "name":"Vibrancy", "description":"Vibrancy Effect for Visual Studio Code"}
     ]},
     {"themesVSCode":[
-        {"id":53, "name":"MS-DOS Theme", "description":"A theme for the ones of us that are still missing good old MS-DOS"},
-        {"id":54, "name":"Aramok's Black", "description":"For those who are not satisfied with less colors. Let your mind to focus more"}
+        {"id":70, "name":"MS-DOS Theme", "description":"A theme for the ones of us that are still missing good old MS-DOS"},
+        {"id":71, "name":"Aramok's Black", "description":"For those who are not satisfied with less colors. Let your mind to focus more"},
+        {"id":72, "name":"(Actual) Obsidian", "description":"(Actual) Obsidian theme for Visual Studio Code, based on the TextMate and Eclipse originals1"}
     ]},
     {"themesNotInstalled":[
-        {"id":55, "name":"(Actual) Obsidian", "description":""},
         {"id":51, "name":"[Kuskus] Kusto Color Theme", "description":""},
         {"id":52, "name":"Arcade", "description":""},
         {"id":53, "name":"DarkCode & LightCode Theme", "description":""},
