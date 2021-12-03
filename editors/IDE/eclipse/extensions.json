@@ -1,0 +1,30 @@
+{"extensions":[
+    {"packages":[
+        {"id":1, "name":"Autodetect Encoding", "description":"Show file information for the active editor in the status bar."},
+        {"id":2, "name":"Buildship Gradle Integration", "description":"Eclipse plug-ins that provide support for building software using Gradle."},
+        {"id":3, "name":"CheckStyle Contributions", "description":"This project adds custom checks, filters and for CheckStyle and Eclipse-CS."},
+        {"id":4, "name":"Chuck Norris Facts", "description":"Read Chuck Norris facts in your IDE. Greatly improves your productivity"},
+        {"id":5, "name":"Clippet", "description":"Programmers typically rely heavily on the clipboard – frequently, a single clipboard isn’t enough. Some desktop systems, like KDE, provide tools to support multiple clipboards, allowing the user to switch between different content previously stored in the clipboard as required"},
+        {"id":6, "name":"Codemix 3", "description":"Integrate anything from Vue to React in your daily development. eLearning courses right inside your IDE get you going fast"},
+        {"id":7, "name":"Eclipse Docker Tooling", "description":"The Eclipse Docker Tooling plugin provides the ability to manage Docker images and containers from within the Eclipse IDE"},
+        {"id":8, "name":"Eclipse Marketplace Client", "description":"The Eclipse Marketplace Client is a rich client solution for installing solutions listed on Eclipse Marketplace directly from an Eclipse Installation"},
+        {"id":9, "name":"Eclipse Web Developer Tools", "description":"Includes the HTML, CSS, and JSON Editors, and JavaScript Development Tools from the Eclipse Web Tools Platform project, aimed at supporting client-side web development and node.js applications"},
+        {"id":10, "name":"EGit - Git Integration for Eclipse", "description":"Git is a distributed versioning system, which means every developer has a full copy of all history of every revision of the code, making queries against the history very fast and versatile"},
+        {"id":11, "name":"Enide.p2f - Eclipse Node.js IDE", "description":"Eclipse Node.JS IDE (Enide) is basically one configuration file (*.p2f) that lets you quick start with Node.js development"},
+        {"id":12, "name":"Enide (Studio) 2015 - Node.js, JavaScript, Java and Web ToolsTool Suite for Node.js, JavaScript, Java Development"},
+        {"id":13, "name":"HTML Editor WTP", "description":"This is quick way to install HTML Editor from Web Tools Platform project"},
+        {"id":14, "name":"IBM Monitoring and Diagnostic Tools - Garbage Collection and Memory Visualizer (GCMV)", "description":"Garbage Collection and Memory Visualizer (GCMV) can plot and analyze verbose GC data to help diagnose Node.js and Java application memory and performance problems"},
+        {"id":15, "name":"IBM Monitoring and Diagnostic Tools - Health Center", "description":"Health Center is a diagnostic tool for monitoring the status of a running Java or Node.js application"},
+        {"id":16, "name":"JBoss Tools", "description":"JBoss Tools is an umbrella project for a set of Eclipse plugins that includes support for JBoss and related technologies, such as Hibernate, JBoss AS / WildFly, CDI, OpenShift, Apache Camel, Red Hat JBoss Fuse, Docker, JSF, (X)HTML, Maven, and more"},
+        {"id":17, "name":"JSHint Eclipse", "description":"JSHint integration for the Eclipse IDE. Maintained by Ralf Sternberg, EclipseSource"},
+        {"id":18, "name":"Language Support for Apache Camel", "description":"Provides completion, validation and documentation features for Apache Camel URI elements in XML"},
+        {"id":19, "name":"LiClipseText 2.1.2", "description":"LiClipseText is an editor which enables Eclipse to be used as a general-purpose text editor, providing support for multiple languages out of the box"},
+        {"id":20, "name":"PyDev", "description":"PyDev is a plugin that enables Eclipse to be used as a Python IDE (supporting also Jython and IronPython)"},
+        {"id":21, "name":"Python::Codemix", "description":"The Python pack for CodeMix 3 brings the best extensions for Python from VS Code directly into Eclipse"},
+        {"id":22, "name":"SonarLint", "description":"SonarLint is an IDE extension that helps you detect and fix quality issues as you write code"},
+        {"id":23, "name":"SpotBugs Eclipse plugin", "description":"SpotBugs is a program which uses static analysis to look for bugs in Java code. SpotBugs is open source (LGPL)."},
+        {"id":24, "name":"Tern Eclipse IDE - Outdated - use Wild Web Developer instead", "description":"tern.js is a stand-alone code-analysis engine for JavaScript written in Javascript. tern.java provides the capability to use tern.js in"},
+        {"id":25, "name":"Wakatime", "description":"Metrics, insights, & time tracking automatically generated from your programming activity"},
+        {"id":26, "name":"Yaml Editor", "description":"Just a YAML editor"}
+    ]}
+]}
