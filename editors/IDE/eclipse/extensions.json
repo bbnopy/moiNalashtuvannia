@@ -26,5 +26,9 @@
         {"id":24, "name":"Tern Eclipse IDE - Outdated - use Wild Web Developer instead", "description":"tern.js is a stand-alone code-analysis engine for JavaScript written in Javascript. tern.java provides the capability to use tern.js in"},
         {"id":25, "name":"Wakatime", "description":"Metrics, insights, & time tracking automatically generated from your programming activity"},
         {"id":26, "name":"Yaml Editor", "description":"Just a YAML editor"}
+    ]},
+    {"themes":[
+        {"id":1, "name":"Eclipse Color Theme", "description":"Eclipse Color Theme makes it possible to switch color themes conveniently and without side effects"},
+        {"id":2, "name":"Darkest Dark Theme with DevStyle CI", "description":"a free plugin providing an enhanced set of experiences for Eclipse"}
     ]}
 ]}
