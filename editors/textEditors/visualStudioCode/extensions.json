@@ -77,10 +77,10 @@
     {"themesVSCode":[
         {"id":70, "name":"MS-DOS Theme", "description":"A theme for the ones of us that are still missing good old MS-DOS"},
         {"id":71, "name":"Aramok's Black", "description":"For those who are not satisfied with less colors. Let your mind to focus more"},
-        {"id":72, "name":"(Actual) Obsidian", "description":"(Actual) Obsidian theme for Visual Studio Code, based on the TextMate and Eclipse originals1"}
+        {"id":72, "name":"(Actual) Obsidian", "description":"(Actual) Obsidian theme for Visual Studio Code, based on the TextMate and Eclipse originals1"},
+        {"id":73, "name":"[Kuskus] Kusto Color Theme", "description":"Kusto color themes"}
     ]},
     {"themesNotInstalled":[
-        {"id":51, "name":"[Kuskus] Kusto Color Theme", "description":""},
         {"id":52, "name":"Arcade", "description":""},
         {"id":53, "name":"DarkCode & LightCode Theme", "description":""},
         {"id":54, "name":"1337 Theme", "description":""},
