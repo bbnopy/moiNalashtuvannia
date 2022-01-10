@@ -65,33 +65,108 @@
 ```U```                        :    fix a whole line
 ```<C-r>```                    :    few times to redo the commands (undo the undos)
 
+## The put command
 
-```:w```                       :    save
-```:w <FILENAME>```            :    save changes made to get a listing of your directory
 ```p```                        :    put previously deleted text after the cursor
+
+## The replace command
+
 ```rx```                       :    replace the character at the cursor with x
+
+## The changer operator
+
 ```ce```                       :    change until the end of a word
+
+## More changes using ```c```
+
 ```c$```                       :    type the rest of the line like the second and press
+
+## Cursor location and file status
+
 ```<C-g>```                    :    show your location in a file and the file status
 ```G```                        :    move to a line in the file
-```<number-G>```               :    moves to that line number
-```gg```                       :    move you to the start of the file
+
+## The search command
+
 ```/```                        :    followed by a phrase to search for the phrase
 ```n```                        :    search for the same phrase again
 ```N```                        :    search for the same phrase in the opposite direction
 ```?```                        :    search for a phrase in the backward direction
 ```<C-o>```                    :    go back to where you came
 ```<C-i>```                    :    goes forward
+
+## Matching parentheses search
+
 ```%```                        :    find a matching ), ] or }
-```:```                        :    set the cursor at the bottom of the screen, this allows you to enter a command-line command
+
+## The substitute command
+
+```:s```                       :    substitute command
+
+## How to execute an external
+
 ```!```                        :    this allows you to execute any external shell command
+```:```                        :    set the cursor at the bottom of the screen, this allows you to enter a command-line command
 ```!ls```                      :    get a listing of your directory
+
+## More on writing files
+
+```:w```                       :    save
+```:w <FILENAME>```            :    save changes made to get a listing of your directory
 ```!rm <FILENAME>```           :    removing the file
+
+## Selecting text to write
+
 ```v```                        :    starts Visual-mode
+
+## Retrieving and merging files
+
 ```:r <FILENAME>```            :    insert the contents of a file
+
+## The open command
+
 ```o```                        :    open a line bellow the cursor and place you in insert mode
+
+## The append command
+
+```a```                        :    insert text after the cursor
 ```e```                        :    cursor at the and of word
+
+## Another way to replace
+
 ```R```                        :    replace mode
+
+## Copy and paste text
+
+```y```                        :    operator to copy text
+```p```                        :    paste
+```j$```                       :    move the cursor to the end of the line
+```yw```                       :    yanks one word
+
+## Set option
+
+```:set ic```                       :    set ignore case option
+```:set hls is```                   :    set the 'hlsearch' and 'incsearch'
+```:set noic```                     :    disable ignoring case enter
+```:set invic```                    :    toggle the value of a setting
+```nohlsearch```                    :    remove the highlighting of matches enter
+
+## Getting help
+
+```<HELP>```                        :    Vim has a comprehesive on-line help system
+```<F1>```                          :    Vim has a comprehesive on-line help system
+```<C-w><C-w>```                    :    jump from one window to another
+```:help <argument>```              :    you can find help on just about any subject, by giving an argument
+
+## Completion
+
+```<C-d>```                         :    command line completion
+```<Tab>```                         :    command line completion
+
+
+
+```<number-G>```               :    moves to that line number
+```gg```                       :    move you to the start of the file
 
 jump to a subject              :    ```CTRL-J``` - position the cursor on a tag
 with the mouse                 :    double-click the left mouse button on a tag
