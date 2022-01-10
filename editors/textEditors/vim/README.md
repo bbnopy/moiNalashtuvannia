@@ -1,35 +1,97 @@
 # VIM
 
-## Move around
+## Moving the cursor
 
-```h```                               :    key to move left
-```j```                                :    key to scroll down
-```k```                               :    key to scroll up
-```l```                                :    key to move right
+```h```                        :    key to move left
+```j```                        :    key to scroll down
+```k```                        :    key to scroll up
+```l```                        :    key to move right
 
-```nvim FILENAME```    :    start vim from the shell
-```:q```                              :    close this window
-```:q!```                             :    this exits the editor, discarding any changes you have made
-```x```                               :    to delete the character under the cursor
-```dw```                            :    delete a word
-```d2w```                          :    delete the two UPPER CASE words
-```de```                             :    will delete grom the cursor to the end of the word
-```d$```                             :    delete to the end of the line
-```dd```                             :    delete a whole line
-```2dd```                           :    delete two lines
-```0```                                :    move to the start of the line
-```2w```                             :    move the cursor two words forward
-```3e```                              :    move the cursor to the end of the third word forward
-```i```                                :    insert before the cursor
-```a```                               :    append after the line
-```:wq```                           :    to save a file and text
-```<Esc>```                       :    return to Normal mode
-```u```                               :    undo the last commands
-```U```                              :    fix a whole line
-```<C-r>```                       :    few times to redo the commands (undo the undos)
-```p```                               :    put previously deleted text after the cursor
-```rx```                              :    replace the character at the cursor with x
-```ce```                              :    change until the end of a word
+```nvim FILENAME```            :    start vim from the shell
+```<Esc>```                    :    return to Normal mode
+
+## Exiting vIM
+
+```:q!```                      :    this exits the editor, discarding any changes you have made
+```:q```                       :    close this window
+
+## Text editing -deletion
+
+```x```                        :    to delete the character under the cursor
+
+## Text editing insertion
+
+```i```                        :    insert before the cursor
+
+## Text editing appending
+
+```a```                        :    append after the cursor
+```A```                        :    append after the line
+
+## Editing a file
+
+```:wq```                      :    to save a file, text and exit
+
+## Deletion command
+
+```dw```                       :    delete a word
+
+## More deletion commands
+
+```d$```                       :    delete to the end of the line
+
+## On operators and motions
+
+```de```                       :    will delete grom the cursor to the end of the word
+
+## Using a count for a motions
+
+```2w```                       :    move the cursor two words forward
+```3e```                       :    move the cursor to the end of the third word forward
+```0```                        :    move to the start of the line
+
+## Using a count to delete more
+
+```d2w```                      :    delete the two UPPER CASE words
+
+## Operating on lines
+
+```dd```                       :    delete a whole line
+```2dd```                      :    delete two lines
+
+## The undo command
+
+```u```                        :    undo the last commands
+```U```                        :    fix a whole line
+```<C-r>```                    :    few times to redo the commands (undo the undos)
+
+
+```:w```                       :    save
+```:w <FILENAME>```            :    save changes made to get a listing of your directory
+```p```                        :    put previously deleted text after the cursor
+```rx```                       :    replace the character at the cursor with x
+```ce```                       :    change until the end of a word
+```c$```                       :    type the rest of the line like the second and press
+```<C-g>```                    :    show your location in a file and the file status
+```G```                        :    move to a line in the file
+```<number-G>```               :    moves to that line number
+```gg```                       :    move you to the start of the file
+```/```                        :    followed by a phrase to search for the phrase
+```n```                        :    search for the same phrase again
+```N```                        :    search for the same phrase in the opposite direction
+```?```                        :    search for a phrase in the backward direction
+```<C-o>```                    :    go back to where you came
+```<C-i>```                    :    goes forward
+```%```                        :    find a matching ), ] or }
+```:```                        :    set the cursor at the bottom of the screen, this allows you to enter a command-line command
+```!```                        :    this allows you to execute any external shell command
+```!ls```                      :    get a listing of your directory
+```!rm <FILENAME>```           :    removing the file
+```v```                        :    starts Visual-mode
+```:r <FILENAME>```            :    insert the contents of a file
+```o```                        :    open a line bellow the cursor and place you in insert mode
+```e```                        :    cursor at the and of word
+```R```                        :    replace mode
 
 jump to a subject              :    ```CTRL-J``` - position the cursor on a tag
 with the mouse                 :    double-click the left mouse button on a tag
