@@ -239,7 +239,21 @@ uganda.txt                             :           Vim distribution conditions a
 
 ## Basic editing
 
-starting.txt                             :           starting Vim, Vim command arguments, initialisation
+### Starting Vim *starting* starting.txt
+
+```nvim [option | filename]```         :    more generally, Nvim is started with option arguments and file name arguments can be mixed, and any number of them can be given.
+```filename```                         :    one or more file names.The first one will be the current file and read into the buffer.
+```-```                                :    alias for stdin (standart input)
+```-t{tag}```                          :    a tag. "tag" is locked up in the tags file, the associated file becomes the current file, and the associated command is executed.
+```-q[errorfile]```                    :    quickfix mode. The file with the name [errorfile] is read and the first is displayed.
+```(nothing)```                        :    without one of the four items above, Vim will start editing a new buffer.
+
+```--help, -?, -h```                   :    give usage (help) message and exit.
+```--version, -v```                    :    print version information and exit.
+```--clean```                          :    mimics a fresh install of Nvim.
+```--noplugin```                       :    skip loading plugins. Reset the 'loadplugins' option.
+```--startuptime {fname}```            :    during startup write timing messages to the file {fname}. This can be used to find out where time is spent while loading your config, plugins and opening the first file.
+
 editing.txt                              :           editing and writing files
 motion.txt                              :          commands for moving around
 scroll.txt                                :           scrolling the text in the window
@@ -248,7 +262,13 @@ change.txt                              :          deleting and replacing text
 undo.txt                                  :          undo and rendo
 repeat.txt                                :          repeating commands, Vim scripts and debugging
 visual.txt                                :          using the Visual mode (selecting a text area)
-various.txt                              :          various remaining commands
+
+### Various vommands *various-cmd* various.txt
+
+```<C-l>```                               :    clears and redraws the screen. The redraw may happen later, after processing typeahead.
+
+
+
 recover.txt                              :          recovering from a crash
 cmdline.txt                             :          Command-line editing
 options.txt                              :          description of all options
