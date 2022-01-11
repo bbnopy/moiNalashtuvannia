@@ -164,23 +164,14 @@
 ```<Tab>```                         :    command line completion
 
 
-
 ```<number-G>```               :    moves to that line number
 ```gg```                       :    move you to the start of the file
 
-jump to a subject              :    ```CTRL-J``` - position the cursor on a tag
-with the mouse                 :    double-click the left mouse button on a tag
-jump back                         :    ```CTRL-O``` - repeat to go further back
 
-normal mode command    :            :help x
-visual mode command      :    v_    :help v_u
-insert mode command       :    i_    :help i_<Esc>
-command-line command   :    :       :help :quit
-command-line editing        :    c_     :help c_<Del>
-vim command argument    :    _       :help -r
-option                                 :    '        :help 'textwidth'
-regular expression              :    /       :help /[
-search for help                    :            type ":help", then hit CTRL-D to see matching help entries for "word"
+```<C-j>```                    :    jump to a subject
+```<C-o>```                    :    jump back
+```<C-d>```                    :    see matching search
+```<C-t>```                    :    
 
 ## Basic
 
