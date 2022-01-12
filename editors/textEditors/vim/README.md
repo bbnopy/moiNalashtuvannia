@@ -387,9 +387,478 @@ cmdline.txt                             :          Command-line editing
 ```:setg[lobal]```                                                    :    like ":set" but set only the global value for a local option without changing the local value.
 ```:setf[iletype] [FALLBACK] {filetype}```                            :    set the 'filetype' option to {filetype}, but only if not done yet in a sequence of (nested) autocommands.
 ```:bro[wse] se[t] :opt[ions]```                                      :    open a window for viewing and setting all options.
+
 ```'aleph', 'al'```                                                   :    number (default 224) global. The ASCII code for the first letter of the Hebrew  alphabet.
 ```'allowrevins', 'ari'```                                            :    boolean (default off) global. Allow CTRL-_ in Insert and Command-line mode.
 ```'ambiwidth', 'ambw'```                                             :    string (default: "single") global. Tells Vim what to do with characters with East Asian Width Class Ambiguous (such as Euro, Registred Sign, Copyright Sign, Greek letters, Cyrillic letters).
+```'autochdir', 'acd'```                                              :    boolean (default off) global. When on, Vim will change the current working directory whenever you open a file, switch buffers, delete a buffer or open/close a window.
+```'arabic', 'arab'```                                                :    boolean (default off) local to window. This option can be set to start editing Arabic text.
+'arabicshape' 'arshape'	boolean (default on)
+			global
+	When on and 'termbidi' is off, the required visual character
+	corrections that need to take place for displaying the Arabic language
+	take effect.
+    'autoindent' 'ai'	boolean	(default on)
+			local to buffer
+	Copy indent from current line when starting a new line (typing <CR>
+	in Insert mode or when using the "o" or "O" command).
+    'autoread' 'ar'		boolean	(default on)
+			global or local to buffer |global-local|
+	When a file has been detected to have been changed outside of Vim and
+	it has not been changed inside of Vim, automatically read it again.
+    'autowrite' 'aw'	boolean	(default off)
+			global
+	Write the contents of the file, if it has been modified, on each
+	`:next`, `:rewind`, `:last`, `:first`, `:previous`, `:stop`,
+	`:suspend`, `:tag`, `:!`, `:make`, CTRL-] and CTRL-^ command; and when
+	a `:buffer`, CTRL-O, CTRL-I, '{A-Z0-9}, or `{A-Z0-9} command takes one
+	to another file.
+    'autowriteall' 'awa'	boolean	(default off)
+			global
+	Like 'autowrite', but also used for commands ":edit", ":enew", ":quit",
+	":qall", ":exit", ":xit", ":recover" and closing the Vim window.
+    'background' 'bg'	string	(default "dark")
+			global
+	When set to "dark" or "light", adjusts the default color groups for
+	that background type.
+    'backspace' 'bs'	string	(default "indent,eol,start")
+			global
+	Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert
+	mode.
+    'backup' 'bk'		boolean	(default off)
+			global
+	Make a backup before overwriting a file.  Leave it around after the
+	file has been successfully written.
+    'backupcopy' 'bkc'	string	(Vi default for Unix: "yes", otherwise: "auto")
+			global or local to buffer |global-local|
+	When writing a file and a backup is made, this option tells how it's
+	done.
+    'backupcopy' 'bkc'	string	(Vi default for Unix: "yes", otherwise: "auto")
+			global or local to buffer |global-local|
+	When writing a file and a backup is made, this option tells how it's
+	done.
+    'backupext' 'bex'	string	(default "~")
+			global
+	String which is appended to a file name to make the name of the
+	backup file.
+    'backupext' 'bex'	string	(default "~")
+			global
+	String which is appended to a file name to make the name of the
+	backup file.
+    'binary' 'bin'		boolean	(default off)
+			local to buffer
+	This option should be set before editing a binary file.
+    'bomb'			boolean	(default off)
+			local to buffer
+	When writing a file and the following conditions are met, a BOM (Byte
+	Order Mark) is prepended to the file
+    'bomb'			boolean	(default off)
+			local to buffer
+	When writing a file and the following conditions are met, a BOM (Byte
+	Order Mark) is prepended to the file
+    'breakindent' 'bri'	boolean (default off)
+			local to window
+	Every wrapped line will continue visually indented (same amount of
+	space as the beginning of that line), thus preserving horizontal blocks
+	of text.
+    'breakindentopt' 'briopt' string (default empty)
+			local to window
+	Settings for 'breakindent'.
+    'browsedir' 'bsdir'	string	(default: "last")
+			global
+	Which directory to use for the file browser
+    'bufhidden' 'bh'	string (default: "")
+			local to buffer
+	This option specifies what happens when a buffer is no longer
+	displayed in a window
+    'buflisted' 'bl'	boolean (default: on)
+			local to buffer
+	When this option is set, the buffer shows up in the buffer list.
+    'buflisted' 'bl'	boolean (default: on)
+			local to buffer
+	When this option is set, the buffer shows up in the buffer list.
+    'casemap' 'cmp'		string	(default: "internal,keepascii")
+			global
+	Specifies details about changing the case of letters.  It may contain
+	these words, separated by a comma
+    'cdhome' 'cdh'		boolean	(default: off)
+			global
+	When on, |:cd|, |:tcd| and |:lcd| without an argument changes the
+	current working directory to the |$HOME| directory like in Unix.
+    'cdpath' 'cd'		string	(default: equivalent to $CDPATH or ",,")
+			global
+	This is a list of directories which will be searched when using the
+	|:cd|, |:tcd| and |:lcd| commands, provided that the directory being
+	searched for has a relative path, not an absolute part starting with
+	"/", "./" or "../", the 'cdpath' option is not used then.
+    'cdpath' 'cd'		string	(default: equivalent to $CDPATH or ",,")
+			global
+	This is a list of directories which will be searched when using the
+	|:cd|, |:tcd| and |:lcd| commands, provided that the directory being
+	searched for has a relative path, not an absolute part starting with
+	"/", "./" or "../", the 'cdpath' option is not used then.
+    'channel'		number (default: 0)
+			local to buffer
+	|channel| connected to the buffer, or 0 if no channel is connected.
+    'channel'		number (default: 0)
+			local to buffer
+	|channel| connected to the buffer, or 0 if no channel is connected.
+    'cindent' 'cin'		boolean	(default off)
+			local to buffer
+	Enables automatic C program indenting.  See 'cinkeys' to set the keys
+	that trigger reindenting in insert mode and 'cinoptions' to set your
+	preferred indent style.
+    'cinkeys' 'cink'	string	(default "0{,0},0),0],:,0#,!^F,o,O,e")
+			local to buffer
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.
+    'cinkeys' 'cink'	string	(default "0{,0},0),0],:,0#,!^F,o,O,e")
+			local to buffer
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.
+    'cinkeys' 'cink'	string	(default "0{,0},0),0],:,0#,!^F,o,O,e")
+			local to buffer
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.
+    'cinoptions' 'cino'	string	(default "")
+			local to buffer
+	The 'cinoptions' affect the way 'cindent' reindents lines in a C
+	program.
+    'cinoptions' 'cino'	string	(default "")
+			local to buffer
+	The 'cinoptions' affect the way 'cindent' reindents lines in a C
+	program.
+    'cinwords' 'cinw'	string	(default "if,else,while,do,for,switch")
+			local to buffer
+	These keywords start an extra indent in the next line when
+	'smartindent' or 'cindent' is set.
+    'cmdheight' 'ch'	number	(default 1)
+			global
+	Number of screen lines to use for the command-line.  Helps avoiding
+	|hit-enter| prompts.
+    'cmdwinheight' 'cwh'	number	(default 7)
+			global
+	Number of screen lines to use for the command-line window. |cmdwin|
+    'cmdwinheight' 'cwh'	number	(default 7)
+			global
+	Number of screen lines to use for the command-line window. |cmdwin|
+    'columns' 'co'		number	(default 80 or terminal width)
+			global
+	Number of columns of the screen.
+
+    'comments' 'com'	string	(default
+				"s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-")
+			local to buffer
+	A comma separated list of strings that can start a comment line.
+    'commentstring' 'cms'	string	(default "/*%s*/")
+			local to buffer
+	A template for a comment.
+    'complete' 'cpt'	string	(default: ".,w,b,u,t")
+			local to buffer
+	This option specifies how keyword completion |ins-completion| works
+	when CTRL-P or CTRL-N are used.
+    'complete' 'cpt'	string	(default: ".,w,b,u,t")
+			local to buffer
+	This option specifies how keyword completion |ins-completion| works
+	when CTRL-P or CTRL-N are used.
+    'completeslash' 'csl'	string	(default: "")
+			local to buffer
+			{only for MS-Windows}
+	When this option is set it overrules 'shellslash' for completion
+    'completeslash' 'csl'	string	(default: "")
+			local to buffer
+			{only for MS-Windows}
+	When this option is set it overrules 'shellslash' for completion
+    'completeslash' 'csl'	string	(default: "")
+			local to buffer
+			{only for MS-Windows}
+	When this option is set it overrules 'shellslash' for completion
+    'completeslash' 'csl'	string	(default: "")
+			local to buffer
+			{only for MS-Windows}
+	When this option is set it overrules 'shellslash' for completion
+    'confirm' 'cf'		boolean (default off)
+			global
+	When 'confirm' is on, certain operations that would normally
+	fail because of unsaved changes to a buffer, e.g.
+    'copyindent' 'ci'	boolean	(default off)
+			local to buffer
+	Copy the structure of the existing lines indent when autoindenting a
+	new line.
+    'cpoptions' 'cpo'	string	(Vim default: "aABceFs_",
+				 Vi default: all flags)
+			global
+	A sequence of single character flags.
+    'cscopepathcomp' 'cspc'	number	(default 0)
+			global
+	Determines how many components of the path to show in a list of tags.
+	See |cscopepathcomp|.
+    'cscopepathcomp' 'cspc'	number	(default 0)
+			global
+	Determines how many components of the path to show in a list of tags.
+	See |cscopepathcomp|.
+    'cscopequickfix' 'csqf' string	(default "")
+			global
+	Specifies whether to use quickfix window to show cscope results.
+    'cscoperelative' 'csre' boolean (default off)
+			global
+	In the absence of a prefix (-P) for cscope.
+    'cscoperelative' 'csre' boolean (default off)
+			global
+	In the absence of a prefix (-P) for cscope.
+    'cscopetag' 'cst'	boolean (default off)
+			global
+	Use cscope for tag commands.  See |cscope-options|.
+    'cscopetagorder' 'csto'	number	(default 0)
+			global
+	Determines the order in which ":cstag" performs a search.
+    'cursorbind' 'crb'	boolean  (default off)
+			local to window
+	When this option is set, as the cursor in the current
+	window moves other cursorbound windows (windows that also have
+	this option set) move their cursors to the corresponding line and
+	column.
+    'cursorcolumn' 'cuc'	boolean	(default off)
+			local to window
+	Highlight the screen column of the cursor with CursorColumn
+	|hl-CursorColumn|
+'cursorline' 'cul'	boolean	(default off)
+			local to window
+	Highlight the text line of the cursor with CursorLine |hl-CursorLine|.
+'cursorlineopt' 'culopt' string (default: "number,line")
+			local to window
+	Comma separated list of settings for how 'cursorline' is displayed.
+    'debug'			string	(default "")
+			global
+	These values can be used
+    'define' 'def'		string	(default "^\s*#\s*define")
+			global or local to buffer |global-local|
+	Pattern to be used to find a macro definition.
+'dictionary' 'dict'	string	(default "")
+			global or local to buffer |global-local|
+	List of file names, separated by commas, that are used to lookup words
+	for keyword completion commands |i_CTRL-X_CTRL-K|.
+    'diff'			boolean	(default off)
+			local to window
+	Join the current window in the group of windows that shows differences
+	between files.  See |diff-mode|.
+    'diffexpr' 'dex'	string	(default "")
+			global
+	Expression which is evaluated to obtain a diff file (either ed-style
+	or unified-style) from two versions of a file.
+    'diffopt' 'dip'		string	(default "internal,filler,closeoff")
+			global
+	Option settings for diff mode.
+    'digraph' 'dg'		boolean	(default off)
+			global
+	Enable the entering of digraphs in Insert mode with {char1} <BS>
+	{char2}.  See |digraphs|.
+    'directory' 'dir'	string	(default "$XDG_DATA_HOME/nvim/swap//")
+			global
+	List of directory names for the swap file, separated with commas.
+    'display' 'dy'		string	(default "lastline,msgsep", Vi default: "")
+			global
+	Change the way text is displayed.  This is comma separated list of
+	flags
+    'eadirection' 'ead'	string	(default "both")
+			global
+	Tells when the 'equalalways' option applies
+    'emoji' 'emo'	boolean (default: on)
+			global
+	When on all Unicode emoji characters are considered to be full width.
+    'encoding' 'enc'
+	String-encoding used internally and for |RPC| communication.
+	Always UTF-8.
+    'endofline' 'eol'	boolean	(default on)
+			local to buffer
+	When writing a file and this option is off and the 'binary' option
+	is on, or 'fixeol' option is off, no <EOL> will be written for the
+	last line in the file.
+    'equalalways' 'ea'	boolean	(default on)
+			global
+	When on, all the windows are automatically made the same size after
+	splitting or closing a window.
+    'equalalways' 'ea'	boolean	(default on)
+			global
+	When on, all the windows are automatically made the same size after
+	splitting or closing a window.
+    
+'equalprg' 'ep'		string	(default "")
+			global or local to buffer |global-local|
+	External program to use for "=" command.
+    'errorbells' 'eb'	boolean	(default off)
+			global
+	Ring the bell (beep or screen flash) for error messages.  This only
+	makes a difference for error messages, the bell will be used always
+	for a lot of errors without a message (e.g., hitting <Esc> in Normal
+	mode).
+    'errorfile' 'ef'	string	(default: "errors.err")
+			global
+	Name of the errorfile for the QuickFix mode (see |:cf|).
+	When the "-q" command-line argument is used, 'errorfile' is set to the
+	following argument.  Se
+    'errorformat' 'efm'	string	(default is very long)
+			global or local to buffer |global-local|
+	Scanf-like description of the format for the lines in the error file
+	(see |errorformat|).
+    'eventignore' 'ei'	string	(default "")
+			global
+	A list of autocommand event names, which are to be ignored.
+    'expandtab' 'et'	boolean	(default off)
+			local to buffer
+	In Insert mode: Use the appropriate number of spaces to insert a
+	<Tab>. 
+    'fileencoding' 'fenc'	string (default: "")
+			local to buffer
+	File-content encoding for the current buffer. Conversion is done with
+	iconv() or as specified with 'charconvert'.
+    'fileencodings' 'fencs'	string (default: "ucs-bom,utf-8,default,latin1")
+			global
+	This is a list of character encodings considered when starting to edit
+	an existing file. 
+    'fileformat' 'ff'	string (Windows default: "dos",
+				Unix default: "unix")
+			local to buffer
+	This gives the <EOL> of the current buffer, which is used for
+	reading/writing the buffer from/to a file
+    'fileformats' 'ffs'	string (default:
+				Vim+Vi	Win32: "dos,unix",
+				Vim	Unix: "unix,dos",
+				Vi	others: "")
+			global
+	This gives the end-of-line (<EOL>) formats that will be tried when
+	starting to edit a new buffer and when reading a file into an existing
+	buffer
+    'fileignorecase' 'fic'	boolean	(default on for systems where case in file
+				 names is normally ignored)
+			global
+	When set case is ignored when using file names and directories.
+	See 'wildignorecase' for only ignoring case when doing completion.
+    'filetype' 'ft'		string (default: "")
+			local to buffer
+	When this option is set, the FileType autocommand event is triggered.
+    'fillchars' 'fcs'	string	(default "")
+			global or local to window |global-local|
+	Characters to fill the statuslines and vertical separators.
+    'fixendofline' 'fixeol'	boolean	(default on)
+			local to buffer
+	When writing a file and this option is on, <EOL> at the end of file
+	will be restored if missing.
+    'foldclose' 'fcl'	string (default "")
+			global
+	When set to "all", a fold is closed when the cursor isn't in it and
+	its level is higher than 'foldlevel'.
+    'foldcolumn' 'fdc'	string (default "0")
+			local to window
+	When and how to draw the foldcolumn. Valid values are
+    'foldenable' 'fen'	boolean (default on)
+			local to window
+	When off, all folds are open.
+    'foldexpr' 'fde'	string (default: "0")
+			local to window
+	The expression used for when 'foldmethod' is "expr".
+    'foldignore' 'fdi'	string (default: "#")
+			local to window
+	Used only when 'foldmethod' is "indent".
+    'foldlevel' 'fdl'	number (default: 0)
+			local to window
+	Sets the fold level: Folds with a higher level will be closed.
+    'foldlevelstart' 'fdls'	number (default: -1)
+			global
+	Sets 'foldlevel' when starting to edit another buffer in a window.
+    'foldmarker' 'fmr'	string (default: "{{{,}}}")
+			local to window
+	The start and end marker used when 'foldmethod' is "marker". 
+    'foldmethod' 'fdm'	string (default: "manual")
+			local to window
+	The kind of folding used for the current window.
+    'foldminlines' 'fml'	number (default: 1)
+			local to window
+	Sets the number of screen lines above which a fold can be displayed
+	closed.
+    'foldnestmax' 'fdn'	number (default: 20)
+			local to window
+	Sets the maximum nesting of folds for the "indent" and "syntax"
+	methods.
+    'foldopen' 'fdo'	string (default: "block,hor,mark,percent,quickfix,
+							     search,tag,undo")
+			global
+	Specifies for which type of commands folds will be opened, if the
+	command moves the cursor into a closed fold.
+    'foldtext' 'fdt'	string (default: "foldtext()")
+			local to window
+	An expression which is used to specify the text displayed for a closed
+	fold.
+    'formatexpr' 'fex'	string (default "")
+			local to buffer
+	Expression which is evaluated to format a range of lines for the |gq|
+	operator or automatic formatting (see 'formatoptions').
+    'formatlistpat' 'flp'	string (default: "^\s*\d\+[\]:.)}\t ]\s*")
+			local to buffer
+	A pattern that is used to recognize a list header.  This is used for
+	the "n" flag in 'formatoptions'.
+    'formatoptions' 'fo'	string (default: "tcqj", Vi default: "vt")
+			local to buffer
+	This is a sequence of letters which describes how automatic
+	formatting is to be done.
+    'formatprg' 'fp'	string (default "")
+			global or local to buffer |global-local|
+	The name of an external program that will be used to format the lines
+	selected with the |gq| operator.  
+    'fsync' 'fs'		boolean	(default off)
+			global
+	When on, the OS function fsync() will be called after saving a file
+	(|:write|, |writefile()|, …), |swap-file| and |shada-file|.
+    'gdefault' 'gd'		boolean	(default off)
+			global
+	When on, the ":substitute" flag 'g' is default on. 
+    'grepformat' 'gfm'	string	(default "%f:%l:%m,%f:%l%m,%f  %l%m")
+			global
+	Format to recognize for the ":grep" command output.
+    'grepprg' 'gp'		string	(default "grep -n ",
+				 Unix: "grep -n $* /dev/null")
+			global or local to buffer |global-local|
+	Program to use for the |:grep| command. 
+    'guicursor' 'gcr'	string	(default "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20")
+			global
+	Configures the cursor style for each mode. Works in the GUI and many
+	terminals.  See |tui-cursor-shape|.
+    'guifont' 'gfn'		string	(default "")
+			global
+	This is a list of fonts which will be used for the GUI version of Vim.
+    'guifontwide' 'gfw'	string	(default "")
+			global
+	Comma-separated list of fonts to be used for double-width characters.
+    'guioptions' 'go'	string	(default "egmrLT"   (MS-Windows))
+			global
+	This option only has an effect in the GUI version of Vim.
+    'guitablabel' 'gtl'	string	(default empty)
+			global
+	When nonempty describes the text to use in a label of the GUI tab
+	pages line. 
+    'guitabtooltip' 'gtt'	string	(default empty)
+			global
+	When nonempty describes the text to use in a tooltip for the GUI tab
+	pages line. 
+    'helpfile' 'hf'		string	(default (MS-Windows) "$VIMRUNTIME\doc\help.txt"
+					 (others) "$VIMRUNTIME/doc/help.txt")
+			global
+	Name of the main help file. 
+    'helpheight' 'hh'	number	(default 20)
+			global
+	Minimal initial height of the help window when it is opened with the
+	":help" command. 
+    'helplang' 'hlg'	string	(default: messages language or empty)
+			global
+	Comma separated list of languages.
+    'hidden' 'hid'		boolean	(default on)
+			global
+	When off a buffer is unloaded (including loss of undo information)
+	when it is |abandon|ed. 
+    'history' 'hi'		number	(Vim default: 10000, Vi default: 0)
+			global
+	A history of ":" commands, and a history of previous search patterns
+	is remembered. 
 
 
 pattern.txt                               :          regexp patterns and search commands
