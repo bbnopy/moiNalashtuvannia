@@ -859,6 +859,251 @@ cmdline.txt                             :          Command-line editing
 			global
 	A history of ":" commands, and a history of previous search patterns
 	is remembered. 
+    'hkmap' 'hk'		boolean (default off)
+			global
+	When on, the keyboard is mapped for the Hebrew character set.
+    'hkmapp' 'hkp'		boolean (default off)
+			global
+	When on, phonetic keyboard mapping is used.  'hkmap' must also be on.
+    'hlsearch' 'hls'	boolean	(default on)
+			global
+	When there is a previous search pattern, highlight all its matches.
+    'icon'			boolean	(default off, on when title can be restored)
+			global
+	When on, the icon text of the window will be set to the value of
+	'iconstring' (if it is not empty), or to the name of the file
+	currently being edited.
+    'iconstring'		string	(default "")
+			global
+	When this option is not empty, it will be used for the icon text of
+	the window. 
+    'ignorecase' 'ic'	boolean	(default off)
+			global
+	Ignore case in search patterns.  Also used when searching in the tags
+	file.
+    'imcmdline' 'imc'	boolean (default off)
+			global
+	When set the Input Method is always on when starting to edit a command
+	line, unless entering a search pattern (see 'imsearch' for that).
+    'imdisable' 'imd'	boolean (default off, on for some systems (SGI))
+			global
+	When set the Input Method is never used.  This is useful to disable
+	the IM when it doesn't work properly.
+    'iminsert' 'imi'	number (default 0)
+			local to buffer
+	Specifies whether :lmap or an Input Method (IM) is to be used in
+	Insert mode.  Valid values
+    'imsearch' 'ims'	number (default -1)
+			local to buffer
+	Specifies whether :lmap or an Input Method (IM) is to be used when
+	entering a search pattern.  Valid values
+    'inccommand' 'icm'	string	(default "nosplit")
+			global
+
+	When nonempty, shows the effects of |:substitute|, |:smagic|, and
+	|:snomagic| as you type.
+    'include' 'inc'		string	(default "^\s*#\s*include")
+			global or local to buffer |global-local|
+	Pattern to be used to find an include command.  It is a search
+	pattern, just like for the "/" command (See |pattern|).
+    'include' 'inc'		string	(default "^\s*#\s*include")
+			global or local to buffer |global-local|
+	Pattern to be used to find an include command.  It is a search
+	pattern, just like for the "/" command (See |pattern|).
+    'includeexpr' 'inex'	string	(default "")
+			local to buffer
+	Expression to be used to transform the string found with the 'include'
+	option to a file name.
+    'includeexpr' 'inex'	string	(default "")
+			local to buffer
+	Expression to be used to transform the string found with the 'include'
+	option to a file name.
+    'indentkeys' 'indk'	string	(default "0{,0},0),0],:,0#,!^F,o,O,e")
+			local to buffer
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.  Only happens if 'indentexpr' isn't empty.
+    'infercase' 'inf'	boolean	(default off)
+			local to buffer
+	When doing keyword completion in insert mode |ins-completion|, and
+	'ignorecase' is also on, the case of the match is adjusted depending
+	on the typed text.
+    'infercase' 'inf'	boolean	(default off)
+			local to buffer
+	When doing keyword completion in insert mode |ins-completion|, and
+	'ignorecase' is also on, the case of the match is adjusted depending
+	on the typed text.
+    'isfname' 'isf'		string	(default for Windows:
+			     "@,48-57,/,\,.,-,_,+,,,#,$,%,{,},[,],:,@-@,!,~,="
+			    otherwise: "@,48-57,/,.,-,_,+,,,#,$,%,~,=")
+			global
+	The characters specified by this option are included in file names and
+	path names.
+    'isfname' 'isf'		string	(default for Windows:
+			     "@,48-57,/,\,.,-,_,+,,,#,$,%,{,},[,],:,@-@,!,~,="
+			    otherwise: "@,48-57,/,.,-,_,+,,,#,$,%,~,=")
+			global
+	The characters specified by this option are included in file names and
+	path names.
+    'iskeyword' 'isk'	string (default: @,48-57,_,192-255
+				Vi default: @,48-57,_)
+			local to buffer
+	Keywords are used in searching and recognizing with many commands:
+	"w", "*", "[i", etc.  It is also used for "\k" in a |pattern|.
+    'iskeyword' 'isk'	string (default: @,48-57,_,192-255
+				Vi default: @,48-57,_)
+			local to buffer
+	Keywords are used in searching and recognizing with many commands:
+	"w", "*", "[i", etc.  It is also used for "\k" in a |pattern|.
+    'iskeyword' 'isk'	string (default: @,48-57,_,192-255
+				Vi default: @,48-57,_)
+			local to buffer
+	Keywords are used in searching and recognizing with many commands:
+	"w", "*", "[i", etc.  It is also used for "\k" in a |pattern|.
+    'joinspaces' 'js'	boolean	(default off)
+			global
+	Insert two spaces after a '.', '?' and '!' with a join command.
+	Otherwise only one space is inserted.
+    'joinspaces' 'js'	boolean	(default off)
+			global
+	Insert two spaces after a '.', '?' and '!' with a join command.
+	Otherwise only one space is inserted.
+    'keymodel' 'km'		string	(default "")
+			global
+	List of comma separated words, which enable special things that keys
+	can do.
+    'keywordprg' 'kp'	string	(default ":Man", Windows: ":help")
+			global or local to buffer |global-local|
+	Program to use for the |K| command.
+    'langmap' 'lmap'	string	(default "")
+			global
+	This option allows switching your keyboard into a special language
+	mode.
+    'langmap' 'lmap'	string	(default "")
+			global
+	This option allows switching your keyboard into a special language
+	mode.
+    'langmenu' 'lm'		string	(default "")
+			global
+	Language to use for menu translation.
+'langremap' 'lrm'	boolean (default off)
+			global
+	When off, setting 'langmap' does not apply to characters resulting from
+	a mapping.
+'laststatus' 'ls'	number	(default 2)
+			global
+	The value of this option influences when the last window will have a
+	status line
+    'lazyredraw' 'lz'	boolean	(default off)
+			global
+	When this option is set, the screen will not be redrawn while
+	executing macros, registers and other commands that have not been
+	typed.
+    'linebreak' 'lbr'	boolean	(default off)
+			local to window
+	If on, Vim will wrap long lines at a character in 'breakat' rather
+	than at the last character that fits on the screen.  
+    'lines'			number	(default 24 or terminal height)
+			global
+	Number of lines of the Vim window.
+    'lisp'			boolean	(default off)
+			local to buffer
+	Lisp mode: When <Enter> is typed in insert mode set the indent for
+	the next line to Lisp standards (well, sort of).
+    'lispwords' 'lw'	string	(default is very long)
+			global or local to buffer |global-local|
+	Comma separated list of words that influence the Lisp indenting.
+	|'lisp'|
+    'list'			boolean	(default off)
+			local to window
+	List mode: By default, show tabs as ">", trailing spaces as "-", and
+	non-breakable space characters as "+".
+    'listchars' 'lcs'	string	(default: "tab:> ,trail:-,nbsp:+"
+				 Vi default: "eol:$")
+			global or local to window |global-local|
+	Strings to use in 'list' mode and for the |:list| command.
+'loadplugins' 'lpl'	boolean	(default on)
+			global
+	When on the plugin scripts are loaded when starting up |load-plugins|.
+    'magic'			boolean	(default on)
+			global
+	Changes the special characters that can be used in search patterns.
+	See |pattern|.
+    'makeef' 'mef'		string	(default: "")
+			global
+	Name of the errorfile for the |:make| command (see |:make_makeprg|)
+	and the |:grep| command.
+    'makeencoding' 'menc'	string	(default "")
+			global or local to buffer |global-local|
+	Encoding used for reading the output of external commands.  When empty,
+	encoding is not converted.
+    'makeprg' 'mp'		string	(default "make")
+			global or local to buffer |global-local|
+	Program to use for the ":make" command.  See |:make_makeprg|.
+    'matchpairs' 'mps'	string	(default "(:),{:},[:]")
+			local to buffer
+	Characters that form pairs.  The |%| command jumps from one to the
+	other.
+    'matchtime' 'mat'	number	(default 5)
+			global
+	Tenths of a second to show the matching paren, when 'showmatch' is
+	set.
+    'maxcombine' 'mco'	Removed. |vim-differences|
+	Nvim always displays up to 6 combining characters. 
+    'maxfuncdepth' 'mfd'	number	(default 100)
+			global
+	'maxmapdepth' 'mmd'	number	(default 1000)
+			global
+	Maximum number of times a mapping is done without resulting in a
+	character to be used.
+    'maxmempattern' 'mmp'	number	(default 1000)
+			global
+	'menuitems' 'mis'	number	(default 25)
+			global
+	Maximum number of items to use in a menu.
+    'mkspellmem' 'msm'	string	(default "460000,2000,500")
+			global
+	Parameters for |:mkspell|. 
+    'modeline' 'ml'		boolean	(Vim default: on (off for root),
+				 Vi default: off)
+			local to buffer
+	If 'modeline' is on 'modelines' gives the number of lines that is
+	checked for set commands.
+    'modelineexpr' 'mle'	boolean (default: off)
+			global
+	When on allow some options that are an expression to be set in the
+	modeline. 
+    'modelines' 'mls'	number	(default 5)
+			global
+	If 'modeline' is on 'modelines' gives the number of lines that is
+	checked for set commands.
+    'modifiable' 'ma'	boolean	(default on)
+			local to buffer
+	When off the buffer contents cannot be changed. 
+    'modified' 'mod'	boolean	(default off)
+			local to buffer
+	When on, the buffer is considered to be modified. 
+    'more'			boolean	(Vim default: on, Vi default: off)
+			global
+	When on, listings pause when the whole screen is filled.
+    'mouse'			string	(default "")
+			global
+
+	Enables mouse support.
+    'mousefocus' 'mousef'	boolean	(default off)
+			global
+	The window that the mouse pointer is on is automatically activated.
+    'mousehide' 'mh'	boolean	(default on)
+			global
+			{only works in the GUI}
+	When on, the mouse pointer is hidden when characters are typed.
+    'mousemodel' 'mousem'	string	(default "extend")
+			global
+	Sets the model to use for the mouse.
+    'mouseshape' 'mouses'	string	(default "i:beam,r:beam,s:updown,sd:cross,
+					m:no,ml:up-arrow,v:rightup-arrow")
+			global
+	This option tells Vim what the mouse pointer should look like in
+	different modes.
 
 
 pattern.txt                               :          regexp patterns and search commands
