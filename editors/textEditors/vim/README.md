@@ -1,14 +1,14 @@
 # VI VIM NVIM
 
-## *help.txt* Nvim VIM - main help file
+## Nvim VIM - main help file *help.txt*
 
-**Move arround**                                : Use the cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right.
-**Close this window**                           : Use ":q<Enter>".
-**Get out of Vim**                              : Use ":qa!<Enter>" (careful, all changes are lost!).
-**Jump to a subject**                           : Position the cursor on a tag (e.g. |bars|) and hit "CTRL-]".
-**With the mouse**                              : Double-click the left mouse button on a tag, e.g. |bars|.
-**Jump back**                                   : Type CTRL-O.  Repeat to go further back.
-**Get specific help**                           : It is possible to go directly to whatever you want help on, by giving an argument to the |:help| command.
+**Move arround**                                : cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right
+**Close this window**                           : :q<Enter>
+**Get out of Vim**                              : :qa!<Enter>, careful, all changes are lost!
+**Jump to a subject**                           : position the cursor on a tag (e.g. |bars|) and hit "CTRL-]".
+**With the mouse**                              : double-click the left mouse button on a tag, e.g. |bars|.
+**Jump back**                                   : "CTRL-O", repeat to go further back
+**Get specific help**                           : it is possible to go directly to whatever you want help on, by giving an argument to the |:help| command
 **Prepend something to specify the context**    : *help-context*
 
 |         WHAT         | PREPEND |      EXAMPLE      |
@@ -27,7 +27,54 @@
 
 ### BASIC: *doc-file-list* *Q_ct*
 
-|quickref|                                        : Overview of the most common commands you will use
+#### Quickref - Quick reference guide *quickref.txt* - Overview of the most common commands you will use
+
+| tag  |           subject          |
+|------|----------------------------|
+| Q_ct |     list of help files     |		
+| Q_lr |     motion: Left-right     |
+| Q_ud |      motion: Up-down       |
+| Q_tm |     motion: Text object    |
+| Q_pa |  motion: Pattern searches  |
+| Q_m a|        motion: Marks       |
+| Q_vm |       motion: Various      |
+| Q_ta |     motion: Using tags     |
+| Q_sc |          Scrolling         |
+| Q_in |   insert: Inserting text   |
+| Q_ai |         insert: Keys       |
+| Q_ss |    insert: Special keys    |
+| Q_di |      insert: Digraphs      |
+| Q_si |   insert: Special inserts  |
+| Q_de |    change: Deleting text   |
+| Q_cm | change: Copying and moving |
+| Q_ch |    change: Changing text   |
+| Q_co |       change: Complex      |
+| Q_vi |         Visual mode        |
+| Q_to |        Text objects        |
+| Q_fo |           Folding          |
+| Q_re |     Repeating commands     |
+| Q_km |         Key mapping        |
+| Q_ab |        Abbreviations       |
+| Q_op |           Options          |
+| Q_ur |     Undo/Redo commands     |
+| Q_et |      External commands     |
+| Q_qf |      Quickfix commands     |
+| Q_vc |      Various commands      |
+| Q_ce |  Ex: Command-line editing  |
+| Q_ra |          Ex: Ranges        |
+| Q_ex |   Ex: Special characters   |
+| Q_st |         Starting Vim       |
+| Q_ed |       Editing a file       |
+| Q_fl |   Using the argument list  |
+| Q_wq |    Writing and quitting    |
+| Q_ac |     Automatic commands     |
+| Q_wi |    Multi-window commands   |
+| Q_bu |    Buffer list commands    |
+| Q_sy |     Syntax highlighting    |
+| Q_gu |        GUI commands        |
+
+
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
@@ -35,11 +82,11 @@
 |www|	                                          : Vim on the World Wide Web
 |bugs|                                            : Where to send bug reports
 
-## USER MANUAL: These filed explain how to accomplish an editing task
+### USER MANUAL: These filed explain how to accomplish an editing task
 
 |usr_toc.txt|                                     : Table Of Contents
 
-### Getting Started
+#### Getting Started
 
 |usr_01.txt|                                      : About the manuals
 |usr_02.txt|                                      : The first steps in Vim
@@ -54,7 +101,7 @@
 |usr_11.txt|                                      : Recovering from a crash
 |usr_12.txt|                                      : Clever tricks
 
-### Editing Effectively
+#### Editing Effectively
 
 |usr_20.txt|                                      : Typing command-line commands quickly
 |usr_21.txt|                                      : Go away and come back
@@ -70,7 +117,7 @@
 |usr_31.txt|                                      : Exploiting the GUI
 |usr_32.txt|                                      : The undo tree
 
-### Tuning Vim
+#### Tuning Vim
 
 |usr_40.txt|                                      : Make new commands
 |usr_41.txt|                                      : Write a Vim script
@@ -79,9 +126,9 @@
 |usr_44.txt|                                      : Your own syntax highlighted
 |usr_45.txt|                                      : Select your language
 
-## REFERENCE MANUAL: These files explain every detail of Vim
+### REFERENCE MANUAL: These files explain every detail of Vim
 
-### General subjects
+#### General subjects
 
 |intro.txt|                                       : general introduction to Vim; notation used in help files
 |nvim.txt|                                        : Transitioning from Vim
@@ -95,7 +142,7 @@
 |debug.txt|                                       : debugging Vim itself
 |uganda.txt|                                      : Vim distribution conditions and what to do with your money
 
-### Basic editing
+#### Basic editing
 
 |starting.txt|                                    : starting Vim, Vim command arguments, initialisation
 |editing.txt|                                     : editing and writing files
@@ -109,7 +156,7 @@
 |various.txt|                                     : various remaining commands
 |recover.txt|                                     : recovering from a crash
 
-### Advanced editing
+#### Advanced editing
 
 |cmdline.txt|                                     : Command-line editing
 |options.txt|                                     : description of all options
@@ -126,13 +173,13 @@
 |lua.txt|                                         : Lua API
 |api.txt|                                         : Nvim API via RPC, Lua and VimL
 
-### Special issues
+#### Special issues
 
 |testing.txt|                                      : testing Vim and Vim scripts
 |print.txt|                                        : printing
 |remote_plugin.txt|                                : Nvim support for remote plugins
 
-### Programming language support
+#### Programming language support
 
 |indent.txt|                                       : automatic indenting for C and other languages
 |lsp.txt|                                          : Language Server Protocol (LSP)
@@ -148,7 +195,7 @@
 |ft_rust.txt|                                      : Filetype plugin for Rust
 |ft_sql.txt|                                       : about the SQL filetype plugin
 
-### Language support
+#### Language support
 
 |digraph.txt|                                      : list of available digraphs
 |mbyte.txt|                                        : multibyte text support
@@ -158,11 +205,11 @@
 |hebrew.txt|                                       : Hebrew language support and editing
 |russian.txt|                                      : Russian language support and editing
 
-## GUI
+### GUI
 
 |gui.txt|                                          : Graphical User Interface (GUI)
 
-### Interfaces
+#### Interfaces
 
 |if_cscop.txt|                                     : using Cscope with Vim
 |if_perl.txt|                                      : Perl interface
@@ -170,13 +217,13 @@
 |if_ruby.txt|                                      : Ruby interface
 |sign.txt|                                         : debugging signs
 
-### Versions
+#### Versions
 
 |vim_diff.txt|                                      : Main differences between Nvim and Vim
 |vi_diff.txt|                                       : Main differences between Vim and Vi
 |deprecated.txt|                                    : Deprecated items that have been or will be removed
 
-### Other
+#### Other
 
 |terminal_emulator.txt|                              : Terminal buffers
 |term.txt|                                           : Terminal UI
@@ -185,7 +232,7 @@
 |dev_style.txt|                                      : Nvim style guide
 |job_control.txt|                                    : Spawn and control multiple processes
 
-### Standard plugins *standard-plugin-list*
+#### Standard plugins *standard-plugin-list*
 
 |matchit.txt|                                        : Extended |%| matching
 |pi_gzip.txt|                                        : Reading and writing compressed files
