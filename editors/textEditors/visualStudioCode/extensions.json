@@ -80,12 +80,11 @@
         {"id":72, "name":"(Actual) Obsidian", "description":"(Actual) Obsidian theme for Visual Studio Code, based on the TextMate and Eclipse originals1"},
         {"id":73, "name":"[Kuskus] Kusto Color Theme", "description":"Kusto color themes"},
         {"id":74, "name":"Arcade", "description":"Somewhere between neon and pastel"},
-        {"id":75, "name":"DarkCode & LightCode Theme", "description":"Dark & Light theme for cool coders"}
+        {"id":75, "name":"DarkCode & LightCode Theme", "description":"Dark & Light theme for cool coders"},
+        {"id":76, "name":"1337 Theme", "description":"1337 Theme for VS Code based on the TextMate theme"},
+        {"id":77, "name":"1984", "description":"I'm gonna show you where it's dark, but have no fear"}
     ]},
     {"themesNotInstalled":[
-        {"id":53, "name":"DarkCode & LightCode Theme", "description":""},
-        {"id":54, "name":"1337 Theme", "description":""},
-        {"id":55, "name":"1984", "description":""},
         {"id":56, "name":"1987 Theme", "description":""},
         {"id":57, "name":"1Dark RainCoat", "description":""},
         {"id":58, "name":"1mm Themes", "description":""},
