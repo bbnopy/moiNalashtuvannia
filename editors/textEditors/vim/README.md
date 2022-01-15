@@ -1,11 +1,26 @@
-# VIM
+# VI VIM NVIM
 
-## Moving the cursor
+## *help.txt* Nvim VIM - main help file
 
-```h```                        :    key to move left
-```j```                        :    key to scroll down
-```k```                        :    key to scroll up
-```l```                        :    key to move right
+**Move arround**                                : Use the cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right.
+**Close this window**                           : Use ":q<Enter>".
+**Get out of Vim**                              : Use ":qa!<Enter>" (careful, all changes are lost!).
+**Jump to a subject**                           : Position the cursor on a tag (e.g. |bars|) and hit "CTRL-]".
+**With the mouse**                              : Double-click the left mouse button on a tag, e.g. |bars|.
+**Jump back**                                   : Type CTRL-O.  Repeat to go further back.
+**Get specific help**                           : It is possible to go directly to whatever you want help on, by giving an argument to the |:help| command.
+**Prepend something to specify the context**    : *help-context*
+
+|         WHAT         | PREPEND |      EXAMPLE      |
+|----------------------|---------|-------------------|
+| Normal mode command  |         | :help x           |
+| Visual mode command  |    v_   | :help v_u         |
+| Insert mode command  |    i_   | :help i_<Esc>     |
+| Command-line command |    :    | :help :quit       |
+| Command-line editing |    c_   | :help c_<Del>     |
+| Vim command argument |    -    | :help -r          |
+| Option               |    ''   | :help 'textwidth' |
+| Regular expression   |    /    | :help /[          |
 
 ```nvim FILENAME```            :    start vim from the shell
 ```<Esc>```                    :    return to Normal mode
@@ -13,7 +28,6 @@
 ## Exiting vIM
 
 ```:q!```                      :    this exits the editor, discarding any changes you have made
-```:q```                       :    close this window
 
 ## Text editing -deletion
 
@@ -5435,8 +5449,6 @@ Basic items
 %O		single-line file message: overread the matched part
 	%P		single-line file message: push file %f onto the stack
 	%Q		single-line file message: pop the last file from stack
-
-	
 
 ft_ada.txt                                :         Ada (the programming language) support
 ft_rust.txt                                :        filetype plugin for Rust
