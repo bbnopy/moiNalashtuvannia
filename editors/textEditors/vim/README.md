@@ -3,7 +3,7 @@
 ## Nvim VIM - main help file *help.txt*
 
 **Move arround**                                : cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right\
-**Close this window**                           :<space>:q<Enter>\
+**Close this window**                           :&nbsp;:q'<Enter>'\
 **Get out of Vim**                              : :qa!<Enter>, careful, all changes are lost!
 **Jump to a subject**                           : position the cursor on a tag (e.g. |bars|) and hit "CTRL-]".
 **With the mouse**                              : double-click the left mouse button on a tag, e.g. |bars|.
