@@ -29,49 +29,96 @@
 
 #### Quickref - Quick reference guide *quickref.txt* - Overview of the most common commands you will use
 
-| tag  |           subject          |
-|------|----------------------------|
-| Q_ct |     list of help files     |		
-| Q_lr |     motion: Left-right     |
-| Q_ud |      motion: Up-down       |
-| Q_tm |     motion: Text object    |
-| Q_pa |  motion: Pattern searches  |
-| Q_m a|        motion: Marks       |
-| Q_vm |       motion: Various      |
-| Q_ta |     motion: Using tags     |
-| Q_sc |          Scrolling         |
-| Q_in |   insert: Inserting text   |
-| Q_ai |         insert: Keys       |
-| Q_ss |    insert: Special keys    |
-| Q_di |      insert: Digraphs      |
-| Q_si |   insert: Special inserts  |
-| Q_de |    change: Deleting text   |
-| Q_cm | change: Copying and moving |
-| Q_ch |    change: Changing text   |
-| Q_co |       change: Complex      |
-| Q_vi |         Visual mode        |
-| Q_to |        Text objects        |
-| Q_fo |           Folding          |
-| Q_re |     Repeating commands     |
-| Q_km |         Key mapping        |
-| Q_ab |        Abbreviations       |
-| Q_op |           Options          |
-| Q_ur |     Undo/Redo commands     |
-| Q_et |      External commands     |
-| Q_qf |      Quickfix commands     |
-| Q_vc |      Various commands      |
-| Q_ce |  Ex: Command-line editing  |
-| Q_ra |          Ex: Ranges        |
-| Q_ex |   Ex: Special characters   |
-| Q_st |         Starting Vim       |
-| Q_ed |       Editing a file       |
-| Q_fl |   Using the argument list  |
-| Q_wq |    Writing and quitting    |
-| Q_ac |     Automatic commands     |
-| Q_wi |    Multi-window commands   |
-| Q_bu |    Buffer list commands    |
-| Q_sy |     Syntax highlighting    |
-| Q_gu |        GUI commands        |
+##### *quickref* *Contents*
+
+| tag  |           subject          |  tag |          subject         |
+|------+----------------------------+------+--------------------------|
+| Q_ct |     list of help files     | Q_re |    Repeating commands    |
+| Q_lr |     motion: Left-right     | Q_km |        Key mapping       |
+| Q_ud |      motion: Up-down       | Q_ab |       Abbreviations      |
+| Q_tm |     motion: Text object    | Q_op |          Options         |
+| Q_pa |  motion: Pattern searches  | Q_ur |    Undo/Redo commands    |
+| Q_m a|        motion: Marks       | Q_et |     External commands    |
+| Q_vm |       motion: Various      | Q_qf |     Quickfix commands    |
+| Q_ta |     motion: Using tags     | Q_vc |     Various commands     |
+| Q_sc |          Scrolling         | Q_ce | Ex: Command-line editing |
+| Q_in |   insert: Inserting text   | Q_ra |        Ex: Ranges        |
+| Q_ai |         insert: Keys       | Q_ex |  Ex: Special characters  |
+| Q_ss |    insert: Special keys    | Q_st |       Starting Vim       |
+| Q_di |      insert: Digraphs      | Q_ed |      Editing a file      |
+| Q_si |   insert: Special inserts  | Q_fl |  Using the argument list |
+| Q_de |    change: Deleting text   | Q_wq |   Writing and quitting   |
+| Q_cm | change: Copying and moving | Q_ac |    Automatic commands    |
+| Q_ch |    change: Changing text   | Q_wi |   Multi-window commands  |
+| Q_co |       change: Complex      | Q_bu |   Buffer list commands   |
+| Q_vi |         Visual mode        | Q_sy |    Syntax highlighting   |
+| Q_to |        Text objects        | Q_gu |       GUI commands       |
+|      |                            | Q_fo |          Folding         |
+
+##### *Q_lr* Left-right motions
+
+<h>      N    h          left (also: CTRL-H, <BS>, or <Left> key)
+<l>      N    l          right (also: <Space> or <Right> key)
+<0>           0          to first character in the line (also: <Home> key)
+<^>           ^          to first non-blank character in the line
+<$>      N    $          to the next EOL (end of line) position (also: <End> key)
+<g0>          g0         to first character in screen line (differs from "0" when lines wrap)
+<g^>          g^         to first non-blank character in screen line (differs from "^" when lines wrap)
+<g$>     N    g$         to last character in screen line (differs from "$" when lines wrap)
+<gm>          gm         to middle of the screen line
+<gM>          gM         to middle of the line
+<bar>    N    |          to column N (default: 1)
+<f>      N    f{char}    to the Nth occurrence of {char} to the right
+<F>      N    F{char}    to the Nth occurrence of {char} to the left
+<t>      N    t{char}    till before the Nth occurrence of {char} to the right
+<T>      N    T{char}    till before the Nth occurrence of {char} to the left
+<;>      N    ;          repeat the last "f", "F", "t", or "T" N times
+<,>      N    ,          repeat the last "f", "F", "t", or "T" N times in opposite direction
+
+##### *Q_ud* Up-down motion
+
+|k|   N  k   up N lines (also: CTRL-P and <Up>)
+|j|   N  j   down N lines (also: CTRL-J, CTRL-N, <NL>, and <Down>)
+|-|   N  -   up N lines, on the first non-blank character
+|+|   N  +   down N lines, on the first non-blank character (also: CTRL-M and <CR>)
+|_|   N  _   down N-1 lines, on the first non-blank character
+|G|   N  G   goto line N (default: last line), on the first non-blank character
+|gg|  N  gg  goto line N (default: first line), on the first non-blank character
+|N%|  N  %   goto line N percentage down in the file; N must be given, otherwise it is the |%| command
+|gk|  N  gk  up N screen lines (differs from "k" when line wraps)
+|gj|  N  gj  down N screen lines (differs from "j" when line wraps)
+
+##### *Q_tm* Text object motions
+
+|w|      N  w   N words forward
+|W|      N  W   N blank-separated |WORD|s forward
+|e|      N  e   forward to the end of the Nth word
+|E|      N  E   forward to the end of the Nth blank-separated |WORD|
+|b|      N  b   N words backward
+|B|      N  B   N blank-separated |WORD|s backward
+|ge|     N  ge  backward to the end of the Nth word
+|gE|     N  gE  backward to the end of the Nth blank-separated |WORD|
+
+|)|      N  )   N sentences forward
+|(|      N  (   N sentences backward
+|}|      N  }   N paragraphs forward
+|{|      N  {   N paragraphs backward
+|]]|     N  ]]  N sections forward, at start of section
+|[[|     N  [[  N sections backward, at start of section
+|][|     N  ][  N sections forward, at end of section
+|[]|     N  []  N sections backward, at end of section
+|[(|     N  [(  N times back to unclosed '('
+|[{|     N  [{  N times back to unclosed '{'
+|[m|     N  [m  N times back to start of method (for Java)
+|[M|     N  [M  N times back to end of method (for Java)
+|])|     N  ])  N times forward to unclosed ')'
+|]}|     N  ]}  N times forward to unclosed '}'
+|]m|     N  ]m  N times forward to start of method (for Java)
+|]M|     N  ]M  N times forward to end of method (for Java)
+|[#|     N  [#  N times back to unclosed "#if" or "#else"
+|]#|     N  ]#  N times forward to unclosed "#else" or "#endif"
+|[star|  N  [*  N times back to start of comment "/*"
+|]star|  N  ]*  N times forward to end of comment "*/"
 
 
 
