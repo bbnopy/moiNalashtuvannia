@@ -3,13 +3,13 @@
 ## Nvim VIM - main help file *help.txt*
 
 **Move arround**                                : cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right\
-**Close this window**                           :&nbsp;:q'<Enter>'\
-**Get out of Vim**                              : :qa!<Enter>, careful, all changes are lost!
-**Jump to a subject**                           : position the cursor on a tag (e.g. |bars|) and hit "CTRL-]".
-**With the mouse**                              : double-click the left mouse button on a tag, e.g. |bars|.
-**Jump back**                                   : "CTRL-O", repeat to go further back
-**Get specific help**                           : it is possible to go directly to whatever you want help on, by giving an argument to the |:help| command
-**Prepend something to specify the context**    : *help-context*
+**Close this window**                           :&nbsp;:q&gt;Enter&lt;\
+**Get out of Vim**                              : :qa!&gt;Enter&lt;, careful, all changes are lost!\
+**Jump to a subject**                           : position the cursor on a tag (e.g. |bars|) and hit &gt;C-]&lt;\
+**With the mouse**                              : double-click the left mouse button on a tag, e.g. |bars|\
+**Jump back**                                   : &gt;C-o&lt;, repeat to go further back\
+**Get specific help**                           : it is possible to go directly to whatever you want help on, by giving an argument to the |:help| command\
+**Prepend something to specify the context**    : *help-context*\
 
 |         WHAT         | PREPEND |      EXAMPLE      |
 |----------------------|---------|-------------------|
