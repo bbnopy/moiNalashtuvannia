@@ -32,7 +32,7 @@
 ##### *quickref* *Contents*
 
 | tag  |           subject          |  tag |          subject         |
-|------+----------------------------+------+--------------------------|
+|------|----------------------------|------|--------------------------|
 | Q_ct |     list of help files     | Q_re |    Repeating commands    |
 | Q_lr |     motion: Left-right     | Q_km |        Key mapping       |
 | Q_ud |      motion: Up-down       | Q_ab |       Abbreviations      |
