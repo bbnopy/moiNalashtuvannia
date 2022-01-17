@@ -1,125 +1,148 @@
 # VI VIM NVIM
 
-## Nvim VIM - main help file *help.txt*
+## Nvim VIM - main help file &ast;help.txt&ast;
 
 **Move arround**                                : cursor keys, or "h" to go left, "j" to go down, "k" to go up, "l" to go right\
-**Close this window**                           :&nbsp;:q&gt;Enter&lt;\
-**Get out of Vim**                              : :qa!&gt;Enter&lt;, careful, all changes are lost!\
-**Jump to a subject**                           : position the cursor on a tag (e.g. |bars|) and hit &gt;C-]&lt;\
-**With the mouse**                              : double-click the left mouse button on a tag, e.g. |bars|\
-**Jump back**                                   : &gt;C-o&lt;, repeat to go further back\
-**Get specific help**                           : it is possible to go directly to whatever you want help on, by giving an argument to the |:help| command\
-**Prepend something to specify the context**    : *help-context*\
+**Close this window**                           : &colon;q&lt;Enter&gt;\
+**Get out of Vim**                              : &colon;qa!&lt;Enter&gt;, careful, all changes are lost!\
+**Jump to a subject**                           : position the cursor on a tag (e.g. &vert;bars&vert;) and hit&lt;C-&rbrack;&gt;\
+**With the mouse**                              : double-click the left mouse button on a tag, e.g. &vert;bars&vert;\
+**Jump back**                                   : &lt;C-o&gt;, repeat to go further back\
+**Get specific help**                           : it is possible to go directly to whatever you want help on, by giving an argument to the &vert;&colon;help&vert; command\
+**Prepend something to specify the context**    : &ast;help-context&ast;
 
-|         WHAT         | PREPEND |      EXAMPLE      |
-|----------------------|---------|-------------------|
-| Normal mode command  |         | :help x           |
-| Visual mode command  |    v_   | :help v_u         |
-| Insert mode command  |    i_   | :help i_<Esc>     |
-| Command-line command |    :    | :help :quit       |
-| Command-line editing |    c_   | :help c_<Del>     |
-| Vim command argument |    -    | :help -r          |
-| Option               |    ''   | :help 'textwidth' |
-| Regular expression   |    /    | :help /[          |
+|         WHAT         |      PREPEND     |          EXAMPLE          |
+|----------------------|------------------|---------------------------|
+| Normal mode command  |                  | &colon;help x             |
+| Visual mode command  | v_               | &colon;help v_u           |
+| Insert mode command  | i_               | &colon;help i_&lt;Esc&gt; |
+| Command-line command | &colon;          | &colon;help &colon;quit   |
+| Command-line editing | c_               | &colon;help c_&lt;Del&gt; |
+| Vim command argument | &lowbar;         | &colon;help -r            |
+| Option               | &prime;&prime;   | &colon;help 'textwidth'   |
+| Regular expression   | &sol;            | &colon;help &sol;&lbrack; |
 
-**Search for help**                              : Type ":help word", then hit CTRL-D to see matching help entries for "word".
-**Getting started**                              : Do the Vim tutor, a 30-minute interactive course for the basic commands, see |vimtutor|.
+**Search for help**                              : Type "&colon;help word", then hit &lt;C-d&gt; to see matching help entries for "word"\
+**Getting started**                              : Do the Vim tutor, a 30-minute interactive course for the basic commands, see &vert;vimtutor&vert;
 
-### BASIC: *doc-file-list* *Q_ct*
+### BASIC: &ast;doc-file-list&ast; &ast;Q_ct&ast;
 
-#### Quickref - Quick reference guide *quickref.txt* - Overview of the most common commands you will use
+#### Quickref - Quick reference guide &ast;quickref.txt&ast; - Overview of the most common commands you will use
 
-##### *quickref* *Contents*
+##### &ast;quickref&ast; &ast;Contents&ast;
 
-| tag  |           subject          |  tag |          subject         |
+|  tag |           subject          |  tag |          subject         |
 |------|----------------------------|------|--------------------------|
-| Q_ct |     list of help files     | Q_re |    Repeating commands    |
-| Q_lr |     motion: Left-right     | Q_km |        Key mapping       |
-| Q_ud |      motion: Up-down       | Q_ab |       Abbreviations      |
-| Q_tm |     motion: Text object    | Q_op |          Options         |
-| Q_pa |  motion: Pattern searches  | Q_ur |    Undo/Redo commands    |
-| Q_m a|        motion: Marks       | Q_et |     External commands    |
-| Q_vm |       motion: Various      | Q_qf |     Quickfix commands    |
-| Q_ta |     motion: Using tags     | Q_vc |     Various commands     |
-| Q_sc |          Scrolling         | Q_ce | Ex: Command-line editing |
-| Q_in |   insert: Inserting text   | Q_ra |        Ex: Ranges        |
-| Q_ai |         insert: Keys       | Q_ex |  Ex: Special characters  |
-| Q_ss |    insert: Special keys    | Q_st |       Starting Vim       |
-| Q_di |      insert: Digraphs      | Q_ed |      Editing a file      |
-| Q_si |   insert: Special inserts  | Q_fl |  Using the argument list |
-| Q_de |    change: Deleting text   | Q_wq |   Writing and quitting   |
-| Q_cm | change: Copying and moving | Q_ac |    Automatic commands    |
-| Q_ch |    change: Changing text   | Q_wi |   Multi-window commands  |
-| Q_co |       change: Complex      | Q_bu |   Buffer list commands   |
-| Q_vi |         Visual mode        | Q_sy |    Syntax highlighting   |
-| Q_to |        Text objects        | Q_gu |       GUI commands       |
-|      |                            | Q_fo |          Folding         |
+| Q_ct | list of help files         | Q_km | Key mapping              |
+| Q_lr | motion: Left-right         | Q_ab | Abbreviations            |
+| Q_ud | motion: Up-down            | Q_op | Options                  |
+| Q_tm | motion: Text object        | Q_ur | Undo/Redo commands       |
+| Q_pa | motion: Pattern searches   | Q_et | External commands        |
+| Q_m a| motion: Marks              | Q_qf | Quickfix commands        |
+| Q_vm | motion: Various            | Q_vc | Various commands         |
+| Q_ta | motion: Using tags         | Q_ce | Ex: Command-line editing |
+| Q_sc | Scrolling                  | Q_ra | Ex: Ranges               |
+| Q_in | insert: Inserting text     | Q_ex | Ex: Special characters   |
+| Q_ai | insert: Keys               | Q_st | Starting Vim             |
+| Q_ss | insert: Special keys       | Q_ed | Editing a file           |
+| Q_di | insert: Digraphs           | Q_fl | Using the argument list  |
+| Q_si | insert: Special inserts    | Q_wq | Writing and quitting     |
+| Q_de | change: Deleting text      | Q_ac | Automatic commands       |
+| Q_cm | change: Copying and moving | Q_wi | Multi-window commands    |
+| Q_ch | change: Changing text      | Q_bu | Buffer list commands     |
+| Q_co | change: Complex            | Q_sy | Syntax highlighting      |
+| Q_vi | Visual mode                | Q_gu | GUI commands             |
+| Q_to | Text objects               | Q_fo | Folding                  |
+| Q_re | Repeating commands         |      |                          |
 
-##### *Q_lr* Left-right motions
+##### &ast;Q_lr&ast; Left-right motions
 
-<h>      N    h          left (also: CTRL-H, <BS>, or <Left> key)
-<l>      N    l          right (also: <Space> or <Right> key)
-<0>           0          to first character in the line (also: <Home> key)
-<^>           ^          to first non-blank character in the line
-<$>      N    $          to the next EOL (end of line) position (also: <End> key)
-<g0>          g0         to first character in screen line (differs from "0" when lines wrap)
-<g^>          g^         to first non-blank character in screen line (differs from "^" when lines wrap)
-<g$>     N    g$         to last character in screen line (differs from "$" when lines wrap)
-<gm>          gm         to middle of the screen line
-<gM>          gM         to middle of the line
-<bar>    N    |          to column N (default: 1)
-<f>      N    f{char}    to the Nth occurrence of {char} to the right
-<F>      N    F{char}    to the Nth occurrence of {char} to the left
-<t>      N    t{char}    till before the Nth occurrence of {char} to the right
-<T>      N    T{char}    till before the Nth occurrence of {char} to the left
-<;>      N    ;          repeat the last "f", "F", "t", or "T" N times
-<,>      N    ,          repeat the last "f", "F", "t", or "T" N times in opposite direction
+&vert;h&vert;             N    h            left (also: &lt;C-h&gt;, &lt;BS&gt;, or &lt;Left&gt; key)\
+&vert;l&vert;             N    l            right (also: &lt;Space&lt; or &lt;Right&gt; key)\
+&vert;0&vert;                  0            to first character in the line (also: &lt;Home&gt; key)\
+&vert;&Hat;&vert;              &Hat;        to first non-blank character in the line\
+&vert;&dollar;&#124;      N    &dollar;     to the next EOL (end of line) position (also: &lt;End&gt; key)\
+&vert;g0&vert;                 g0           to first character in screen line (differs from "0" when lines wrap)\
+&vert;g&Hat;&vert;             g&Hat;       to first non-blank character in screen line (differs from "&Hat;" when lines wrap)\
+&vert;g&dollar;&#124;     N    g&dollar;    to last character in screen line (differs from "&dollar;" when lines wrap)\
+&vert;gm&vert;              gm         to middle of the screen line\
+&vert;gM&vert;              gM         to middle of the line\
+&vert;bar&vert;        N    &vert;     to column N (default: 1)\
+&vert;f&vert;          N    f{char}    to the Nth occurrence of {char} to the right\
+&vert;F&vert;          N    F{char}    to the Nth occurrence of {char} to the left\
+&vert;t&vert;          N    t{char}    till before the Nth occurrence of {char} to the right\
+&vert;T&vert;          N    T{char}    till before the Nth occurrence of {char} to the left\
+&vert;&semi;&vert;     N    &semi;     repeat the last "f", "F", "t", or "T" N times\
+&vert;&comma;&vert;    N    &comma;    repeat the last "f", "F", "t", or "T" N times in opposite direction
 
-##### *Q_ud* Up-down motion
+##### &ast;Q_ud&ast; Up-down motion
 
-|k|   N  k   up N lines (also: CTRL-P and <Up>)
-|j|   N  j   down N lines (also: CTRL-J, CTRL-N, <NL>, and <Down>)
-|-|   N  -   up N lines, on the first non-blank character
-|+|   N  +   down N lines, on the first non-blank character (also: CTRL-M and <CR>)
-|_|   N  _   down N-1 lines, on the first non-blank character
-|G|   N  G   goto line N (default: last line), on the first non-blank character
-|gg|  N  gg  goto line N (default: first line), on the first non-blank character
-|N%|  N  %   goto line N percentage down in the file; N must be given, otherwise it is the |%| command
-|gk|  N  gk  up N screen lines (differs from "k" when line wraps)
-|gj|  N  gj  down N screen lines (differs from "j" when line wraps)
+&vert;k&vert;            N    k           up N lines (also: &lt;C-p&gt; and &lt;Up&gt;)\
+&vert;j&vert;            N    j           down N lines (also: &lt;C-j&gt;, &lt;C-n&gt;, &lt;NL&gt;, and &lt;Down&gt;)\
+&vert;&minus;&vert;      N    &minus;     up N lines, on the first non-blank character\
+&vert;&plus;&vert;       N    &plus;      down N lines, on the first non-blank character (also: &lt;C-m&gt; and &lt;CR&gt;)\
+&vert;&lowbar;&#124;     N    &lowbar;    down N-1 lines, on the first non-blank character\
+&vert;G&vert;            N    G           goto line N (default: last line), on the first non-blank character\
+&vert;gg&vert;           N    gg          goto line N (default: first line), on the first non-blank character\
+&vert;N&percnt;&vert;    N    &percnt;    goto line N percentage down in the file; N must be given, otherwise it is the &vert;&percnt;&vert; command\
+&vert;gk&vert;           N    gk          up N screen lines (differs from "k" when line wraps)\
+&vert;gj&vert;           N    gj         down N screen lines (differs from "j" when line wraps)
 
-##### *Q_tm* Text object motions
+##### &ast;Q_tm&ast; Text object motions
 
-|w|      N  w   N words forward
-|W|      N  W   N blank-separated |WORD|s forward
-|e|      N  e   forward to the end of the Nth word
-|E|      N  E   forward to the end of the Nth blank-separated |WORD|
-|b|      N  b   N words backward
-|B|      N  B   N blank-separated |WORD|s backward
-|ge|     N  ge  backward to the end of the Nth word
-|gE|     N  gE  backward to the end of the Nth blank-separated |WORD|
+&vert;w&vert;        N    w          N words forward\
+&vert;W&vert;        N    W          N blank-separated &vert;WORD&vert;s forward\
+&vert;e&vert;        N    e          forward to the end of the Nth word\
+&vert;E&vert;        N    E          forward to the end of the Nth blank-separated &vert;WORD&vert;\
+&vert;b&vert;        N    b          N words backward\
+&vert;B&vert;        N    B          N blank-separated &vert;WORD&vert;s backward\
+&vert;ge&vert;       N    ge         backward to the end of the Nth word\
+&vert;gE&vert;       N    gE         backward to the end of the Nth blank-separated &vert;WORD&vert;\
+\
+&vert;&rpar;&vert;              N    &rpar;              N sentences forward\
+&vert;&lpar;&vert;              N    &lpar;              N sentences backward\
+&vert;&rbrace;&vert;            N    &rbrace;            N paragraphs forward\
+&vert;&lbrace;&vert;            N    &lbrace;            N paragraphs backward\
+&vert;&rbrack;&rbrack;&vert;    N    &rbrack;&rbrack;    N sections forward, at start of section\
+&vert;&lbrack;&lbrack;&vert;    N    &lbrack;&lbrack;    N sections backward, at start of section\
+&vert;&rbrack;&lbrack;&vert;    N    &rbrack;&lbrack;    N sections forward, at end of section\
+&vert;&lbrack;&rbrack;&vert;    N    &lbrack;&rbrack;    N sections backward, at end of section\
+&vert;&lbrack;&lpar;&vert;      N    &lbrack;&lpar;      N times back to unclosed '&lpar;'\
+&vert;&lbrack;&lbrace;&vert;    N    &lbrack;&lbrace;    N times back to unclosed '&lbrace;'\
+&vert;&lbrack;m&vert;           N    &lbrack;m           N times back to start of method (for Java)\
+&vert;&lbrack;M&vert;           N    &lbrack;M           N times back to end of method (for Java)\
+&vert;&rbrack;&rpar;&vert;      N    &rbrack;&rpar;      N times forward to unclosed '&rpar;'\
+&vert;&rbrack;&rbrace;&vert;    N    &rbrack;&rbrace;    N times forward to unclosed '&rbrace;'\
+&vert;&rbrack;m&vert;           N    &rbrack;m           N times forward to start of method (for Java)\
+&vert;&rbrack;M&vert;           N    &rbrack;M           N times forward to end of method (for Java)\
+&vert;&lbrack;&num;&vert;       N    &lbrack;&num;       N times back to unclosed "&num;if" or "&num;else"\
+&vert;&rbrack;&num;&vert;       N    &rbrack;&num;       N times forward to unclosed "&num;else" or "&num;endif"\
+&vert;&lbrack;star&vert;        N    &lbrack;&ast;       N times back to start of comment "&sol;&ast;"\
+&vert;&rbrack;star&vert;        N    &rbrack;&ast;       N times forward to end of comment "&ast;&sol;"
 
-|)|      N  )   N sentences forward
-|(|      N  (   N sentences backward
-|}|      N  }   N paragraphs forward
-|{|      N  {   N paragraphs backward
-|]]|     N  ]]  N sections forward, at start of section
-|[[|     N  [[  N sections backward, at start of section
-|][|     N  ][  N sections forward, at end of section
-|[]|     N  []  N sections backward, at end of section
-|[(|     N  [(  N times back to unclosed '('
-|[{|     N  [{  N times back to unclosed '{'
-|[m|     N  [m  N times back to start of method (for Java)
-|[M|     N  [M  N times back to end of method (for Java)
-|])|     N  ])  N times forward to unclosed ')'
-|]}|     N  ]}  N times forward to unclosed '}'
-|]m|     N  ]m  N times forward to start of method (for Java)
-|]M|     N  ]M  N times forward to end of method (for Java)
-|[#|     N  [#  N times back to unclosed "#if" or "#else"
-|]#|     N  ]#  N times forward to unclosed "#else" or "#endif"
-|[star|  N  [*  N times back to start of comment "/*"
-|]star|  N  ]*  N times forward to end of comment "*/"
+##### &ast;Q_pa&ast; Pattern searches
 
+&vert;&sol;&vert;      N    &sol;{pattern}[&sol;[offset]]&lt;CR&gt;        search forward for the Nth occurrence of {pattern}\
+&vert;&quest;&vert;    N    &quest;{pattern}[&quest;[offset]]&lt;CR&gt;    seacrh backward for the Nth occurrencr of {pattern}\
+&vert;&sol;&lt;CR&gt;&vert;      N    &sol;&lt;CR&gt;      repeat last search, in the forward direction\
+&vert;&quest;&lt;CR&gt;&vert;    N    &quest;&lt;CR&gt;    repeat last search, in the backward direction\
+&vert;n&vert;    N    n    repeat last search\
+&vert;N&vert;    N    N    repeat last search, in the opposite direction\
+&vert;star&vert;    N    &ast;    search forward for the indentifier under the cursor\
+&vert;&num;&vert;    N    &num;    search backward for the identifier under the cursor\
+&vert;gstar&vert;    N    g&ast;    like "&ast;", but also find partial matches\
+&vert;g&num;&vert;    N    g&num;    like "&num;", but also find partial matches\
+&vert;gd&vert;             gd    goto local declaration of identifier under the cursor\
+&vert;gD&vert;             gD    goto global declaration of identifier under the cursor\
+\
+&vert;pattern&vert;    special characters in search patterns
+
+|            meaning           |    magic   |     nomagic    |
+|------------------------------|------------|----------------|
+| matches any single character | &period;   | &bsol;&period; |
+| matches start of line        | &Hat;      | &Hat;          |
+| matches &lt;EOL&gt;          | &dollar;   | &dollar;       |
+| matches start of word        | &bsol;&lt; | &bsol;&lt;     |
 
 
 |tutor|                                           : 30-minute interactive course for beginners
