@@ -57,23 +57,23 @@
 
 ##### &ast;Q_lr&ast; Left-right motions
 
-&vert;h&vert;             N    h            left (also: &lt;C-h&gt;, &lt;BS&gt;, or &lt;Left&gt; key)\
-&vert;l&vert;             N    l            right (also: &lt;Space&lt; or &lt;Right&gt; key)\
-&vert;0&vert;                  0            to first character in the line (also: &lt;Home&gt; key)\
-&vert;&Hat;&vert;              &Hat;        to first non-blank character in the line\
-&vert;&dollar;&#124;      N    &dollar;     to the next EOL (end of line) position (also: &lt;End&gt; key)\
-&vert;g0&vert;                 g0           to first character in screen line (differs from "0" when lines wrap)\
-&vert;g&Hat;&vert;             g&Hat;       to first non-blank character in screen line (differs from "&Hat;" when lines wrap)\
-&vert;g&dollar;&#124;     N    g&dollar;    to last character in screen line (differs from "&dollar;" when lines wrap)\
-&vert;gm&vert;              gm         to middle of the screen line\
-&vert;gM&vert;              gM         to middle of the line\
-&vert;bar&vert;        N    &vert;     to column N (default: 1)\
-&vert;f&vert;          N    f{char}    to the Nth occurrence of {char} to the right\
-&vert;F&vert;          N    F{char}    to the Nth occurrence of {char} to the left\
-&vert;t&vert;          N    t{char}    till before the Nth occurrence of {char} to the right\
-&vert;T&vert;          N    T{char}    till before the Nth occurrence of {char} to the left\
-&vert;&semi;&vert;     N    &semi;     repeat the last "f", "F", "t", or "T" N times\
-&vert;&comma;&vert;    N    &comma;    repeat the last "f", "F", "t", or "T" N times in opposite direction
+&vert;h&vert;            N    h            left (also: &lt;C-h&gt;, &lt;BS&gt;, or &lt;Left&gt; key)\
+&vert;l&vert;            N    l            right (also: &lt;Space&lt; or &lt;Right&gt; key)\
+&vert;0&vert;                 0            to first character in the line (also: &lt;Home&gt; key)\
+&vert;&Hat;&vert;             &Hat;        to first non-blank character in the line\
+&vert;&dollar;&vert;     N    &dollar;     to the next EOL (end of line) position (also: &lt;End&gt; key)\
+&vert;g0&vert;                g0           to first character in screen line (differs from "0" when lines wrap)\
+&vert;g&Hat;&vert;            g&Hat;       to first non-blank character in screen line (differs from "&Hat;" when lines wrap)\
+&vert;g&dollar;&vert;    N    g&dollar;    to last character in screen line (differs from "&dollar;" when lines wrap)\
+&vert;gm&vert;                gm         to middle of the screen line\
+&vert;gM&vert;                gM         to middle of the line\
+&vert;bar&vert;          N    &vert;     to column N (default: 1)\
+&vert;f&vert;            N    f{char}    to the Nth occurrence of {char} to the right\
+&vert;F&vert;            N    F{char}    to the Nth occurrence of {char} to the left\
+&vert;t&vert;            N    t{char}    till before the Nth occurrence of {char} to the right\
+&vert;T&vert;            N    T{char}    till before the Nth occurrence of {char} to the left\
+&vert;&semi;&vert;       N    &semi;     repeat the last "f", "F", "t", or "T" N times\
+&vert;&comma;&vert;      N    &comma;    repeat the last "f", "F", "t", or "T" N times in opposite direction
 
 ##### &ast;Q_ud&ast; Up-down motion
 
@@ -81,7 +81,7 @@
 &vert;j&vert;            N    j           down N lines (also: &lt;C-j&gt;, &lt;C-n&gt;, &lt;NL&gt;, and &lt;Down&gt;)\
 &vert;&minus;&vert;      N    &minus;     up N lines, on the first non-blank character\
 &vert;&plus;&vert;       N    &plus;      down N lines, on the first non-blank character (also: &lt;C-m&gt; and &lt;CR&gt;)\
-&vert;&lowbar;&#124;     N    &lowbar;    down N-1 lines, on the first non-blank character\
+&vert;&lowbar;&vert;     N    &lowbar;    down N-1 lines, on the first non-blank character\
 &vert;G&vert;            N    G           goto line N (default: last line), on the first non-blank character\
 &vert;gg&vert;           N    gg          goto line N (default: first line), on the first non-blank character\
 &vert;N&percnt;&vert;    N    &percnt;    goto line N percentage down in the file; N must be given, otherwise it is the &vert;&percnt;&vert; command\
@@ -122,27 +122,100 @@
 
 ##### &ast;Q_pa&ast; Pattern searches
 
-&vert;&sol;&vert;      N    &sol;{pattern}[&sol;[offset]]&lt;CR&gt;        search forward for the Nth occurrence of {pattern}\
-&vert;&quest;&vert;    N    &quest;{pattern}[&quest;[offset]]&lt;CR&gt;    seacrh backward for the Nth occurrencr of {pattern}\
+&vert;&sol;&vert;                N    &sol;{pattern}[&sol;[offset]]&lt;CR&gt;        search forward for the Nth occurrence of {pattern}\
+&vert;&quest;&vert;              N    &quest;{pattern}[&quest;[offset]]&lt;CR&gt;    seacrh backward for the Nth occurrencr of {pattern}\
 &vert;&sol;&lt;CR&gt;&vert;      N    &sol;&lt;CR&gt;      repeat last search, in the forward direction\
 &vert;&quest;&lt;CR&gt;&vert;    N    &quest;&lt;CR&gt;    repeat last search, in the backward direction\
-&vert;n&vert;    N    n    repeat last search\
-&vert;N&vert;    N    N    repeat last search, in the opposite direction\
-&vert;star&vert;    N    &ast;    search forward for the indentifier under the cursor\
-&vert;&num;&vert;    N    &num;    search backward for the identifier under the cursor\
-&vert;gstar&vert;    N    g&ast;    like "&ast;", but also find partial matches\
-&vert;g&num;&vert;    N    g&num;    like "&num;", but also find partial matches\
-&vert;gd&vert;             gd    goto local declaration of identifier under the cursor\
-&vert;gD&vert;             gD    goto global declaration of identifier under the cursor\
+&vert;n&vert;                    N    n    repeat last search\
+&vert;N&vert;                    N    N    repeat last search, in the opposite direction\
+&vert;star&vert;                 N    &ast;    search forward for the indentifier under the cursor\
+&vert;&num;&vert;                N    &num;    search backward for the identifier under the cursor\
+&vert;gstar&vert;                N    g&ast;    like "&ast;", but also find partial matches\
+&vert;g&num;&vert;               N    g&num;    like "&num;", but also find partial matches\
+&vert;gd&vert;                        gd    goto local declaration of identifier under the cursor\
+&vert;gD&vert;                        gD    goto global declaration of identifier under the cursor\
 \
 &vert;pattern&vert;    special characters in search patterns
 
-|            meaning           |    magic   |     nomagic    |
-|------------------------------|------------|----------------|
-| matches any single character | &period;   | &bsol;&period; |
-| matches start of line        | &Hat;      | &Hat;          |
-| matches &lt;EOL&gt;          | &dollar;   | &dollar;       |
-| matches start of word        | &bsol;&lt; | &bsol;&lt;     |
+|                  meaning                |            magic         |              nomagic           |
+|-----------------------------------------|--------------------------|--------------------------------|
+| matches any single character            | &period;                  | &bsol;&period;                 |
+| matches start of line                   | &Hat;                     | &Hat;                          |
+| matches &lt;EOL&gt;                     | &dollar;                  | &dollar;                       |
+| matches start of word                   | &bsol;&lt;                | &bsol;&lt;                     |
+| matches end of word                     | &bsol;&gt;                | &bsol;&gt;                     |
+| matches a single char from the range    | &lbrack;a-z&rbrack;       | &bsol;&lbrack;a-z&rbrack;      |
+| matches a single char not in the range  | &lbrack;&Hat;a-z&rbrack;  | &bsol;&lbrack;&Hat;a-z&rbrack; |
+| matches an identifier char              | &bsol;i                   | &bsol;i                        |
+| idem but excluding digits               | &bsol;I                   | &bsol;I                        |
+| matches a keyword character             | &bsol;k                   | &bsol;k                        |
+| idem but excluding digits               | &bsol;K                   | &bsol;K                        |
+| matches a file name character           | &bsol;f                   | &bsol;f                        |
+| idem but excluding digits               | &bsol;F                   | &bsol;F                        |
+| matches a printable character           | &bsol;p                   | &bsol;p                        |
+| idem but excluding digits               | &bsol;P                   | &bsol;P                        |
+| matches a white space character         | &bsol;s                   | &bsol;s                        |
+| matches a non-white space character     | &bsol;S                   | &bsol;S                        |
+\
+| matches &lt;Esc&gt;                     | &bsol;e                   | &bsol;e                        |
+| matches &lt;Tab&gt;                     | &bsol;t                   | &bsol;t                        |
+| matches &lt;CR&gt;                      | &bsol;r                   | &bsol;r                        |
+| matches &lt;BS&gt;                      | &bsol;b                   | &bsol;b                        |
+\
+| matches 0 or more of the preceding atom | &ast;                     | &bsol;&ast;                    |
+| matches 1 or more of the preceding atom | &bsol;&plus;              | &bsol;&plus;                   |
+| matches 0 or 1 of the preceding atom    | &bsol;&equals;            | &bsol;&equals;                 |
+| matches 2 to 5 of the preceding atom    | &bsol;&lbrace;2,5&lbrace; | &bsol;&lbrace;2,5&rbrace;      |
+| separates two alternatives              | &bsol;&vert;              | &bsol;&vert;                   |
+| group a pattern into an atom            | &bsol;&lpar;&bsol;&rpar;  | &bsol;&lpar;&bsol;&rpar;       |
+\
+&vert;search-offset&vert;    Offsets allowed after search command\
+\
+&lbrack;num&rbrack;            &lbrack;num&rbrack;    lines downloads, in column 1\
+&plus;&lbrack;num&rbrack;      &lbrack;num&rbrack;    lines downloads incolumn 1\
+&minus;&lbrack;num&rbrack;     &lbrack;num&lbrack;    lines upwards, in column 1\
+e&lbrack;&plus;num&rbrack;     &lbrack;num&rbrack;    characters to the right of the end of the match\
+e&lbrack;&minus;num&rbrack;    &lbrack;num&rbrack;    characters to the left of the end of the match\
+s&lbrack;&plus;num&rbrack;     &lbrack;num&rbrack;    characters to the right of the start of the match\
+s&lbrack;&minus;num&rbrack;    &lbrack;num&rbrack;    characters to the left of the start of the match\
+b&lbrack;&plus;num&rbrack;     &lbrack;num&rbrack;    identical to s&lbrack;&plus;num&rbrack; above (mnemonic: begin)\
+b&lbrack;&minus;num&rbrack;    &lbrack;num&rbrack;    identical to s&lbrack;&minus;num&rbrack; above (mnemonic: begin)\
+&semi;&lbrace;search-command&rbrace;     execute &lbrace;search-command&rbrace; next\
+\
+##### &ast;Q_ma&ast; Marks and motions
+
+&vert;m&vert;                  m&lbrace;a-zA-Z&rbrace;                                                                             mark current position with mark &lbrace;a-zA-Z&rbrace;\
+&vert;&grave;a&vert;           &grave;&lbrace;a-z&rbrace;                                                                           go to mark {a-z} within current file\
+&vert;&grave;A&vert;           &grave;&lbrace;A-Z&rbrace;                                                                           go to mark &lbrace;A-Z&rbrace; in any file\
+&vert;&grave;0&vert;           &grave;&lbrace;0-9&rbrace;                                                                           go to the position where Vim was previously exited\
+&vert;&grave;&grave;&vert;     &grave;&grave;                                                                                       go to the position before the last jump\
+&vert;&grave;quote&vert;       &grave;&quot;                                                                                        go to the position when last editing this file\
+&vert;&grave;&lbrack;&vert;    &grave;&lbrack;                                                                                      go to the start of the previously operated or put text\
+&vert;&grave;&rbrack;&vert;    &grave;&rbrack;                                                                                      go to the end of the previously operated or put text\
+&vert;&grave;&lt;&vert;        &grave;&lt;                                                                                          go to the end of the previously operated or put text\
+&vert;&grave;&gt;&vert;        &grave;&gt;                                                                                          go to the end of the (previous) Visual area\
+&vert;&grave;&period;&vert;    &grave;&period;                                                                                      go to the end of the (previous) Visual area\
+&vert;&apos;&vert;             &grave;&lbrace;a-zA-Z0-9&lbrack;&rbrack;&apos;&quot;&apos;&lt;&gt;&period;&rbrace;                   same as &grave;, but on the first non-blank in the line\
+&vert;&colon;marks&vert;       &colon;marks                                                                                         print the active marks\
+&vert;&lt;C-o&gt;&vert;        N                                                                                     &lt;C-o&gt;    go to Nth older position in jump list\
+&vert;&lt;C-i&gt;&vert;        N                                                                                     &lt;C-i&gt;    go to Nth newer position in jump list\
+&vert;&colon;ju&vert;	       &colon;ju&lbrack;mps&rbrack;                                                                         print the jump list\
+\
+##### &aps;Q_vm&asp; Various motions
+
+&vert;&percnt;&vert;                                                                            &percnt;    find the next brace, bracket, comment, or "&num;if"&sol; "&num;else"&sol;"&num;endif" in this line and go to its match\
+&vert;H&vert;           N                                                                       H           go to the Nth line in the window, on the first non-blank\
+&vert;M&vert;                                                                                   M           go to the middle line in the window, on the first non-blank\
+&vert;L&vert;           N                                                                       L           go to the Nth line from the bottom, on the first non-blank\
+&vert;go&vert;          N                                                                       go          go to Nth byte in the buffer\
+&vert;&colon;go&vert;   &colon;&lbrack;range&rbrack;go&lbrack;to&rbrack; &lbrack;off&rbrack;                go to &lbrack;off&rbrack; byte in the buffer\
+\
+##### &asp;Q_ta&asp; Using tags
+
+&vert;&colon;ta&vert;    &colon;ta&lbrack;g&rbrack;&lbrack;!&rbrack; &lbrace;tag&rbrace;        jump to tag &lbrace;tag&rbrace;\
+&vert;&colon;ta&vert;    &colon;&lbrack;count&rbrack;ta&lbrack;g&rbrack;&lbrack;!&rbrack;       jump to &lbrack;count&rbrack;'th newer tag in tag list\
+&vert;&lt;C-j&gt;        &lt;C-j&gt;                                                            jump to the tag under cursor, unless changes have been made\
+&vert;&colon;ts&vert;    &colon;ts&lbrack;elect&rbrack;&lbrack;!&rbrack; &lbrack;tag&rbrack;    list matching tags and select one to jump to\
 
 
 |tutor|                                           : 30-minute interactive course for beginners
