@@ -212,11 +212,82 @@ b&lbrack;&minus;num&rbrack;    &lbrack;num&rbrack;    identical to s&lbrack;&min
 \
 ##### &asp;Q_ta&asp; Using tags
 
-&vert;&colon;ta&vert;    &colon;ta&lbrack;g&rbrack;&lbrack;!&rbrack; &lbrace;tag&rbrace;        jump to tag &lbrace;tag&rbrace;\
-&vert;&colon;ta&vert;    &colon;&lbrack;count&rbrack;ta&lbrack;g&rbrack;&lbrack;!&rbrack;       jump to &lbrack;count&rbrack;'th newer tag in tag list\
-&vert;&lt;C-j&gt;        &lt;C-j&gt;                                                            jump to the tag under cursor, unless changes have been made\
-&vert;&colon;ts&vert;    &colon;ts&lbrack;elect&rbrack;&lbrack;!&rbrack; &lbrack;tag&rbrack;    list matching tags and select one to jump to\
+&vert;&colon;ta&vert;           &colon;ta&lbrack;g&rbrack;&lbrack;!&rbrack; &lbrace;tag&rbrace;                                 jump to tag &lbrace;tag&rbrace;\
+&vert;&colon;ta&vert;           &colon;&lbrack;count&rbrack;ta&lbrack;g&rbrack;&lbrack;!&rbrack;                                jump to &lbrack;count&rbrack;'th newer tag in tag list\
+&vert;&lt;C-j&gt;                                                                                       &lt;C-j&gt;             jump to the tag under cursor, unless changes have been made\
+&vert;&colon;ts&vert;           &colon;ts&lbrack;elect&rbrack;&lbrack;!&rbrack; &lbrack;tag&rbrack;                             list matching tags and select one to jump to\
+&vert;&colon;tjump&vert;        &colon;tj&lbrack;ump&rbrack;&lbrack;!&rbrack; &lbrack;tag&rbrack;                               jump to tag &lbrack;tag&rbrack; or select from list when there are multiple matches\
+&vert;&colon;ltag&vert;         &colon;lt&lbrack;ag&rbrack;&lbrack;!&rbrack; &lbrack;tag&rbrack;                                jump to tag &lbrack;tag&rbrack; and add matching tags to the location list\
+\
+&vert;&colon;tags&vert;         &colon;tags                                                                                     print tag list\
+&vert;&lt;C-t&gt;&vert;         N                                                                       &lt;C-t&gt;             jump back from Nth older tag in tag list\
+&vert;&colon;po&vert;           &colon;&lbrack;count&rbrack;po&lbrack;p&rbrack;&lbrack;!&rbrack;                                jump back from &lbrack;count&rbrack;'th older tag in tag list\
+&vert;&colon;tnext&vert;        &colon;&lbrack;count&rbrack;tn&lbrack;ext&rbrack;&lbrack;!&rbrack;                              jump to &lbrack;count&rbrack;'th next matching tag\
+&vert;&colon;tp&vert;           &colon;&lbrack;count&rbrack;tp&lbrack;revious&rbrack;&lbrack;!&rbrack;                          jump to &lbrack;count&rbrack;'th previous matching tag\
+&vert;&colon;tr&vert;           &colon;&lbrack;count&rbrack;tr&lbrack;ewind&rbrack;&lbrack;!&rbrack;                            jump to &lbrack;count&rbrack;'th matching tag\
+&vert;&colon;tl&vert;           &colon;tl&lbrack;ast&rbrack;&lbrack;!&rbrack;                                                   jump to last matching tag\
+\
+&vert;&colon;ptag&vert;         &colon;pt&lbrack;ag&rbrack; &lbrace;tag&rbrace;                                                 open a preview window to show tag &lbrace;tag&rbrace;\
+&vert;&lt;C-w &rbrace;&vert;                                                                            &lt;C-w &rbrace;&gt;    like &lt;C-&rbrack;&gt; but show tag in preview window\
+&vert;&colon;pts&vert;          &colon;pts&lbrack;elect&rbrack;                                                                 like "&colon;tselect" but show tag in preview window\
+&vert;&colon;ptjump&vert;       &colon;ptj&lbrack;ump&rbrack;                                                                   like "&colon;tjump" but show tag in preview window\
+&vert;&colon;pclose&vert;       &colon;pc&lbrack;lose&rbrack;                                                                   close tag preview window\
+&vert;&lt;C-w z&gt;&vert;                                                                               &lt;C-w z&gt;           close tag preview window
 
+##### &ast;Q_sc&ast; Scrolling
+
+&vert;&lt;C-e&gt;&vert;    N    &lt;C-e&gt;          window N lines downwards (default: 1)\
+&vert;&lt;C-d&gt;&vert;    N    &lt;C-d&gt;          window N lines Downwards (default: 1/2 window)\
+&vert;&lt;C-f&gt;&vert;    N    &lt;C-f&gt;          window N pages Forwards (downwards)\
+&vert;&lt;C-y&gt;&vert;    N    &lt;C-y&gt;          window N lines upwards (default: 1)\
+&vert;&lt;C-u&gt;&vert;    N    &lt;C-u&gt;          window N lines Upwards (default: 1/2 window)\
+&vert;&lt;C-b&gt;&vert;    N    &lt;C-b&gt;          window N pages Backwards (upwards)\
+&vert;z&lt;CR&gt;&vert;         z&lt;CR&gt; or zt    redraw, current line at top of window\
+&vert;z&period;&vert;           z&period;   or zz    redraw, current line at center of window\
+&vert;z&minus;&vert;            z&minus;    or zb    redraw, current line at bottom of window\
+\
+These only work when 'wrap' is off:\
+&vert;zh&vert;             N    zh                   scroll screen N characters to the right\
+&vert;zl&vert;             N    zl                   scroll screen N characters to the left\
+&vert;zH&vert;             N    zH                   scroll screen half a screenwidth to the right\
+&vert;zL&vert;             N    zL                   scroll screen half a screenwidth to the left
+
+##### &ast;Q_in&ast; Inserting text
+
+&vert;a&vert;                     N    a                                                       append text after the cursor (N times)\
+&vert;A&vert;                     N    A                                                       append text at the end of the line (N times)\
+&vert;i&vert;                     N    i                                                       insert text before the cursor (N times) (also: &lt;Insert&gt;)\
+&vert;I&vert;                     N    I                                                       insert text before the first non-blank in the line (N times)\
+&vert;gI&vert;                    N    gI                                                      insert text in column 1 (N times)\
+&vert;o&vert;                     N    o                                                       open a new line below the current line, append text (N times)\
+&vert;O&vert;                     N    O                                                       open a new line above the current line, append text (N times)\
+&vert;&colon;startinsert&vert;         &colon;star&lbrack;tinsert&rbrack;&lbrack;!&rbrack;     start Insert mode, append when &lbrack;!&rbrack; used\
+&vert;&colon;startreplace&vert;        &colon;starte&lbrack;eplace&rbrack;&lbrack;!&rbrack;    start Replace mode, at EOL when &lbrack;!&rbrack; used\
+\
+in Visual block mode:\
+&vert;v b I&vert;                      I                                                       insert the same text in front of all the selected lines\
+&vert;v b A&vert;                      A                                                       append the same text after all the selected lines
+
+#### &asp;Q_ai&asp; Insert mode keys
+
+&vert;insert-index&vert;                    alphabetical index of Insert mode commands\
+\
+leaving Insert mode:\
+&vert;i &lt;ESC&gt;&vert;    &lt;ESC&gt;                            end Insert mode, back to Normal mode\
+&vert;i &lt;C-c&gt;&vert;    &lt;C-c&gt;                            like &lt;Esc&gt;, but do not use an abbreviation\
+&vert;i &lt;C-o&gt;          &lt;C-o&gt; &lbrace;command&rbrace;    execute &lbrace;command&rbrace; and return to Insert mode\
+\
+moving around:\
+&vert;i &lt;UP&gt;&vert;        cursor keys                          move cursor left/right/up/down\
+&vert;i &lt;S-Left&gt;&vert;    shift-left/right                     one word left/right\
+&vert;i &lt;S-UP&gt;&vert;      shift-up/down                        one screenful backward/forward\
+&vert;i &lt;END&gt;&vert;       &lt;END&gt;                          cursor after last character in the line\
+&vert;i &lt;HOME&gt;&vert;      &lt;HOME&gt;                         cursor to first character in the line
+
+##### &ast;Q_ss&ast; Special keys in Insert mode
+
+&vert;i &lt;C-v&gt;&vert;    &lt;C-v&gt; &lbrace;char&rbrace;..    insert character literally, or enter decimal byte value\
+&vert;i &lt;NL&gt;&vert;     &lt;NL&gt; or 
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
