@@ -286,8 +286,14 @@ moving around:\
 
 ##### &ast;Q_ss&ast; Special keys in Insert mode
 
-&vert;i &lt;C-v&gt;&vert;    &lt;C-v&gt; &lbrace;char&rbrace;..    insert character literally, or enter decimal byte value\
-&vert;i &lt;NL&gt;&vert;     &lt;NL&gt; or 
+&vert;i &lt;C-v&gt;&vert;           &lt;C-v&gt; &lbrace;char&rbrace;..                        insert character literally, or enter decimal byte value\
+&vert;i &lt;NL&gt;&vert;            &lt;NL&gt; or &lt;CR&gt; or &lt;C-m&gt; or &lt;C-j&gt;    begin new line\
+&vert;i &lt;C-e&gt;&vert;           &lt;C-e&gt;                                               insert the character from below the cursor\
+&vert;i &lt;C-y&gt;&vert;           &lt;C-y&gt;                                               insert the character from above the cursor\
+\
+&vert;i &lt;C-a&gt;&vert;           &lt;C-a&gt;                                               insert previously inserted text\
+&vert;i &lt;C-&commat;&gt;&vert;    &lt;C-&commat;&gt;                                        insert previously inserted text and stop Insert mode\
+&vert;i &lt;C-r&gt;&vert;           &lt;C-r&gt; &lbrace;register&rbrace;                      insert the contents of a register\
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
