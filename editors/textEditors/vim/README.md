@@ -294,6 +294,104 @@ moving around:\
 &vert;i &lt;C-a&gt;&vert;           &lt;C-a&gt;                                               insert previously inserted text\
 &vert;i &lt;C-&commat;&gt;&vert;    &lt;C-&commat;&gt;                                        insert previously inserted text and stop Insert mode\
 &vert;i &lt;C-r&gt;&vert;           &lt;C-r&gt; &lbrace;register&rbrace;                      insert the contents of a register\
+\
+&vert;i &lt;C-n&gt;&vert;           &lt;C-n&gt;                                               insert next match of identifier before the cursor\
+&vert;i &lt;C-p&gt;&vert;           &lt;C-p&gt;                                               insert previous match of identifier before the cursor\
+&vert;i &lt;C-x&gt;&vert;           &lt;C-x&gt; &hellip;                                      complete the word before the cursor in various ways\
+\
+&vert;i &lt;BS&gt;&vert;            &lt;BS&gt; or &lt;C-n&gt;                                 delete the character before the cursor\
+&vert;i &lt;DEL&gt;&vert;           &lt;DEL&gt;                                               delete the character under the cursor\
+&vert;i &lt;C-w&gt;&vert;           &lt;C-w&gt;                                               delete word before the cursor\
+&vert;i &lt;C-u&gt;&vert;           &lt;C-u&gt;                                               delete all entered characters in the current line\
+&vert;i &lt;C-t&gt;&vert;           &lt;C-t&gt;                                               insert one shiftwidth of indent in front of the current line\
+&vert;i &lt;C-d&gt;&vert;           &lt;C-d&gt;                                               delete one shiftwidth of indent in front of the current line\
+&vert;i 0 &lt;C-d&gt;&vert;         0 &lt;C-d&gt;                                             delete all indent in the current line\
+&vert;i &Hat; &lt;C-d&gt;&vert;     &Hat; &lt;C-d&gt;                                         delete all indent in the current line, restore indent in next line
+
+##### &asp;Q_di&asp; Digraphs
+
+&vert;&colon;dig&vert;       &colon;dig&lbrack;raphs&rbrack;                                                                               show current list of digraphs\
+&vert;&colon;dig&vert;       &colon;dig&lbrack;raphs&rbrack; &lbrace;char1&rbrace;&lbrace;char2&rbrace; &lbrace;number&rbrace; &hellip;    add digraph(s) to the list\
+\
+In Insert or Command-line mode:\
+&vert;i &lt;C-k&gt;&vert;    &lt;C-k&gt; &lbrace;char1&rbrace; &lbrace;char2&rbrace;                                                        enter digraph\
+&vert;i digraph&vert;        &lbrace;char1&rbrace; &lt;BS&gt; &lbrace;char2&lbrace;                                                         enter digraph if 'digraph' option set
+
+##### &asp;Q_si&asp; Special inserts
+
+&vert;&colon;r&vert;     &colon;r &lbrack;file&rbrack;        insert the contents of [file] below the cursor\
+&vert;&colon;r!&vert;    &colon;r! &lbrace;command&rbrace;    insert the standard output of &lbrace;command&rbrace; below the cursor
+
+##### &asp;Q_de&asp; Deleting text
+
+&vert;x&vert;              N    x                                             delete N characters under and after the cursor\
+&vert;&lt;DEL&gt;&vert;    N    &lt;DEL&gt;                                   delete N characters under and after the cursor\
+&vert;X&vert;              N    X                                             delete N characters before the cursor\
+&vert;d&vert;              N    d&lbrace;motion&rbrace;                       delete the text that is moved over with &lbrace;motion&rbrace;\
+&vert;v d vert;                 &lbrace;visual&rbrace;d                       delete the highlighted text\
+&vert;dd&vert;             N    dd                                            delete N lines\
+&vert;D&vert;              N    D                                             delete to the end of the line (and N-1 more lines)\
+&vert;J&vert;              N    J                                             join N-1 lines (delete &lt;EOL&gt;s)\
+&vert;v J&vert;                 &lbrace;visual&rbrace;J                       join the highlighted lines\
+&vert;gJ&vert;             N    gJ                                            like "J", but without inserting spaces\
+&vert;v gJ&vert;                &lbrace;visual&rbrace;gJ                      like "&lbrace;visual&rbrace;J", but without inserting spaces\
+&vert;&colon;d&vert;       &colon;&lbrack;range&rbrack;d &lbrack;x&rbrack;    delete &lbrack;range&rbrack; lines &lbrack;into register x&rbrack;
+
+##### &asp;Q_cm&asp; Copying and moving text
+
+&vert;quote&vert;              &quot;&lbrace;char&rbrace;        use register &lbrace;char&rbrace; for the next delete, yank, or put\
+&vert;&colon;reg&vert;         &colon;reg                        show the contents of all registers\
+&vert;&colon;reg&vert;         &colon;reg &lbrace;arg&rbrace;    show the contents of registers mentioned in &lbrace;arg&rbrace;\
+&vert;y&vert;             N    y&lbrace;motion&rbrace;           yank the text moved over with &lbrace;motion&rbrace; into a register\
+&vert;v y&vert;                &lbrace;visual&rbrace;y           yank the highlighted text into a register\
+&vert;yy&vert;            N    yy                                yank N lines into a register\
+&vert;Y&vert;             N    Y                                 yank N lines into a register\
+&vert;p&vert;             N    p                                 put a register after the cursor position (N times)\
+&vert;P&vert;             N    P                                 put a register before the cursor position (N times)\
+&vert;&rbrack;p&vert;     N    &rbrack;p                         like p, but adjust indent to current line\
+&vert;&lbrack;p&vert;     N    &lbrack;p                         like P, but adjust indent to current line\
+&vert;gp&vert;            N    gp                                like p, but leave cursor after the new text\
+&vert;gP&vert;            N    gP                                like P, but leave cursor after the new text
+
+##### &asp;Q_ch&asp; Changing text
+
+&vert;r&vert;              N    r&lbrace;char&rbrace;                                                replace N characters with &lbrace;char&rbrace;\
+&vert;gr&vert;             N    gr&lbrace;char&rbrace;                                               replace N characters without affecting layout\
+&vert;R&vert;              N    R                                                                    enter Replace mode (repeat the entered text N times)\
+&vert;gR&vert;             N    gR                                                                   enter virtual Replace mode: Like Replace mode but without affecting layout\
+&vert;v b r&vert;               &lbrace;visual&rbrace;r&lbrace;char&rbrace;                          in Visual block mode: Replace each char of the selected text with &lbrace;char&rbrace;\
+\
+(change = delete text and enter Insert mode)\
+&vert;c&vert;              N    c&lbrace;motion&rbrace;                                              change the text that is moved over with &lbrace;motion&rbrace;\
+&vert;v c*vert;                 &lbrace;visual&rbrace;c                                              change the highlighted text\
+&vert;cc&vert;             N    cc                                                                   change N lines\
+&vert;S&vert;              N    S                                                                    change N lines\
+&vert;C&vert;              N    C                                                                    change to the end of the line (and N-1 more lines)\
+&vert;s&vert;              N    s                                                                    change N characters\
+&vert;v b c&vert;               &lbrace;visual&rbrace;c                                              in Visual block mode: Change each of the selected lines with the entered text\
+&vert;v b C&vert;               &lbrace;visual&rbrace;C                                              in Visual block mode: Change each of the selected lines until end-of-line with the entered text\
+\
+&vert;&tilde;&vert;        N    &tilde;                                                               switch case for N characters and advance cursor\
+&vert;v &tilde;&vert;           &lbrace;visual&rbrace;&tilde;                                         switch case for highlighted text\
+&vert;v u&vert;                 &lbrace;visual&rbrace;u                                               make highlighted text lowercase\
+&vert;v U&vert;                 &lbrace;visual&rbrace;U                                               make highlighted text uppercase\
+&vert;g&tilde;&vert;            g&tilde;&lbrace;motion&rbrace;                                        switch case for the text that is moved over with &lbrace;motion&rbrace;\
+&vert;gu&vert;                  gu&lbrace;motion&rbrace;                                              make the text that is moved over with &lbrace;motion&rbrace; lowercase\
+&vert;gU&vert;                  gU&lbrace;motion&rbrace;                                              make the text that is moved over with &lbrace;motion&rbrace; uppercase\
+&vert;v g&quest;&vert;          &lbrace;visual&rbrace;g&quest;                                        perform rot13 encoding on highlighted text\
+&vert;g&quest;&vert;            g&quest;&lbrace;motion&rbrace;                                        perform rot13 encoding on the text that is moved over with &lbrace;motion&rbrace;\
+\
+&vert;&lt;C-a&gt;&vert;    N    &lt;C-a&gt;                                                           add N to the number at or after the cursor\
+&vert;&lt;C-x&gt;&vert;    N    &lt;C-x&gt;                                                           subtract N from the number at or after the cursor\
+\
+&vert;&lt;&vert;           N    &lt;&lbrace;motion&rbrace;                                             move the lines that are moved over with &lbrace;motion&rbrace; one shiftwidth left\
+&vert;&laquo;&vert;        N    &laquo;                                                                move N lines one shiftwidth left\
+&vert;&gt;&vert;           N    &gt;&lbrace;motion&rbrace;                                             move the lines that are moved over with &lbrace;motion&rbrace; one shiftwidth right\
+&vert;&raquo;&vert;        N    &raquo;                                                                move N lines one shiftwidth right\
+&vert;gq&vert;             N    gq&lbrace;motion&rbrace;                                               format the lines that are moved over with &lbrace;motion&rbrace; to 'textwidth' length\
+&vert;&colon;ce&vert;      &colon;&lbrack;range&rbrack;ce&lbrack;nter&rbrack; &lbrack;width&rbrack;    center the lines in &lbrack;range&rbrack;\
+&vert;&colon;le&vert;      &colon;&lbrack;range&rbrack;le&lbrack;ft&rbrack; &lbrack;indent&rbrack;     left-align the lines in &lbrack;range&rbrack; (with &lbrack;indent&rbrack;)\
+&vert;&colonri&vert;       &colon;&lbrack;range&rbrack;ri&lbrack;ght&rbrack; &lbrack;width&rbrack;     right-align the lines in &lbrack;range&rbrack;
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
