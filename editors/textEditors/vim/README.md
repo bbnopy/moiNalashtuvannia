@@ -391,7 +391,115 @@ In Insert or Command-line mode:\
 &vert;gq&vert;             N    gq&lbrace;motion&rbrace;                                               format the lines that are moved over with &lbrace;motion&rbrace; to 'textwidth' length\
 &vert;&colon;ce&vert;      &colon;&lbrack;range&rbrack;ce&lbrack;nter&rbrack; &lbrack;width&rbrack;    center the lines in &lbrack;range&rbrack;\
 &vert;&colon;le&vert;      &colon;&lbrack;range&rbrack;le&lbrack;ft&rbrack; &lbrack;indent&rbrack;     left-align the lines in &lbrack;range&rbrack; (with &lbrack;indent&rbrack;)\
-&vert;&colonri&vert;       &colon;&lbrack;range&rbrack;ri&lbrack;ght&rbrack; &lbrack;width&rbrack;     right-align the lines in &lbrack;range&rbrack;
+&vert;&colon;ri&vert;      &colon;&lbrack;range&rbrack;ri&lbrack;ght&rbrack; &lbrack;width&rbrack;     right-align the lines in &lbrack;range&rbrack;
+
+##### *asp;Q_co&asp; Complex changes
+
+&vert;&excl;&vert;              N    &excl;&lbrace;motion&rbrace;&lbrace;command&rbrace;&lt;CR&gt;                                                                                      filter the lines that are moved over through &lbrace;command&rbrace;\
+&vert;&excl;&excl;&vert;        N    &excl;&excl;&lbrace;command&rbrace;&lt;CR&gt;                                                                                                      filter N lines through  &lbrace;command&rbrace;\
+&vert;v &excl;&vert;                 &lbrace;visual&rbrace;&excl;&lbrace;command&rbrace;&lt;CR&gt;                                                                                      filter the highlighted lines through &lbrace;command&rbrace;\
+&vert;&colon;range&vert;             &colon;&lbrack;range&rbrack;&excl; &lbrace;command&rbrace;&lt;CR&gt;                                                                               filter &lbrack;range&rbrack; lines through &lbrace;command&rbrace;\
+&vert;&equals;&vert;            N    &equals;&lbrace;motion&rbrace;                                                                                                                     filter the lines that are moved over through 'equalprg'\
+&vert;&equals;&equals;&vert;    N    &equals;&equals;                                                                                                                                   filter N lines through 'equalprg'\
+&vert;v &equals;&vert;               &lbrace;visual&rbrace;&equals;                                                                                                                     filter the highlighted lines through 'equalprg'\
+&vert;&colon;s&vert;                 &colon;&lbrack;range&rbrack;s&lbrack;ubstitute&rbrack;&sol;&lbrace;pattern&rbrace;&sol;&lbrace;string&rbrace;&lbrack;g&rbrack;&lbrack;c&rbrack;    substitute &lbrace;pattern&rbrace; by &lbrace;string&rbrace; in &lbrack;range&rbrack; lines; with &lbrack;g&rbrack;, replace all occurrences of &lbrace;pattern&rbrace;; with &lbrack;c&rbrack;, confirm each replacement\
+&vert;&colon;s&vert;                 &colon;&lbrack;range&rbrack;s&lbrack;ubstitute&rbrack; &lbrack;g&rbrack;&lbrack;c&rbrack;                                                          repeat previous "&colon;s" with new range and options\
+&vert;&amp;&vert;                    &amp;                                                                                                                                              Repeat previous "&colon;s" on current line without options\
+&vert;&colon;ret&vert;               &colon;&lbrack;range&rbrack;ret&lbrack;ab&rbrack;&lbrack;&excl;&rbrack; &lbrack;tabstop&rbrack;                                                    set 'tabstop' to new value and adjust white space accordingly
+
+##### &asp;Q_vi&asp; Visual mode
+
+&vert;visual-index&vert;                    list of Visual mode commands\
+&vert;v&vert;                v              start highlighting characters &rbrace; move cursor and use\
+&vert;V&vert;                V              start highlighting linewise &rbrace; operator to affect\
+&vert;&lt;C-v&gt;&vert;      &lt;C-v&gt;    start highlighting blockwise &rbrace; highlighted text\
+&vert;v o&vert;              o              exchange cursor position with start of highlighting\
+&vert;gv&vert;               gv             start highlighting on previous visual area\
+&vert;v v&vert;              v              highlight characters or stop highlighting\
+&vert;v V&vert;              V              highlight linewise or stop highlighting\
+&vert;v &lt;C-v&gt;&vert;    &lt;C-v&gt;    highlight blockwise or stop highlighting
+
+##### &asp;Q_to&asp; Text objects (only in Visual mode or after an operator)
+
+&vert;v aw&vert;          N    aw          Select "a word"\
+&vert;v iw&vert;          N    iw          Select "inner word"\
+&vert;v aW&vert;          N    aW          Select "a &vert;WORD&vert;"\
+&vert;v iW&vert;          N    iW          Select "inner &vert;WORD&vert;"\
+&vert;v as&vert;          N    as          Select "a sentence"\
+&vert;v is&vert;          N    is          Select "inner sentence"\
+&vert;v ap&vert;          N    ap          Select "a paragraph"\
+&vert;v ip&vert;          N    ip          Select "inner paragraph"\
+&vert;v ab&vert;          N    ab          Select "a block" (from "&lbrack;&lpar;" to "&rpar;&rbrace;")\
+&vert;v ib&vert;          N    ib          Select "inner block" (from "&lbrack;&lpar;" to "&rbrack;&rpar;")\
+&vert;v aB&vert;          N    aB          Select "a Block" (from "&lbrack;&lbrace;" to "&rpar;&rbrace;")\
+&vert;v iB&vert;          N    iB          Select "inner Block" (from "&lpar;&lbrace;" to "&rpar;&rbrack;")\
+&vert;v a&gt;&vert;       N    a&gt;       Select "a &lt;&gt; block"\
+&vert;v i&gt;&vert;       N    i&gt;       Select "inner &lt;&gt; block"\
+&vert;v at&vert;          N    at          Select "a tag block" (from &lt;aaa&gt; to &lt;&sol;aaa&gt;)\
+&vert;v it&vert;          N    it          Select "inner tag block" (from &lt;aaa&gt; to &lt;&sol;aaa&gt;)\
+&vert;v a&apos;&vert;     N    a&apos;     Select "a single quoted string"\
+&vert;v i&apos;&vert;     N    i&apos;     Select "inner single quoted string"\
+&vert;v aquote&vert;      N    a&quot;     Select "a double quoted string"\
+&vert;v iquote&vert;      N    i&quot;     Select "inner double quoted string"\
+&vert;v a&grave;&vert;    N    a&grave;    Select "a backward quoted string"\
+&vert;v i&grave;&vert;    N    i&grave;    Select "inner backward quoted string"
+
+##### &asp;Q_re&asp; Repeating commands
+
+&vert;&period;&vert;                   N    &period;                                                                                                   repeat last change (with count replaced with N)\
+&vert;q&vert;                               q&lbrace;a-z&rbrace;                                                                                       record typed characters into register &lbrace;a-z&rbrace;\
+&vert;q&vert;                               q&lbrace;A-Z&rbrace;                                                                                       record typed characters, appended to register &lbrace;a-z&rbrace;\
+&vert;q&vert;                               q                                                                                                          stop recording\
+&vert;Q&vert;                               Q                                                                                                          replay last recorded macro\
+&vert;&commat;&vert;                   N    &commat;&lbrace;a-z&rbrace;                                                                                execute the contents of register &lbrace;a-z&rbrace; (N times)\
+&vert;&commat;&commat;&vert;           N    &commat;&commat;                                                                                           repeat previous &commat;&lbrave;a-z&rbrace; (N times)\
+&vert;&colon;&commat;&vert;	           &colon;&commat;&lbrace;a-z&rbrace;                                                                              execute the contents of register &lbrace;a-z&rbrace; as an Ex command\
+&vert;&colon;&commat;&commat;&vert;    &colon;&commat;&commat;                                                                                         repeat previous &colon;&commat;&lbrace;a-z&rbrace;\
+&vert;&colon;g&vert;                   &colon;&lbrack;range&rbrack;g&lbrack;lobal&rbrack;&sol;&lbrace;pattern&rbrace;&sol;&lbrack;cmd&rbrack;          execute Ex command &lbrack;cmd&rbrack; (default: "&colon;p") on the lines within &lbrack;range&rbrack; where &lbrace;pattern&rbrace; matches\
+&vert;&colon;g&vert;                   &colon;&lbrack;range&rbrack;g&lbrack;lobal&rbrack;&excl;&sol;&lbrace;pattern&rbrace;&sol;&lbrack;cmd&rbrack;    execute Ex command &lbrack;cmd&rbrack; (default: "&colon;p") on the lines within &lbrack;range&rbrack; where &lbrace;pattern&rbrace; does NOT match\
+&vert;&colon;so&vert;                  &colon;so&lbrack;urce&rbrack; &lbrace;file}rbrace;                                                              read Ex commands from &lbrace;file&rbrace;\
+&vert;&colon;so&vert;                  &colon;so&lbrack;urce&rbrack;&excl; &lbrace;file&rbrace;                                                        read Vim commands from &lbrace;file&rbrace;\
+&vert;&colon;sl&vert;                  &colon;sl&lbrack;eep&rbrack; &lbrack;sec&rbrack;                                                                don't do anything for &lbrack;sec&rbrack; seconds\
+&vert;gs&vert;                         N    gs                                                                                                         goto Sleep for N seconds
+
+##### &asp;Q_km&asp; Key mapping
+
+&vert;&colon;map&vert;            &colon;ma&lbrack;p&rbrack; &lbrace;lhs&rbrace; &lbrace;rhs&rbrace;                              map &lbrace;lhs&rbrace; to &lbrace;rhs&rbrace; in Normal and Visual mode\
+&vert;&colon;map&excl;&vert;      &colon;ma&lblack;p&rblack;&excl; &lbrace;lhs&rbrace; &lbrace;rhs&rbrace;                        map &lbrace;lhs&rbrace; to &lbrace;rhs&rbrace; in Insert and Command-line mode\
+&vert;&colon;noremap&vert;        &colon;no&lbrack;remap&rbrack;&lbrack;&excl;&rbrack; &lbrace;lhs&rbrace; &lbrace;rhs&rbrace;    same as "&colon;map", no remapping for this &lbrace;rhs&rbrace;\
+&vert;&colon;unmap&vert;          &colon;unm&lbrack;ap&rbrack; &lbrace;lhs&rbrace;                                                remove the mapping of &lbrace;lhs&rbrace; for Normal and Visual mode\
+&vert;&colon;unmap&excl;&vert;    &colon;unm&lbrack;ap&rbrack;&excl; &rbrace;lhs&rbrace;                                          remove the mapping of &lbrace;lhs}&brace; for Insert and Command-line mode\
+&vert;&colon;map l&vert;          &colon;ma&lbrack;p&rbrack; &lbrack;lhs&rbrack;                                                  list mappings (starting with &lbrack;lhs&rbrack;) for Normal and Visual mode\
+&vert;&colon;map l&excl;&vert;    &colon;ma&lbrack;p&rbrack;&excl; &lbrack;lhs&rbrack;                                            list mappings (starting with &lbrack;lhs&rbrask;) for Insert and Command-line mode\
+&vert;&colon;cmap&vert;           &colon;cmap&sol;&colon;cunmap&sol;&colon;cnoremap                                               like "&colon;map&excl;"&sol;"&colon;unmap&excl;"&sol;"&colon;noremap&escl;" but for Command-line mode only\
+&vert;&colon;imap&vert;           &colon;imap&sol;&colon;iunmap&sol;&colon;inoremap                                               like "&colon;map&excl;"&sol;"&colon;unmap&excl;"&sol;"&colon;noremap&excl;" but for Insert mode only\
+&vert;&colon;nmap&vert;           &colon;nmap&sol;&colon;nunmap&sol;&colon;nnoremap                                               like "&colon;map"&sol;"&colon;unmap"&sol;"&colon;noremap" but for Normal mode only\
+&vert;&colon;vmap&vert;           &colon;vmap&sol;&colon;vunmap&sol;&colon;vnoremap                                               like "&colon;map"&sol;"&colon;unmap"&sol;"&colon;noremap" but for Visual mode only\
+&vert;&colon;omap&vert;           &colon;omap&sol;&colon;ounmap&sol;&colon;onoremap                                               like "&colon;map"&sol;"&colon;unmap"&sol;"&colon;noremap" but only for when an operator is pending\
+&vert;&colon;mapc&vert;           &colon;mapc&lbrack;lear&rbrack;                                                                 remove mappings for Normal and Visual mode\
+&vert;&colon;mapc&vert;           &colon;mapc&lbrack;lear&rbrack;&excl;                                                           remove mappings for Insert and Cmdline mode\
+&vert;&colon;imapc&vert;          &colon;imapc&lbrack;lear&rbrack;                                                                remove mappings for Insert mode\
+&vert;&colon;vmapc&vert;          &colon;vmapc&lbrack;lear&rbrack;                                                                remove mappings for Visual mode\
+&vert;&colon;omapc&vert;          &colon;omapc&lbrack;lear&rbrack;                                                                remove mappings for Operator-pending mode\
+&vert;&colon;nmapc&vert;          &colon;nmapc&lbrack;lear&rbrack;                                                                remove mappings for Normal mode\
+&vert;&colon;cmapc&vert;          &colon;cmapc&lbrack;lear&rbrack;                                                                remove mappings for Cmdline mode\
+&vert;&colon;mkexrc&vert;         &colon;mk&lbrack;exrc&rbrack;&lbrack;&excl;&rbrack; &lbrack;file&rbrack;                        write current mappings, abbreviations, and settings to &lbrack;file&rbrack; (default: ".exrc"; use &excl; to overwrite)\
+&vert;&colon;mkvimrc&vert;        &colon;mkv&lbrack;imrc&rbrack;&lbrack;&excl;&rbrack; &lbrack;file&rbrack;                       same as &colon;mkexrc, but with default ".nvimrc"\
+&vert;&colon;mksession&vert;      &colon;mks&lbrack;ession&rbrack;&lbrack;&excl;&rbrack; &lbrack;file&rbrack;                     like "&colon;mkvimrc", but store current files, windows, etc. too, to be able to continue this session later
+
+##### &asp;Q_ab&asp; Abbreviations
+
+|:abbreviate|	:ab[breviate] {lhs} {rhs}  add abbreviation for {lhs} to {rhs}
+|:abbreviate|	:ab[breviate] {lhs}	   show abbr's that start with {lhs}
+|:abbreviate|	:ab[breviate]		   show all abbreviations
+|:unabbreviate|	:una[bbreviate] {lhs}	   remove abbreviation for {lhs}
+|:noreabbrev|	:norea[bbrev] [lhs] [rhs]  like ":ab", but don't remap [rhs]
+|:iabbrev|	:iab/:iunab/:inoreab	   like ":ab", but only for Insert mode
+|:cabbrev|	:cab/:cunab/:cnoreab	   like ":ab", but only for
+						Command-line mode
+|:abclear|	:abc[lear]		   remove all abbreviations
+|:cabclear|	:cabc[lear]		   remove all abbr's for Cmdline mode
+|:iabclear|	:iabc[lear]		   remove all abbr's for Insert mode
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
