@@ -917,6 +917,39 @@ Short explanation of each option: &ast;option-list&ast;\
 &vert;&colon;confirm&vert;    &colon;confirm &lbrace;command&rbrace;                                          quit, write, etc., asking about unsaved changes or read-only files\
 &vert;&colon;browse&vert;     &colon;browse &lbrace;command&rbrace;                                           open/read/write file, using a file selection dialog
 
+##### &ast;Q_ce&ast; Command-line editing
+
+&vert;c &lt;Esc&gt;&vert;       &lt;Esc&gt;                         abandon command-line (if 'wildchar' is &lt;Esc&gt;, type it twice)\
+\
+&vert;c &lt;C-v&gt;&vert;       &lt;C-v&gt; &lbrace;char&rbrace;                           insert &lbrace;char&rbrace; literally\
+&vert;c &lt;C-v&gt;&vert;       &lt;C-v&gt; &lbrace;number&rbrace;                         enter decimal value of character (up to three digits)\
+&vert;c &lt;C-k&gt;&vert;       &lt;C-k&gt; &lbrace;char1&rbrace; &lbrace;char2&rbrace;    enter digraph (See &vert;Q_di&vert;)\
+&vert;c &lt;C-r&vert;           &lt;C-r&gt; &lbrace;register&rbrace;                       insert the contents of a register\
+\
+&vert;c &lt;Left&gt;&vert;      &lt;Left&gt;&sol;&lt;Right&gt;                             cursor left&sol;right\
+&vert;c &lt;S-Left&gt;&vert;    &lt;S-Left&gt;&sol;&lt;S-Right&gt;                         cursor one word left&sol;right\
+&vert;c &lt;C-b&gt;&vert;       &lt;C-b&gt;&sol;&lt;C-e&gt;                                cursor to beginning&sol;end of command-line\
+\
+&vert;c &lt;BS&gt;&vert;        &lt;BS&gt;                                                 delete the character in front of the cursor\
+&vert;c &lt;Del&gt;&vert;       &lt;Del&gt;                                                delete the character under the cursor\
+&vert;c &lt;C-w&gt;&vert;       &lt;C-w&gt;                                                delete the word in front of the cursor\
+&vert;c &lt;C-u&gt;&vert;       &lt;C-u&gt;                                                remove all characters\
+\
+&vert;c &lt;Up&gt;&vert;        &lt;Up&gt;&sol;&lt;Down&gt;                                recall older&sol;newer command-line that starts with current command\
+&vert;c &lt;S-Up&gt;&vert;      &lt;S-Up&gt;&sol;&lt;S-Down&gt;                            recall older&sol;newer command-line from history\
+&vert;c &lt;C-g&gt;&vert;       &lt;C-g&gt;                                                next match when 'incsearch' is active\
+&vert;c 7lt;C-t&gt;&vert;       &lt;C-t&gt;                                                previous match when 'incsearch' is active\
+&vert;&colon;history&vert;      &colon;his&lbrack;tory&rbrack;                             show older command-lines\
+\
+Context-sensitive completion on the command-line:\
+\
+&vert;c wildchar&vert;          'wildchar' (default: &lt;Tab&gt;)                          do completion on the pattern in front of the cursor; if there are multiple matches, beep and show the first one; further 'wildchar' will show the next ones\
+&vert;c &lt;C-d&gt;&vert;        &lt;C-d&gt;                                               list all names that match the pattern in front of the cursor\
+&vert;c &lt;C-a&gt;&vert;        &lt;C-a&gt;                                               insert all names that match pattern in front of cursor\
+&vert;c &lt;C-l&gt;&vert;        &lt;C-l&gt;                                               insert longest common part of names that match pattern\
+&vert;c &lt;C-n&gt;&vert;        &lt;C-n&gt;                                               after 'wildchar' with multiple matches: go to next match\
+&vert;c &lt;C-p&gt;&vert;        &lt;C-p&gt;                                               after 'wildchar' with multiple matches: go to previous match
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
