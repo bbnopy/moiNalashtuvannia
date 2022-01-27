@@ -991,6 +991,41 @@ Context-sensitive completion on the command-line:\
     &vert;&colon;&colon;e&vert;    &colon;e                                                          extension\
     &vert;&colon;&colon;s&vert;    &colon;s&sol;&lbrace;pat&rbrace;&sol;&lbrace;repl&rbrace;&sol;    substitute &lbrace;pat&rbrace; with &lbrace;repl&rbrace;
 
+##### &ast;Q_st&ast; Starting Vim
+
+&vert;&minus;file&vert;              vim &lbrack;options&rbrack; &lbrace;file&rbrace; &period;&period;    start editing one or more files\
+&vert;&minus;&minus;&vert;           vim &lbrack;options&rbrack; &minus;                                  read file from stdin\
+&vert;&minus;tag&vert;               vim &lbrack;options&rbrack; &minus;t {tag}                           edit the file associated with {tag}\
+&vert;&minus;qf&vert;                vim &lbrack;options&rbrack; &minus;q &rbrack;fname&lbrack;           start editing in QuickFix mode, display the first error\
+\
+    Most useful Vim arguments (for full list see &vert;startup-options&vert;)\
+\
+&vert;&minus;&plus;&vert;            &plus;&lbrack;num&rbrack;                                            put the cursor at line &lbrack;num&rbrack; (default: last line)\
+&vert;&minus;&plus;c&vert;           &plus;&lbrace;command&rbrace;                                        execute &lbrace;command&rbrace; after loading the file\
+&vert;&minus;&plus;&sol;&vert;       &plus;&sol;&lbrace;pat&rbrace; &lbrace;file&rbrace; ..               put the cursor at the first occurrence of &lbrace;pat&rbrace;\
+&vert;&minus;e&vert;                 &minus;e                                                             Ex mode, start vim in Ex mode\
+&vert;&minus;R&vert;                 &minus;R                                                             Read-only mode, implies -n\
+&vert;&minus;m&vert;                 &minus;m                                                             modifications not allowed (resets 'write' option)\
+&vert;&minus;d&vert;                 &minus;d                                                             &vert;diff-mode&vert;\
+&vert;&minus;b&vert;                 &minus;b                                                             binary mode\
+&vert;&minus;l&vert;                 &minus;l                                                             lisp mode\
+&vert;&minus;A&vert;                 &minus;A                                                             Arabic mode ('arabic' is set)\
+&vert;&minus;H&vert;                 &minus;H                                                             Hebrew mode ('hkmap' and 'rightleft' are set)\
+&vert;&minus;V&vert;                 &minus;V                                                             Verbose, give informative messages\
+&vert;&minus;r&vert;                 &minus;r                                                             give list of swap files\
+&vert;&minus;r&vert;                 &minus;r &lbrace;file&rbace; ..                                      recover aborted edit session\
+&vert;&minus;n&vert;                 &minus;n                                                             do not create a swap file\
+&vert;&minus;o&vert;                 &minus;o &lbrack;num&rbrack;                                         open &lbrack;num&rbrack; windows (default: one for each file)\
+&vert;&minus;s&vert;                 &minus;s &lbrace;scriptin&rbrace;                                    first read commands from the file &lbrace;scriptin&rbrace;\
+&vert;&minus;w&vert;                 &minus;w &lbrace;scriptout&rbrace;                                   write typed chars to file &lbrace;scriptout&rbrace;} (append)\
+&vert;&minus;W&vert;                 &minus;W &lbrace;scriptout&rbrace;                                   write typed chars to file &lbrace;scriptout&rbrace; (overwrite)\
+&vert;&minus;u&vert;                 &minus;u &lbrace;vimrc&rbrace;                                       read inits from &lbrace;vimrc&rbrace; instead of other inits\
+&vert;&minus;i&vert;                 &minus;i &lbrace;shada&rbrace;                                       read info from &lbrace;shada&rbrace; instead of other files\
+&vert;&minus;&minus;&minus;&vert;    &minus;&minus;                                                       end of options, other arguments are file names
+&vert;&minus;&minus;help&vert;       &minus;&minus;help                                                   show list of arguments and exit\
+&vert;&minus;&minus;version&vert;    &minus;&minus;version                                                show version info and exit\
+&vert;&minus;&minus;&vert;           &minus;                                                              read file from stdin
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
