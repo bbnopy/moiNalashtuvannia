@@ -899,6 +899,24 @@ Short explanation of each option: &ast;option-list&ast;\
 &vert;&colon;make&vert;          &colon;make &lbrack;args&rbrack;                    start make, read errors, and jump to first error\
 &vert;&colon;grep&vert;          &colon;gr&vbrack;ep&rbrack; &lbrack;args&rbrack;    execute 'grepprg' to find matches and jump to the first one
 
+##### &ast;Q_vc&ast; Various commands
+
+&vert;&lt;C-l&gt;&vert;       &lt;C-l&gt;                                                                     clear and redraw the screen\
+&vert;&lt;C-g&gt;&vert;       &lt;C-g&gt;                                                                     show current file name (with path) and cursor position\
+&vert;ga&vert;                ga                                                                              show ascii value of character under cursor in decimal, hex, and octal\
+&vert;g8&vert;                g8                                                                              for utf-8 encoding: show byte sequence for character under cursor in hex\
+&vert;g &lt;C-g&gt;&vert;     g &lt;C-g&gt;                                                                   show cursor column, line, and character position\
+&vert;&lt;C-c&gt;&vert;       &lt;C-c&gt;                                                                     during searches: Interrupt the search\
+&vert;&lt;Del&gt;&vert;       &lt;Del&gt;                                                                     while entering a count: delete last character\
+&vert;&colon;version&vert;    &colon;ve&lbrack;rsion&rbrack;                                                  show version information\
+&vert;&colon;normal&vert;     &colon;norm&lbrack;al&rbrack;&lbrack;&excl;&rbrack; &lbrace;commands&rbrace;    execute Normal mode commands\
+&vert;gQ&vert;                gQ                                                                              switch to "Ex" mode\
+\
+&vert;&colon;redir&vert;      &colon;redir &gt;&lbrace;file&rbrace;                                           redirect messages to &lbrace;file&rbrace;\
+&vert;&colon;silent&vert;     &colon;silent&lbrack;!&rbrack; &lbrace;command&rbrace;                          execute &lbrace;command&rbrace; silently\
+&vert;&colon;confirm&vert;    &colon;confirm &lbrace;command&rbrace;                                          quit, write, etc., asking about unsaved changes or read-only files\
+&vert;&colon;browse&vert;     &colon;browse &lbrace;command&rbrace;                                           open/read/write file, using a file selection dialog
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
