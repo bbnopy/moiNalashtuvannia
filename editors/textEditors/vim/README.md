@@ -870,6 +870,12 @@ Short explanation of each option: &ast;option-list&ast;\
 'writebackup'        'wb'           make a backup before overwriting a file\
 'writedelay'         'wd'           delay this many msec for each char (for debug)
 
+##### &ast;Q_ur&ast; Undo/Redo commands
+
+&vert;u&vert;              N    u              undo last N changes\
+&vert;&lt;C-r&gt;&vert;    N    &lt;C-r&gt;    redo last N undone changes\
+&vert;U&vert;                   U              restore last changed line
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
