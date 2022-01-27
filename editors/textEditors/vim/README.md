@@ -721,154 +721,154 @@ Short explanation of each option: &ast;option-list&ast;\
 'patchexpr'          'pex'          expression used to patch a file\
 'patchmode'          'pm'           keep the oldest version of a file\
 'path'               'pa'           list of directories searched with "gf" et.al.\
-'perldll'		    name of the Perl dynamic library
-'preserveindent'  'pi'	    preserve the indent structure when reindenting
-'previewheight'   'pvh'     height of the preview window
-'previewpopup'    'pvp'     use popup window for preview
-'previewwindow'   'pvw'     identifies the preview window
-'printdevice'	  'pdev'    name of the printer to be used for :hardcopy
-'printencoding'   'penc'    encoding to be used for printing
-'printexpr'	  'pexpr'   expression used to print PostScript for :hardcopy
-'printfont'	  'pfn'     name of the font to be used for :hardcopy
-'printheader'	  'pheader' format of the header used for :hardcopy
-'printmbcharset'  'pmbcs'   CJK character set to be used for :hardcopy
-'printmbfont'	  'pmbfn'   font names to be used for CJK output of :hardcopy
-'printoptions'	  'popt'    controls the format of :hardcopy output
-'pumheight'	  'ph'	    maximum height of the popup menu
-'pumwidth'	  'pw'	    minimum width of the popup menu
-'pythondll'		    name of the Python 2 dynamic library
-'pythonthreedll'	    name of the Python 3 dynamic library
-'pyxversion'	  'pyx'	    Python version used for pyx* commands
-'quoteescape'	  'qe'	    escape characters used in a string
-'readonly'	  'ro'	    disallow writing the buffer
-'redrawtime'	  'rdt'     timeout for 'hlsearch' and |:match| highlighting
-'regexpengine'	  're'	    default regexp engine to use
-'relativenumber'  'rnu'	    show relative line number in front of each line
-'remap'			    allow mappings to work recursively
-'report'		    threshold for reporting nr. of lines changed
-'revins'	  'ri'	    inserting characters will work backwards
-'rightleft'	  'rl'	    window is right-to-left oriented
-'rightleftcmd'	  'rlc'     commands for which editing works right-to-left
-'rubydll'		    name of the Ruby dynamic library
-'ruler'		  'ru'	    show cursor line and column in the status line
-'rulerformat'	  'ruf'     custom format for the ruler
-'runtimepath'	  'rtp'     list of directories used for runtime files
-'scroll'	  'scr'     lines to scroll with CTRL-U and CTRL-D
-'scrollbind'	  'scb'     scroll in window as other windows scroll
-'scrolljump'	  'sj'	    minimum number of lines to scroll
-'scrolloff'	  'so'	    minimum nr. of lines above and below cursor
-'scrollopt'	  'sbo'     how 'scrollbind' should behave
-'sections'	  'sect'    nroff macros that separate sections
-'secure'		    secure mode for reading .vimrc in current dir
-'selection'	  'sel'     what type of selection to use
-'selectmode'	  'slm'     when to use Select mode instead of Visual mode
-'sessionoptions'  'ssop'    options for |:mksession|
-'shada'		  'sd'	    use .shada file upon startup and exiting
-'shell'		  'sh'	    name of shell to use for external commands
-'shellcmdflag'	  'shcf'    flag to shell to execute one command
-'shellpipe'	  'sp'	    string to put output of ":make" in error file
-'shellquote'	  'shq'     quote character(s) for around shell command
-'shellredir'	  'srr'     string to put output of filter in a temp file
-'shellslash'	  'ssl'     use forward slash for shell file names
-'shelltemp'	  'stmp'    whether to use a temp file for shell commands
-'shellxescape'	  'sxe'     characters to escape when 'shellxquote' is (
-'shellxquote'	  'sxq'     like 'shellquote', but include redirection
-'shiftround'	  'sr'	    round indent to multiple of shiftwidth
-'shiftwidth'	  'sw'	    number of spaces to use for (auto)indent step
-'shortmess'	  'shm'     list of flags, reduce length of messages
-'showbreak'	  'sbr'     string to use at the start of wrapped lines
-'showcmd'	  'sc'	    show (partial) command in status line
-'showfulltag'	  'sft'     show full tag pattern when completing tag
-'showmatch'	  'sm'	    briefly jump to matching bracket if insert one
-'showmode'	  'smd'     message on status line to show current mode
-'showtabline'	  'stal'    tells when the tab pages line is displayed
-'sidescroll'	  'ss'	    minimum number of columns to scroll horizontal
-'sidescrolloff'   'siso'    min. nr. of columns to left and right of cursor
-'signcolumn'	  'scl'	    when and how to display the sign column
-'smartcase'	  'scs'     no ignore case when pattern has uppercase
-'smartindent'	  'si'	    smart autoindenting for C programs
-'smarttab'	  'sta'     use 'shiftwidth' when inserting <Tab>
-'softtabstop'	  'sts'     number of spaces that <Tab> uses while editing
-'spell'			    enable spell checking
-'spellcapcheck'   'spc'     pattern to locate end of a sentence
-'spellfile'	  'spf'     files where |zg| and |zw| store words
-'spelllang'	  'spl'     language(s) to do spell checking for
-'spelloptions'	  'spo'     options for spell checking
-'spellsuggest'	  'sps'     method(s) used to suggest spelling corrections
-'splitbelow'	  'sb'	    new window from split is below the current one
-'splitright'	  'spr'     new window is put right of the current one
-'startofline'	  'sol'     commands move cursor to first non-blank in line
-'statusline'	  'stl'     custom format for the status line
-'suffixes'	  'su'	    suffixes that are ignored with multiple match
-'suffixesadd'	  'sua'     suffixes added when searching for a file
-'swapfile'	  'swf'     whether to use a swapfile for a buffer
-'switchbuf'	  'swb'     sets behavior when switching to another buffer
-'synmaxcol'	  'smc'     maximum column to find syntax items
-'syntax'	  'syn'     syntax to be loaded for current buffer
-'tabline'	  'tal'     custom format for the console tab pages line
-'tabpagemax'	  'tpm'     maximum number of tab pages for |-p| and "tab all"
-'tabstop'	  'ts'	    number of spaces that <Tab> in file uses
-'tagbsearch'	  'tbs'     use binary searching in tags files
-'tagcase'	  'tc'      how to handle case when searching in tags files
-'taglength'	  'tl'	    number of significant characters for a tag
-'tagrelative'	  'tr'	    file names in tag file are relative
-'tags'		  'tag'     list of file names used by the tag command
-'tagstack'	  'tgst'    push tags onto the tag stack
-'term'			    name of the terminal
-'termbidi'	  'tbidi'   terminal takes care of bi-directionality
-'terse'			    shorten some messages
-'textwidth'	  'tw'	    maximum width of text that is being inserted
-'thesaurus'	  'tsr'     list of thesaurus files for keyword completion
-'thesaurusfunc'	  'tsrfu'   function to be used for thesaurus completion
-'tildeop'	  'top'     tilde command "~" behaves like an operator
-'timeout'	  'to'	    time out on mappings and key codes
-'timeoutlen'	  'tm'	    time out time in milliseconds
-'title'			    let Vim set the title of the window
-'titlelen'		    percentage of 'columns' used for window title
-'titleold'		    old title, restored when exiting
-'titlestring'		    string to use for the Vim window title
-'ttimeout'		    time out on mappings
-'ttimeoutlen'	  'ttm'     time out time for key codes in milliseconds
-'ttytype'	  'tty'     alias for 'term'
-'undodir'	  'udir'    where to store undo files
-'undofile'	  'udf'	    save undo information in a file
-'undolevels'	  'ul'	    maximum number of changes that can be undone
-'undoreload'	  'ur'	    max nr of lines to save for undo on a buffer reload
-'updatecount'	  'uc'	    after this many characters flush swap file
-'updatetime'	  'ut'	    after this many milliseconds flush swap file
-'varsofttabstop'  'vsts'    a list of number of spaces when typing <Tab>
-'vartabstop'	  'vts'	    a list of number of spaces for <Tab>s
-'verbose'	  'vbs'     give informative messages
-'verbosefile'	  'vfile'   file to write messages in
-'viewdir'	  'vdir'    directory where to store files with :mkview
-'viewoptions'	  'vop'     specifies what to save for :mkview
-'virtualedit'	  've'	    when to use virtual editing
-'visualbell'	  'vb'	    use visual bell instead of beeping
-'warn'			    warn for shell command when buffer was changed
-'whichwrap'	  'ww'	    allow specified keys to cross line boundaries
-'wildchar'	  'wc'	    command-line character for wildcard expansion
-'wildcharm'	  'wcm'     like 'wildchar' but also works when mapped
-'wildignore'	  'wig'     files matching these patterns are not completed
-'wildignorecase'  'wic'     ignore case when completing file names
-'wildmenu'	  'wmnu'    use menu for command line completion
-'wildmode'	  'wim'     mode for 'wildchar' command-line expansion
-'wildoptions'	  'wop'     specifies how command line completion is done
-'winaltkeys'	  'wak'     when the windows system handles ALT keys
-'window'	  'wi'	    nr of lines to scroll for CTRL-F and CTRL-B
-'winheight'	  'wh'	    minimum number of lines for the current window
-'winhighlight'	  'winhl'   window-local highlighting
-'winfixheight'	  'wfh'     keep window height when opening/closing windows
-'winfixwidth'	  'wfw'     keep window width when opening/closing windows
-'winminheight'	  'wmh'     minimum number of lines for any window
-'winminwidth'	  'wmw'     minimal number of columns for any window
-'winwidth'	  'wiw'     minimal number of columns for current window
-'wrap'			    long lines wrap and continue on the next line
-'wrapmargin'	  'wm'	    chars from the right where wrapping starts
-'wrapscan'	  'ws'	    searches wrap around the end of the file
-'write'			    writing to a file is allowed
-'writeany'	  'wa'	    write to file with no need for "!" override
-'writebackup'	  'wb'	    make a backup before overwriting a file
-'writedelay'	  'wd'	    delay this many msec for each char (for debug)
+'perldll'                           name of the Perl dynamic library\
+'preserveindent'     'pi'           preserve the indent structure when reindenting\
+'previewheight'      'pvh'          height of the preview window\
+'previewpopup'       'pvp'          use popup window for preview\
+'previewwindow'      'pvw'          identifies the preview window\
+'printdevice'        'pdev'         name of the printer to be used for :hardcopy\
+'printencoding'      'penc'         encoding to be used for printing\
+'printexpr'          'pexpr'        expression used to print PostScript for &colon;hardcopy\
+'printfont'          'pfn'          name of the font to be used for &colon;hardcopy\
+'printheader'        'pheader'      format of the header used for &colon;hardcopy\
+'printmbcharset'     'pmbcs'        CJK character set to be used for &colon;hardcopy\
+'printmbfont'        'pmbfn'        font names to be used for CJK output of &colon;hardcopy\
+'printoptions'       'popt'         controls the format of :hardcopy output\
+'pumheight'          'ph'           maximum height of the popup menu\
+'pumwidth'           'pw'           minimum width of the popup menu\
+'pythondll'                         name of the Python 2 dynamic library\
+'pythonthreedll'                    name of the Python 3 dynamic library\
+'pyxversion'         'pyx'          Python version used for pyx&ast; commands\
+'quoteescape'        'qe'           escape characters used in a string\
+'readonly'           'ro'           disallow writing the buffer\
+'redrawtime'         'rdt'          timeout for 'hlsearch' and &vert;&colon;match&vert; highlighting\
+'regexpengine'       're'           default regexp engine to use\
+'relativenumber'     'rnu'          show relative line number in front of each line\
+'remap'                             allow mappings to work recursively\
+'report'                            threshold for reporting nr. of lines changed\
+'revins'             'ri'           inserting characters will work backwards\
+'rightleft'          'rl'           window is right-to-left oriented\
+'rightleftcmd'       'rlc'          commands for which editing works right-to-left\
+'rubydll'                           name of the Ruby dynamic library\
+'ruler'              'ru'           show cursor line and column in the status line\
+'rulerformat'        'ruf'          custom format for the ruler\
+'runtimepath'        'rtp'          list of directories used for runtime files\
+'scroll'             'scr'          lines to scroll with &lt;C-u&gt; and &lt;C-d&gt;\
+'scrollbind'         'scb'          scroll in window as other windows scroll\
+'scrolljump'         'sj'           minimum number of lines to scroll\
+'scrolloff'          'so'           minimum nr. of lines above and below cursor\
+'scrollopt'          'sbo'          how 'scrollbind' should behave\
+'sections'           'sect'         nroff macros that separate sections\
+'secure'                            secure mode for reading .vimrc in current dir\
+'selection'          'sel'          what type of selection to use\
+'selectmode'         'slm'          when to use Select mode instead of Visual mode\
+'sessionoptions'     'ssop'         options for &vert;&colon;mksession&vert;\
+'shada'              'sd'           use .shada file upon startup and exiting\
+'shell'              'sh'           name of shell to use for external commands\
+'shellcmdflag'       'shcf'         flag to shell to execute one command\
+'shellpipe'          'sp'           string to put output of "&colon;make" in error file\
+'shellquote'         'shq'          quote character&lbrace;s&rbrace; for around shell command\
+'shellredir'         'srr'          string to put output of filter in a temp file\
+'shellslash'         'ssl'          use forward slash for shell file names\
+'shelltemp'          'stmp'         whether to use a temp file for shell commands\
+'shellxescape'       'sxe'          characters to escape when 'shellxquote' is &lpar;\
+'shellxquote'        'sxq'          like 'shellquote', but include redirection\
+'shiftround'         'sr'           round indent to multiple of shiftwidth\
+'shiftwidth'         'sw'           number of spaces to use for (auto)indent step\
+'shortmess'          'shm'          list of flags, reduce length of messages\
+'showbreak'          'sbr'          string to use at the start of wrapped lines\
+'showcmd'            'sc'           show (partial) command in status line\
+'showfulltag'        'sft'          show full tag pattern when completing tag\
+'showmatch'          'sm'           briefly jump to matching bracket if insert one\
+'showmode'           'smd'          message on status line to show current mode\
+'showtabline'        'stal'         tells when the tab pages line is displayed\
+'sidescroll'         'ss'           minimum number of columns to scroll horizontal\
+'sidescrolloff'      'siso'         min. nr. of columns to left and right of cursor\
+'signcolumn'         'scl'          when and how to display the sign column\
+'smartcase'          'scs'          no ignore case when pattern has uppercase\
+'smartindent'        'si'           smart autoindenting for C programs\
+'smarttab'           'sta'          use 'shiftwidth' when inserting &lt;Tab>gt;\
+'softtabstop'        'sts'          number of spaces that &lt;Tab&gt; uses while editing\
+'spell'                             enable spell checking\
+'spellcapcheck'      'spc'          pattern to locate end of a sentence\
+'spellfile'          'spf'          files where &vert;zg&vert; and &vert;zw&vert; store words\
+'spelllang'          'spl'          language(s) to do spell checking for\
+'spelloptions'       'spo'          options for spell checking\
+'spellsuggest'       'sps'          method(s) used to suggest spelling corrections\
+'splitbelow'         'sb'           new window from split is below the current one\
+'splitright'         'spr'          new window is put right of the current one\
+'startofline'        'sol'          commands move cursor to first non-blank in line\
+'statusline'         'stl'          custom format for the status line\
+'suffixes'           'su'           suffixes that are ignored with multiple match\
+'suffixesadd'        'sua'          suffixes added when searching for a file\
+'swapfile'           'swf'          whether to use a swapfile for a buffer\
+'switchbuf'          'swb'          sets behavior when switching to another buffer\
+'synmaxcol'          'smc'          maximum column to find syntax items\
+'syntax'             'syn'          syntax to be loaded for current buffer\
+'tabline'            'tal'          custom format for the console tab pages line\
+'tabpagemax'         'tpm'          maximum number of tab pages for &vert;-p&vert; and "tab all"\
+'tabstop'            'ts'           number of spaces that &lt;Tab&gt; in file uses\
+'tagbsearch'         'tbs'          use binary searching in tags files\
+'tagcase'            'tc'           how to handle case when searching in tags files\
+'taglength'          'tl'           number of significant characters for a tag\
+'tagrelative'        'tr'           file names in tag file are relative\
+'tags'               'tag'          list of file names used by the tag command\
+'tagstack'           'tgst'         push tags onto the tag stack\
+'term'                              name of the terminal\
+'termbidi'           'tbidi'        terminal takes care of bi-directionality\
+'terse'                             shorten some messages\
+'textwidth'          'tw'           maximum width of text that is being inserted\
+'thesaurus'          'tsr'          list of thesaurus files for keyword completion\
+'thesaurusfunc'      'tsrfu'        function to be used for thesaurus completion\
+'tildeop'            'top'          tilde command "~" behaves like an operator\
+'timeout'            'to'           time out on mappings and key codes\
+'timeoutlen'         'tm'           time out time in milliseconds\
+'title'                             let Vim set the title of the window\
+'titlelen'                          percentage of 'columns' used for window title\
+'titleold'                          old title, restored when exiting\
+'titlestring'                       string to use for the Vim window title\
+'ttimeout'                          time out on mappings\
+'ttimeoutlen'        'ttm'          time out time for key codes in milliseconds\
+'ttytype'            'tty'          alias for 'term'\
+'undodir'            'udir'         where to store undo files\
+'undofile'           'udf'          save undo information in a file\
+'undolevels'         'ul'           maximum number of changes that can be undone\
+'undoreload'         'ur'           max nr of lines to save for undo on a buffer reload\
+'updatecount'        'uc'           after this many characters flush swap file\
+'updatetime'         'ut'           after this many milliseconds flush swap file\
+'varsofttabstop'     'vsts'         a list of number of spaces when typing &lt;Tab>&gt;\
+'vartabstop'         'vts'          a list of number of spaces for &lt;Tab&gt;s\
+'verbose'            'vbs'          give informative messages\
+'verbosefile'        'vfile'        file to write messages in\
+'viewdir'            'vdir'         directory where to store files with &colon;mkview\
+'viewoptions'        'vop'          specifies what to save for &colon;mkview\
+'virtualedit'        've'           when to use virtual editing\
+'visualbell'         'vb'           use visual bell instead of beeping\
+'warn'                              warn for shell command when buffer was changed\
+'whichwrap'          'ww'           allow specified keys to cross line boundaries\
+'wildchar'           'wc'           command-line character for wildcard expansion\
+'wildcharm'          'wcm'          like 'wildchar' but also works when mapped\
+'wildignore'         'wig'          files matching these patterns are not completed\
+'wildignorecase'     'wic'          ignore case when completing file names\
+'wildmenu'           'wmnu'         use menu for command line completion\
+'wildmode'           'wim'          mode for 'wildchar' command-line expansion\
+'wildoptions'        'wop'          specifies how command line completion is done\
+'winaltkeys'         'wak'          when the windows system handles &lt;Alt&gt; keys;
+'window'             'wi'           nr of lines to scroll for &lt;C-f&gt; and &lt;C-b&gt;\
+'winheight'          'wh'           minimum number of lines for the current window\
+'winhighlight'       'winhl'        window-local highlighting\
+'winfixheight'       'wfh'          keep window height when opening&sol;closing windows\
+'winfixwidth'        'wfw'          keep window width when opening&sol;closing windows\
+'winminheight'       'wmh'          minimum number of lines for any window\
+'winminwidth'        'wmw'          minimal number of columns for any window\
+'winwidth'           'wiw'          minimal number of columns for current window\
+'wrap'                              long lines wrap and continue on the next line\
+'wrapmargin'         'wm'           chars from the right where wrapping starts\
+'wrapscan'           'ws'           searches wrap around the end of the file\
+'write'                             writing to a file is allowed\
+'writeany'           'wa'           write to file with no need for "!" override\
+'writebackup'        'wb'           make a backup before overwriting a file\
+'writedelay'         'wd'           delay this many msec for each char (for debug)
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
