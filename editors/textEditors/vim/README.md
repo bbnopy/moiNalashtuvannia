@@ -950,6 +950,47 @@ Context-sensitive completion on the command-line:\
 &vert;c &lt;C-n&gt;&vert;        &lt;C-n&gt;                                               after 'wildchar' with multiple matches: go to next match\
 &vert;c &lt;C-p&gt;&vert;        &lt;C-p&gt;                                               after 'wildchar' with multiple matches: go to previous match
 
+##### &ast;Q_ra&ast; Ex ranges
+
+&vert;&colon;range&vert;     &comma;                                                 separates two line numbers\
+&vert;&colon;range&vert;     &semi;                                                  idem, set cursor to the first line number before interpreting the second one\
+\
+&vert;&colon;:range&vert;    &lbrace;number&rbrace;                                   an absolute line number\
+&vert;&colon;range&vert;     &period;                                                 the current line\
+&vert;&colon;range&vert;     &dollar;                                                 the last line in the file\
+&vert;&colon;range&vert;     &percnt;                                                 equal to 1,&dollar; (the entire file)\
+&vert;&colon;range&vert;     &ast;                                                    equal to '&lt;,'&gt; (visual area)\
+&vert;&colon;range&vert;     't                                                       position of mark t\
+&vert;&colon;range&vert;     &sol;&lbrace;pattern&rbrace;&lbrack;&sol;&rbrack;        the next line where &lbrace;pattern&rbrace; matches\
+&vert;&colon;range&vert;     &quest;&lbrace;pattern&rbrace;&lbrack;&quest;&rbrack;    the previous line where &lbrace;pattern&rbrace; matches\
+\
+&vert;&colon;range&vert;     &plus;&lbrack;num&rbrack;                                add &lbrack;num&rbrack; to the preceding line number (default: 1)\
+&vert;&colon;range&vert;     &minus;&lbrack;num&rbrack;                               subtract &lbrack;num&rbrack; from the preceding line number (default: 1)
+
+##### &ast;Q_ex&ast; Special Ex characters
+
+&vert;&colon;bar&vert;                 &vert;                      separates two commands (not for "&colon;global" and "&colon;&excl;")\
+&vert;&colon;quote&vert;               &quot;                      begins comment\
+\
+&vert;&colon;&lowbar;&percnt;&vert;    &percnt;                    current file name (only where a file name is expected)\
+&vert;&colon;&lowbar;&num;&vert;       &num;&lbrack;num&rbrack;    alternate file name [num] (only where a file name is expected)\
+    Note: The next seven are typed literally; these are not special keys!\
+&vert;&colon;&lt;abuf&gt;&vert;        &lt;abuf&gt;                buffer number, for use in an autocommand (only where a file name is expected)\
+&vert;&colon;&lt;afile&gt;&vert;       &lt;afile&gt;               file name, for use in an autocommand (only where a file name is expected)\
+&vert;&colon;&lt;amatch&gt;&vert;      &lt;amatch&gt;              what matched with the pattern, for use in an autocommand (only where a file name is expected)\
+&vert;&colon;&lt;cword&gt;&vert;       &lt;cword&gt;               word under the cursor (only where a file name is expected)\
+&vert;&colon;&lt;cWORD&gt;&vert;       &lt;cWORD&gt;               WORD under the cursor (only where a file name is expected) (see &vert;WORD&vert;)\
+&vert;&colon;&lt;cfile&gt;&vert;       &lt;cfile&gt;               file name under the cursor (only where a file name is expected)\
+&vert;&colon;&lt;sfile&gt;&vert;       &lt;sfile&gt;               file name of a "&colon;source"d file, within that file (only where a file name is expected)\
+\
+    After "&percnt;", "&num;", "&lt;cfile&gt;", "&lt;sfile&gt;" or "&lt;afile&gt;"\
+    &vert;&colon;&colon;p&vert;    &colon;p                                                          full path\
+    &vert;&colon;&colon;h&vert;    &colon;h                                                          head (file name removed)\
+    &vert;&colon;&colon;t&vert;    &colon;t                                                          tail (file name only)\
+    &vert;&colon;&colon;r&vert;    &colon;r                                                          root (extension removed)\
+    &vert;&colon;&colon;e&vert;    &colon;e                                                          extension\
+    &vert;&colon;&colon;s&vert;    &colon;s&sol;&lbrace;pat&rbrace;&sol;&lbrace;repl&rbrace;&sol;    substitute &lbrace;pat&rbrace; with &lbrace;repl&rbrace;
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
