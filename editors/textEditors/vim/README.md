@@ -876,6 +876,11 @@ Short explanation of each option: &ast;option-list&ast;\
 &vert;&lt;C-r&gt;&vert;    N    &lt;C-r&gt;    redo last N undone changes\
 &vert;U&vert;                   U              restore last changed line
 
+##### &ast;Q_et&ast; External commands
+
+&vert;&colon;&excl;&vert;    &colon;&excl;&lbrace;command&rbrace;    execute &lbrace;command&rbrace; with a shell\
+&vert;K&vert;                K                                       lookup keyword under the cursor with 'keywordprg' program (default: "man")
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
