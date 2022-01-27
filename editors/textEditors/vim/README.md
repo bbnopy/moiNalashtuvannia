@@ -881,6 +881,24 @@ Short explanation of each option: &ast;option-list&ast;\
 &vert;&colon;&excl;&vert;    &colon;&excl;&lbrace;command&rbrace;    execute &lbrace;command&rbrace; with a shell\
 &vert;K&vert;                K                                       lookup keyword under the cursor with 'keywordprg' program (default: "man")
 
+##### &ast;Q_qf&ast; Quickfix commands
+
+&vert;&colon;cc&vert;            &colon;cc &lbrack;nr&rbrack;                        display error &lbrack;nr&rbrack; (default is the same again)\
+&vert;&colon;cnext&vert;         &colon;cn                                           display the next error\
+&vert;&colon;cprevious&vert;     &colon;cp                                           display the previous error\
+&vert;&colon;clist&vert;         &colon;cl                                           list all errors\
+&vert;&colon;cfile&vert;         &colon;cf                                           read errors from the file 'errorfile'\
+&vert;&colon;cgetbuffer&vert;    &colon;cgetb                                        like &colon;cbuffer but don't jump to the first error\
+&vert;&colon;cgetfile&vert;      &colon;cg                                           like &colon;cfile but don't jump to the first error\
+&vert;&colon;cgetexpr&vert;      &colon;cgete                                        like &colon;cexpr but don't jump to the first error\
+&vert;&colon;caddfile&vert;      &colon;caddf                                        add errors from the error file to the current quickfix list\
+&vert;&colon;caddexpr&vert;      &colon;cad                                          add errors from an expression to the current quickfix list\
+&vert;&colon;cbuffer&vert;       &colon;cb                                           read errors from text in a buffer\
+&vert;&colon;cexpr&vert;         &colon;cex                                          read errors from an expression\
+&vert;&colon;cquit&vert;         &colon;cq                                           quit without writing and return error code (to the compiler)\
+&vert;&colon;make&vert;          &colon;make &lbrack;args&rbrack;                    start make, read errors, and jump to first error\
+&vert;&colon;grep&vert;          &colon;gr&vbrack;ep&rbrack; &lbrack;args&rbrack;    execute 'grepprg' to find matches and jump to the first one
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
