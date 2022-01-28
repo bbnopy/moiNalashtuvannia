@@ -1026,6 +1026,41 @@ Context-sensitive completion on the command-line:\
 &vert;&minus;&minus;version&vert;    &minus;&minus;version                                                show version info and exit\
 &vert;&minus;&minus;&vert;           &minus;                                                              read file from stdin
 
+##### &ast;Q_ed&ast; Editing a file
+
+    Without !: Fail if changes have been made to the current buffer.\
+    With !: Discard any changes to the current buffer.\
+&vert;&colon;edit f&vert;       &colon;e&lbrack;dit&rbrack;&lbrack;&excl;&rbrack; &lbrace;file&rbrace;    edit &lbrace;file&rbrace;\
+&vert;&colon;edit&vert;         &colon;e&lbrack;dit&rbrack;&lbrack;&excl;&rbrack;                         reload the current file\
+&vert;&colon;enew&vert;         &colon;ene&lbrack;w&rbrack;&lbrack;&excl;&rbrack;                         edit a new, unnamed buffer\
+&vert;&colon;find&vert;         &colon;fin&lbrack;d&rbrack;&lbrack;&excl;&rbrack; &lbrace;file&rbrace;    find &lbrace;file&rbrace; in 'path' and edit it\
+\
+&vert;&lt;C-&Hat;&gt;&vert;     N    &lt;C-&Hat;&gt;                                                    edit alternate file N (equivalent to ":e #N")\
+&vert;gf&vert;                       gf  or &rbrack;f                                                   edit the file whose name is under the cursor\
+&vert;&colon;pwd&vert;          &colon;pwd                                                              print the current directory name\
+&vert;&colon;cd&vert;           &colon;cd &lbrack;path&rbrack;                                          change the current directory to &lbrack;path&rbrack;\
+&vert;&colon;cd&minus;&vert;    &colon;cd &minus;                                                       back to previous current directory\
+&vert;&colon;file&vert;         &colon;f&lbrack;ile&rbrack;                                             print the current file name and the cursor position\
+&vert;&colon;file&vert;         &colon;f&lbrack;ile&rbrack; &lbrace;name&rbrace;                        set the current file name to &lbrace;name&rbrace;\
+&vert;&colon;files&vert;        &colon;files                                                            show alternate file names
+
+##### &ast;Q_fl&ast; Using the argument list    &vert;argument-list&vert;
+
+&vert;&colon;args&vert;    &colon;ar&lbrack;gs&rbrack;                                                print the argument list, with the current file in "&lbrack;&rbrack;"\
+&vert;&colon;all&vert;     &colon;all  or &colon;sall                                                 open a window for every file in the arg list\
+&vert;&colon;wn&vert;      &colon;wn&lbrack;ext&rbrack;&lbrack;&excl;&rbrack;                         write file and edit next file\
+&vert;&colon;wn&vert;      &colon;wn&lbrack;ext&rbrack;&lbrack;&excl;&rbrack; &lbrace;file&rbrace;    write to &lbrace;file&rbrace; and edit next file, unless file} exists; With &excl;, overwrite existing file\
+&vert;&colon;wN&vert;      &colon;wN&lbrack;ext&rbrack;&lbrack;&excl;&rbrack; &lbrack;file&rbrack;    write file and edit previous file\
+\
+|                 |                  in current window                  |                     in new window                    |                                         |
+|-----------------|-----------------------------------------------------|------------------------------------------------------|-----------------------------------------|
+| &colon;argument | &colon;argu&lbrack;ment&rbrack; N                   | &colon;sar&lbrack;gument&rbrack; N                   | edit file N                             |
+| &colon;next     | &colon;n&lbrack;ext&rbrack;                         | &colon;sn&lbrack;ext&rbrack;                         | edit next file                          |
+| &colon;next f   | &colon;n&lbrack;ext&rbrack; &lbrace;arglist&rbrace; | &colon;sn&lbrack;ext&rbrack; &lbrace;arglist&rbrace; | define new arg list and edit first file |
+| &colon;Next     | &colon;N&lbrack;ext&rbrack;                         | &colon;sN&lbrack;ext&rbrack;                         | edit previous file                      |
+| &colon;first    | &colon;fir&lbrack;st&rbrack;                        | &colon;sfir&lbrack;st&rbrack;                        | edit first file                         |
+| &colon;last     | &colon;la&lbrack;st&rbrack;                         | &colon;sla&lbrack;st&rbrack;                         | edit last file                          |
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
