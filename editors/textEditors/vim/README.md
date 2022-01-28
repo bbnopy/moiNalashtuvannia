@@ -1061,6 +1061,33 @@ Context-sensitive completion on the command-line:\
 | &colon;first    | &colon;fir&lbrack;st&rbrack;                        | &colon;sfir&lbrack;st&rbrack;                        | edit first file                         |
 | &colon;last     | &colon;la&lbrack;st&rbrack;                         | &colon;sla&lbrack;st&rbrack;                         | edit last file                          |
 
+##### &ast;Q_wq&ast; Writing and quitting
+
+&vert;&colon;w&vert;       &colon;&lbrack;range&rbrack;w&lbrack;rite&rbrack;&lbrack;&excl;&rbrack;                                 write to the current file\
+&vert;&colon;w f&vert;     &colon;&lbrack;range&rbrack;w&lbrack;rite&rbrack; &lbrace;file&rbrace;                                  write to &lbrace;file&rbrace;, unless it already exists\
+&vert;&colon;w f&vert;     &colon;&lbrack;range&rbrack;w&lbrack;rite&rbrack;&excl; &lbrace;file&rbrace;                            write to &lbrace;file&rbrace;.  Overwrite an existing file\
+&vert;&colon;w a&vert;     &colon;&lbrack;range&rbrack;w&lbrack;rite&rbrack;&lbrack;&excl;&rbrack; &raquo;                         append to the current file\
+&vert;&colon;w a&vert;     &colon;&lbrack;range&rblack;w&lbrack;rite&rbrack;&lbrack;&excl;&rblack; &raquo; &lbrace;file&rbrace;    append to &lbrace;file&rbrace;\
+&vert;&colon;w c&vert;     &colon;&lbrack;range&rbrack;w&lbrack;rite&rbrack; &excl;&lbrace;cmd&rbrace;                             execute &lbrace;cmd&rbrace; with &lbrack;range&rbrack; lines as standard input\
+&vert;&colon;up&vert;      &colon;&lbrack;range&rbrack;up&lbrack;date&rbrack;&lbrack;&excl;&rbrack;                                write to current file if modified\
+&vert;&colon;wall&vert;    &colon;wa&lbrack;ll&rbrack;&lbrack;&excl;&rbrack;                                                       write all changed buffers\
+\
+&vert;&colon;q&vert;       &colon;q&lbrack;uit&rbrack;                                                                             quit current buffer, unless changes have been made; Exit Vim when there are no other non-help buffers\
+&vert;&colon;q&vert;       &colon;q&lbrack;uit&rbrack;&excl;                                                                       quit current buffer always, discard any changes.  Exit Vim when there are no other non-help buffers\
+&vert;&colon;qa&vert;      &colon;qa&lbrack;ll&rbrack;                                                                             exit Vim, unless changes have been made\
+&vert;&colon;qa&vert;      &colon;qa&lbrack;ll&rbrack;&excl;                                                                       exit Vim always, discard any changes\
+&vert;&colon;cq&vert;      &colon;cq                                                                                               quit without writing and return error code\
+\
+&vert;&colon;wq&vert;      &colon;wq&lbrack;&excl;&rbrack;                                                                         write the current file and exit\
+&vert;&colon;wq&vert;      &colon;wq&lbrack;&excl;&rbrack; &lbrace;file&rbrace;                                                    write to &lbrace;file&rbrace; and exit\
+&vert;&colon;xit&vert;     &colon;x&lbrack;it&rbrack;&lbrack;&excl;&rbrack; &lbrack;file&rbrack;                                   like "&colon;wq" but write only when changes have been made\
+&vert;ZZ&vert;             ZZ                                                                                                      same as "&colon;x"\
+&vert;ZQ&vert;             ZQ                                                                                                      same as "&colon;q&excl;"\
+&vert;&colon;xall&vert;    &colon;xa&lbrack;ll&rbrack;&lbrack;&excl;&rbrack;  or &colon;wqall&lbrack;!&rbrack;                     write all changed buffers and exit\
+\
+&vert;&colon;stop&vert;    &colon;st&lbrack;op&rbrack;[&excl;                                                                      suspend Vim or start new shell; if 'aw' option is set and &lbrack;&excl;&rbrack; not given write the buffer\
+&vert;&lt;C-z&gt;&vert;    &lt;C-z&gt;                                                                                             same as "&colon;stop"
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
