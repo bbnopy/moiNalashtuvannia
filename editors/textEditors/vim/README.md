@@ -1115,48 +1115,41 @@ Context-sensitive completion on the command-line:\
 
 ##### &ast;Q_wi&ast; Multi-window commands
 
-&vert;&lt;C-w s&gt;&vert;    &lt;C-w s&gt; or &colon;split    split window into two parts\
-|:split_f|	:split {file}		split window and edit {file} in one of
-					   them
-|:vsplit|	:vsplit {file}		same, but split vertically
-|:vertical|	:vertical {cmd}		make {cmd} split vertically
-
-|:sfind|	:sf[ind] {file}		split window, find {file} in 'path'
-					   and edit it
-|:terminal|	:terminal {cmd}		open a terminal window
-|CTRL-W_]|	CTRL-W ]		split window and jump to tag under
-					   cursor
-|CTRL-W_f|	CTRL-W f		split window and edit file name under
-					   the cursor
-|CTRL-W_^|	CTRL-W ^		split window and edit alternate file
-|CTRL-W_n|	CTRL-W n  or  :new	create new empty window
-|CTRL-W_q|	CTRL-W q  or  :q[uit]	quit editing and close window
-|CTRL-W_c|	CTRL-W c  or  :cl[ose]	make buffer hidden and close window
-|CTRL-W_o|	CTRL-W o  or  :on[ly]	make current window only one on the
-					   screen
-
-|CTRL-W_j|	CTRL-W j		move cursor to window below
-|CTRL-W_k|	CTRL-W k		move cursor to window above
-|CTRL-W_CTRL-W|	CTRL-W CTRL-W		move cursor to window below (wrap)
-|CTRL-W_W|	CTRL-W W		move cursor to window above (wrap)
-|CTRL-W_t|	CTRL-W t		move cursor to top window
-|CTRL-W_b|	CTRL-W b		move cursor to bottom window
-|CTRL-W_p|	CTRL-W p		move cursor to previous active window
-
-|CTRL-W_r|	CTRL-W r		rotate windows downwards
-|CTRL-W_R|	CTRL-W R		rotate windows upwards
-|CTRL-W_x|	CTRL-W x		exchange current window with next one
-
-|CTRL-W_=|	CTRL-W =		make all windows equal height & width
-|CTRL-W_-|	CTRL-W -		decrease current window height
-|CTRL-W_+|	CTRL-W +		increase current window height
-|CTRL-W__|	CTRL-W _		set current window height (default:
-					   very high)
-
-|CTRL-W_<|	CTRL-W <		decrease current window width
-|CTRL-W_>|	CTRL-W >		increase current window width
-|CTRL-W_bar|	CTRL-W |		set current window width (default:
-					   widest possible)
+&vert;&lt;C-w s&gt;&vert;              &lt;C-w s&gt; or &colon;split                        split window into two parts\
+&vert;&colon;split f&vert;             &colon;split &lbrace;file&rbrace;                    split window and edit &lbrace;file&rbrace; in one of them\
+&vert;&colon;vsplit&vert;              &colon;vsplit &lbrace;file&rbrace;                   same, but split vertically\
+&vert;&colon;vertical&vert;            &colon;vertical &lbrace;cmd&rbrace;                  make &lbrace;cmd&rbrace; split vertically\
+\
+&vert;&colon;sfind&vert;               &colon;sf&lbrack;ind&rbrack; &lbrace;file&rbrace;    split window, find &lbrace;file&rbrace; in 'path' and edit it\
+&vert;&colon;terminal&vert;            &colon;terminal &lbrace;cmd&rbrace;                  open a terminal window\
+&vert;&lt;C-w &rbrack;&vert;           &lt;C-w &rbrack;                                     split window and jump to tag under cursor\
+&vert;&lt;C-w f&gt;&vert;              &lt;C-w f&gt;                                        split window and edit file name under the cursor\
+&vert;&lt;C-w &Hat;&gt;&vert;          &lt;C-w &Hat;&gt;                                    split window and edit alternate file\
+&vert;&lt;C-w n&gt;&vert;              &lt;C-w n&gt; or &colon;new                          create new empty window\
+&vert;&lt;C-w q&gt;&vert;              &lt;C-w q&gt; or &colon;q&lbrack;uit&rbrack;         quit editing and close window\
+&vert;&lt;C-w c&gt;&vert;              &lt;C-w c&gr; or &colon;cl&lbrack;ose&rbrack;        make buffer hidden and close window\
+&vert;&lt;C-w o&gt;&vert;              &lt;C-w o&gt; or &colon;on&lbrack;ly&rbrack;         make current window only one on the screen\
+\
+&vert;&lt;C-w j&gt;&vert;              &lt;C-w j&gt;                                       move cursor to window below\
+&vert;&lt;C-w k&gt;&vert;              &lt;C-w k&gt;                                       move cursor to window above\
+&vert;&lt;C-w&gt; &lt;C-w&gt;&vert;    &lt;C-w&gt; &lt;C-w&gt;                             move cursor to window below &lbrace;wrap&rbrace;\
+&vert;&lt;C-w w&gt;&vert;              &lt;C-w w&gt;                                       move cursor to window above &lbrace;wrap&rbrace;\
+&vert;&lt;C-w t&gt;&vert;              &lt;C-w t&gt;                                       move cursor to top window\
+&vert;&lt;C-w b&gt;&vert;              &lt;C-w b&gt;                                       move cursor to bottom window\
+&vert;&lt;C-w p&gt;&vert;              &lt;C-w p&gt;                                       move cursor to previous active window\
+\
+&vert;&lt;C-w r&gt;&vert;              &lt;C-w r&gt;                                       rotate windows downwards\
+&vert;&lt;C-w r&gt;&vert;              &lt;C-w r&gt;                                       rotate windows upwards\
+&vert;&lt;C-w x&gt;&vert;              &lt;C-w x&gt;                                       exchange current window with next one\
+\
+&vert;&lt;C-w &equals;&gt;&vert;       &lt;C-w &equals;&gt;                                make all windows equal height & width\
+&vert;&lt;C-w &minus;&gt;&vert;        &lt;C-w &minus;&gt;                                 decrease current window height\
+&vert;&lt;C-w &plus;&gt;&vert;         &lt;C-w &plus;&gt;                                  increase current window height\
+&vert;&lt;C-w &lowbar;&gt;&vert;       &lt;C-w &lowbar;&gt;                                set current window height (default: very high)\
+\
+&vert;&lt;C-w &lt;&gt;&vert;           &lt;C-w &lt;&gt;                                    decrease current window width\
+&vert;&lt;C-w &gt;&gt;&vert;           &lt;C-w &gt;&gt;                                    increase current window width\
+&vert;&lt;C-w bar&gt;&vert;            &lt;C-w &vert;&gt;                                  set current window width (default: widest possible)
 
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
