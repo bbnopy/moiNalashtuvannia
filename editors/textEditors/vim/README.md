@@ -1088,6 +1088,76 @@ Context-sensitive completion on the command-line:\
 &vert;&colon;stop&vert;    &colon;st&lbrack;op&rbrack;[&excl;                                                                      suspend Vim or start new shell; if 'aw' option is set and &lbrack;&excl;&rbrack; not given write the buffer\
 &vert;&lt;C-z&gt;&vert;    &lt;C-z&gt;                                                                                             same as "&colon;stop"
 
+##### &ast;Q_ac&ast; Automatic Commands
+
+&vert;shada-file&vert;        read registers, marks, history at startup, save when exiting.\
+\
+&vert;&colon;rshada&vert;     &colon;rsh&lbrack;ada&rbrack; &lbrack;file&rbrack;                                read info from ShaDa file &lbrack;file&rbrack;\
+&vert;&colon;rshada&vert;     &colon;rsh&lbrack;ada&rbrackl&excl; &lbrack;file&rbrack;                          idem, overwrite existing info\
+&vert;&colon;wshada&vert;     &colon;wsh&lbrack;ada&rbrack; &lbrack;file&rbrack;                                add info to ShaDa file &lbrack;file&rbrack;\
+&vert;&colon;wshada&vert;     &colon;wsh&lbrack;ada&rbrack;&excl; &lbrack;file&rbrack;                          write info to ShaDa file &lbrack;file&rbrack;\
+\
+&vert;modeline&vert;          Automatic option setting when editing a file\
+\
+&vert;modeline&vert;          vim&colon;&lbrace;set-arg&rbrace;&colon; ..                                      In the first and last lines of the file (see 'ml' option), {set-arg} is given as an argument to "&colon;set"\
+\
+&vert;autocommand&vert;       Automatic execution of commands on certain events.\
+\
+&vert;&colon;autocmd&vert;    &colon;au                                                                        list all autocommands\
+&vert;&colon;autocmd&vert;    &colon;au &lbrace;event&rbrace;                                                  list all autocommands for &lbrace;event&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au &lbrace;event&rbrace; &lbrace;pat&rvrace;                              list all autocommands for &lbrace;event&rbrace; with &lbrace;pat&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au &lbrace;event&rbrace; &lbrace;pat&rbrace; &lbrace;cmd&rbrace;          enter new autocommands for &lbrace;event&rbrace; with &lbrace;pat&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au&excl;                                                                  remove all autocommands\
+&vert;&colon;autocmd&vert;    &colon;au&excl; &lbrace;event&rbrace;                                            remove all autocommands for &lbrace;event&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au&excl; &ast; &lbrace;pat&rbrace;                                        remove all autocommands for &lbrace;pat&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au&excl; &lbrace;event&rbrace; &lbrace;pat&rbrace;                        remove all autocommands for &lbrace;event&rbrace; with &lbrace;pat&rbrace;\
+&vert;&colon;autocmd&vert;    &colon;au&excl; &lbrace;event&rbrace; &lbrace;pat&rbrace; &lbrace;cmd&rbrace;    remove all autocommands for &lbrace;event&rbrace; with &lbrace;pat&rbrace; and enter new one
+
+##### &ast;Q_wi&ast; Multi-window commands
+
+&vert;&lt;C-w s&gt;&vert;    &lt;C-w s&gt; or &colon;split    split window into two parts\
+|:split_f|	:split {file}		split window and edit {file} in one of
+					   them
+|:vsplit|	:vsplit {file}		same, but split vertically
+|:vertical|	:vertical {cmd}		make {cmd} split vertically
+
+|:sfind|	:sf[ind] {file}		split window, find {file} in 'path'
+					   and edit it
+|:terminal|	:terminal {cmd}		open a terminal window
+|CTRL-W_]|	CTRL-W ]		split window and jump to tag under
+					   cursor
+|CTRL-W_f|	CTRL-W f		split window and edit file name under
+					   the cursor
+|CTRL-W_^|	CTRL-W ^		split window and edit alternate file
+|CTRL-W_n|	CTRL-W n  or  :new	create new empty window
+|CTRL-W_q|	CTRL-W q  or  :q[uit]	quit editing and close window
+|CTRL-W_c|	CTRL-W c  or  :cl[ose]	make buffer hidden and close window
+|CTRL-W_o|	CTRL-W o  or  :on[ly]	make current window only one on the
+					   screen
+
+|CTRL-W_j|	CTRL-W j		move cursor to window below
+|CTRL-W_k|	CTRL-W k		move cursor to window above
+|CTRL-W_CTRL-W|	CTRL-W CTRL-W		move cursor to window below (wrap)
+|CTRL-W_W|	CTRL-W W		move cursor to window above (wrap)
+|CTRL-W_t|	CTRL-W t		move cursor to top window
+|CTRL-W_b|	CTRL-W b		move cursor to bottom window
+|CTRL-W_p|	CTRL-W p		move cursor to previous active window
+
+|CTRL-W_r|	CTRL-W r		rotate windows downwards
+|CTRL-W_R|	CTRL-W R		rotate windows upwards
+|CTRL-W_x|	CTRL-W x		exchange current window with next one
+
+|CTRL-W_=|	CTRL-W =		make all windows equal height & width
+|CTRL-W_-|	CTRL-W -		decrease current window height
+|CTRL-W_+|	CTRL-W +		increase current window height
+|CTRL-W__|	CTRL-W _		set current window height (default:
+					   very high)
+
+|CTRL-W_<|	CTRL-W <		decrease current window width
+|CTRL-W_>|	CTRL-W >		increase current window width
+|CTRL-W_bar|	CTRL-W |		set current window width (default:
+					   widest possible)
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
