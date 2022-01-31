@@ -1151,6 +1151,27 @@ Context-sensitive completion on the command-line:\
 &vert;&lt;C-w &gt;&gt;&vert;           &lt;C-w &gt;&gt;                                    increase current window width\
 &vert;&lt;C-w bar&gt;&vert;            &lt;C-w &vert;&gt;                                  set current window width (default: widest possible)
 
+##### &ast;Q_bu&ast; Buffer list commands
+
+&vert;&colon;buffers&vert;    &colon;buffers or &colon;files                           list all known buffer and file names\
+\
+&vert;&colon;ball&vert;       &colon;ball or &colon;sball                               edit all args/buffers\
+&vert;&colon;unhide&vert;     &colon;unhide or &colon;sunhide                           edit all loaded buffers\
+\
+&vert;&colon;badd&vert;       &colon;badd &lbrace;fname&rbrace;                         add file name &lbrace;fname&rbrace; to the list\
+&vert;&colon;bunload&vert;    &colon;bunload&lbrack;&excl;&rbrack; &lbrack;N&rbrack;    unload buffer &lbrack;N&rbrack; from memory\
+&vert;&colon;bdelete&vert;    &colon;bdelete&lbrack;&excl;&rbrack; &lbrack;N&rbrack;    unload buffer &lbrack;N&rbrack; and delete it from the buffer list\
+\
+|                  |                 in current window                   |                     in new window                    |                         |
+|------------------|-----------------------------------------------------|------------------------------------------------------|-------------------------|
+| &colon;buffer    | &colon;&lbrack;N&rbrack;buffer &lbrack;N&rbrack;    | &colon;&lbrack;N&rbrack;sbuffer &lbrack;N&rbrack;    | to arg/buf N            |
+| &colon;bnext     | &colon;&lbrack;N&rbrack;bnext &lbrack;N&rbrack;     | &colon;&lbrack;N&rbrack;sbnext &lbrack;N&rbrack;     | to Nth next arg/buf     |
+| &colon;bNext     | &colon;&lbrack;N&rbrack;bNext &lbrack;N&rbrack;     | &colon;&lbrack;N&rbrack;sbNext &lbrack;N&rbrack;     | to Nth previous arg/buf |
+| &colon;bprevious | &colon;&lbrack;N&rbrack;bprevious &lbrack;N&rbrack; | &colon;&lbrack;N&rbrack;sbprevious &lbrack;N&rbrack; | to Nth previous arg/buf |
+| &colon;bfirst    | &colon;bfirst                                       | &colon;sbfirst                                       | to first arg/buf        |
+| &colon;blast     | &colon;blast                                        | &colon;sblast                                        | to last arg/buf         |
+| &colon;bmodified | &colon;&lbrack;N&rbrack;bmod &lbrack;N&rbrack;      | &colon;&lbrack;N&rbrack;sbmod &lbrack;N&rbrack;      | to Nth modified buf     |
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
