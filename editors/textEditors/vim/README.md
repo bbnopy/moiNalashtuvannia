@@ -1172,6 +1172,24 @@ Context-sensitive completion on the command-line:\
 | &colon;blast     | &colon;blast                                        | &colon;sblast                                        | to last arg/buf         |
 | &colon;bmodified | &colon;&lbrack;N&rbrack;bmod &lbrack;N&rbrack;      | &colon;&lbrack;N&rbrack;sbmod &lbrack;N&rbrack;      | to Nth modified buf     |
 
+##### &ast;Q_sy&ast; Syntax Highlighting
+
+&vert;&colon;syn-on&vert;         &colon;syntax on                                                                         start using syntax highlighting\
+&vert;&colon;syn-off&vert;        &colon;syntax off                                                                        stop using syntax highlighting\
+\
+&vert;&colon;syn-keyword&vert;    &colon;syntax keyword &lbrace;group-name&rbrace; &lbrace;keyword&rbrace; ..               add a syntax keyword item\
+&vert;&colon;syn-match&vert;      &colon;syntax match &lbrace;group-name&rbrace; &lbrace;pattern&rbrace; ...                add syntax match item\
+&vert;&colon;syn-region&vert;     &colon;syntax region &lbrace;group-name&rbrace; &lbrace;pattern&rbrace; ...               add syntax region item\
+&vert;&colon;syn-sync&vert;       &colon;syntax sync &lbrack;ccomment &vert; lines &lbrace;N&rbrace; &vert; ...&rbrack;     tell syntax how to sync\
+&vert;&colon;syntax&vert;         &colon;syntax &lbrack;list&rbrack;                                                        list current syntax items\
+&vert;&colon;syn-clear&vert;      &colon;syntax clear                                                                       clear all syntax info\
+\
+&vert;&colon;highlight&vert;      &colon;highlight clear                                                                    clear all highlight info\
+&vert;&colon;highlight&vert;      &colon;highlight &lbrace;group-name&rbrace; &lbrace;key&rbrace;=&lbrace;arg&rbrace; ..    set highlighting for &lbrace;group-name&rbrace;\
+\
+&vert;&colon;filetype&vert;       &colon;filetype on                                                                        switch on file type detection, without syntax highlighting\
+&vert;&colon;filetype&vert;       &colon;filetype plugin indent on                                                          switch on file type detection, with automatic indenting and settings
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
