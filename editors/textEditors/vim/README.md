@@ -1190,6 +1190,43 @@ Context-sensitive completion on the command-line:\
 &vert;&colon;filetype&vert;       &colon;filetype on                                                                        switch on file type detection, without syntax highlighting\
 &vert;&colon;filetype&vert;       &colon;filetype plugin indent on                                                          switch on file type detection, with automatic indenting and settings
 
+##### &ast;Q_gu&ast; GUI commands
+
+&vert;&colon;menu&vert;      &colon;menu                                                                  list all menus\
+&vert;&colon;menu&vert;      &colon;menu &lbrace;mpath&rbrace;                                            list menus starting with &lbrace;mpath&rbrace;\
+&vert;&colon;menu&vert;      &colon;menu &lbrace;mpath&rbrace; &lbrace;rhs&rbrace;                        add menu &lbrace;mpath&rbrace;, giving &lbrace;rhs&rbrace;\
+&vert;&colon;menu&vert;      &colon;menu &lbrace;pri&rbrace; &lbrace;mpath&rbrace; &lbrace;rhs&rbrace;    idem, with priorities &lbrace;pri&rbrace;\
+&vert;&colon;menu&vert;      &colon;menu ToolBar.&lbrace;name&rbrace; &lbrace;rhs&rbrace;                 add toolbar item, giving &lbrace;rhs&rbrace;\
+&vert;&colon;tmenu&vert;     &colon;tmenu &lbrace;mpath&rbrace; &lbrace;text&rbrace;                      add tooltip to menu &lbrace;mpath&rbrace;\
+&vert;&colon;unmenu&vert;    &colon;unmenu &lbrace;mpath&rbrace;                                          remove menu &lbrace;mpath&rbrace;
+
+##### &ast;Q_fo&ast; Folding
+
+&vert;'foldmethod'&vert;    set foldmethod=manual               manual folding\
+                            set foldmethod=indent               folding by indent\
+                            set foldmethod=expr                 folding by 'foldexpr'\
+                            set foldmethod=syntax               folding by syntax regions
+                            set foldmethod=marker               folding by 'foldmarker'\
+\
+&vert;zf&vert;              zf&lbrace;motion&rbrace;            operator&colon; Define a fold manually\
+&vert;&colon;fold&vert;     &colon;&lbrace;range&rbrace;fold    define a fold for {range} lines\
+&vert;zd&vert;              zd                                  delete one fold under the cursor\
+&vert;zD&vert;              zD                                  delete all folds under the cursor\
+\
+&vert;zo&vert;              zo                                  open one fold under the cursor\
+&vert;zO&vert;              zO                                  open all folds under the cursor\
+&vert;zc&vert;              zc                                  close one fold under the cursor\
+&vert;zC&vert;              zC                                  close all folds under the cursor\
+\
+&vert;zm&vert;              zm                                  fold more: decrease 'foldlevel'\
+&vert;zM&vert;              zM                                  close all folds: make 'foldlevel' zero\
+&vert;zr&vert;              zr                                  reduce folding: increase 'foldlevel'\
+&vert;zR&vert;              zR                                  open all folds: make 'foldlevel' max.\
+\
+&vert;zn&vert;              zn                                  fold none: reset 'foldenable'\
+&vert;zN&vert;              zN                                  fold normal set 'foldenable'\
+&vert;zi&vert;              zi                                  invert 'foldenable'
+
 |tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
