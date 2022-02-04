@@ -1240,7 +1240,29 @@ Context-sensitive completion on the command-line:\
 
 #### Getting Started
 
-|usr_01.txt|                                      : About the manuals
+##### &ast;usr_01.txt&ast; About the manuals
+
+###### &ast;01.1&astt; Two manuals
+
+&lt;C-&rbrack;&gt;    to jump to a subject under the cursor\
+&lt;C-o&gt;           to jump back (repeat to go further back)\
+\
+The bars and stars are usually hidden with the &vert;conceal&vert; feature. They also use &vert;hl-Ignore&vert;, using the same color for the text as the background. You can make them visible with&colon;\
+&colon;set conceallevel=0\
+&colon;hi link HelpBar Normal\
+&colon;hi link HelpStar Normal
+###### &ast;01.2&ast; Vim installed
+
+To create an empty vimrc&colon;\
+&colon;call mkdir(stdpath('config'),'p')\
+&colon;exe 'edit' stdpath('config').'/init.vim'\
+&colon;write
+
+&vert;01.3&vert;    Using the Vim tutor
+&vert;01.4&vert;    Copyright
+
+&vert;usr_toc.txt&vert;    Table of contents
+
 |usr_02.txt|                                      : The first steps in Vim
 |usr_03.txt|                                      : Moving around
 |usr_04.txt|                                      : Making small changes
