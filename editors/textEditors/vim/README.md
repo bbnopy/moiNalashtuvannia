@@ -1227,7 +1227,6 @@ Context-sensitive completion on the command-line:\
 &vert;zN&vert;              zN                                  fold normal set 'foldenable'\
 &vert;zi&vert;              zi                                  invert 'foldenable'
 
-|tutor|                                           : 30-minute interactive course for beginners
 |copying|                                         : About copyrights
 |iccf|                                            : Helping poor children in Uganda
 |sponsor|                                         : Sponsor Vim development, become a registered Vim user
@@ -1258,10 +1257,15 @@ To create an empty vimrc&colon;\
 &colon;exe 'edit' stdpath('config').'/init.vim'\
 &colon;write
 
-&vert;01.3&vert;    Using the Vim tutor
-&vert;01.4&vert;    Copyright
+###### &ast;01.3&ast; Using the Vim tutor
 
-&vert;usr_toc.txt&vert;    Table of contents
+To start the tutorial, execute
+&colon;Tutor
+
+###### &ast;01.4&ast; Copyright
+
+The Vim user manual and reference manual are Copyright (c) 1988-2003 by Bram Moolenaar\
+The latest version is presently available at&colon; [link](http://www.opencontent.org/openpub/)\
 
 |usr_02.txt|                                      : The first steps in Vim
 |usr_03.txt|                                      : Moving around
