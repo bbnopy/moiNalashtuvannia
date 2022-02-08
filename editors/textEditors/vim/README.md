@@ -1227,15 +1227,7 @@ Context-sensitive completion on the command-line:\
 &vert;zN&vert;              zN                                  fold normal set 'foldenable'\
 &vert;zi&vert;              zi                                  invert 'foldenable'
 
-|copying|                                         : About copyrights
-|iccf|                                            : Helping poor children in Uganda
-|sponsor|                                         : Sponsor Vim development, become a registered Vim user
-|www|	                                          : Vim on the World Wide Web
-|bugs|                                            : Where to send bug reports
-
 ### USER MANUAL: These filed explain how to accomplish an editing task
-
-|usr_toc.txt|                                     : Table Of Contents
 
 #### Getting Started
 
@@ -1267,8 +1259,147 @@ To start the tutorial, execute
 The Vim user manual and reference manual are Copyright (c) 1988-2003 by Bram Moolenaar\
 The latest version is presently available at&colon; [link](http://www.opencontent.org/openpub/)\
 
-|usr_02.txt|                                      : The first steps in Vim
-|usr_03.txt|                                      : Moving around
+##### &ast;usr_02.txt&ast; The first steps in Vim
+
+###### &ast;02.1&ast; Running Vim for the First Time
+
+###### &ast;02.2&ast; Inserting text
+
+To be able to see what mode you are in, type this command&colon;\
+&colon;set showmode
+
+###### &ast;02.3&ast; Moving around
+
+&lt;g&gt;    left\
+&lt;j&gt;    down\
+&lt;k&gt;    up\
+&lt;l&gt;    right\
+
+###### &ast;02.4&ast; Deleting characters
+
+&lt;x&gt;     to delete a character, move the cursor over it and type\
+&lt;dd&gt;    to delete a whole line\
+&lt;J&gt;     deleting a line break
+
+###### &ast;02.5&ast; Undo and Redo
+
+&lt;u&gt;      command undoes the last edit\
+&lt;C-r&gt;    if you undo too many times, you can redo\
+&lt;U&gt;      there's a special version of the undo
+
+###### &ast;02.6&ast; Other editing commands
+
+&lt;i&gt;    command inserts a character before the character under the cursor\
+&lt;a&gt;    append command, insert text after cursor\
+&lt;o&gt;    command creates a new, empty line below the cursor and puts Vim in Insert mode
+
+###### &ast;02.7&ast; Getting out
+
+&lt;zz&gt;                to exit vim\
+&lt;&colon;q&excl;&gt;    exit and discarding changes
+
+###### &ast;02.8&ast; Finding help
+
+&colon;help                            to get help\
+&lt;F1&gt;                             to get help using key\
+&lt;Help&gt;                           if your keyboard has a key it might work as well\
+&colon;help &lbrace;subject&rbrace;    To get help on a given subject\
+&colon;help x                          To get help on the "x" command\
+&colon;help deleting                   To find out how to delete text\
+&colon;help index                      To get a complete index of all Vim commands\
+&colon;help &lt;C-a&gt;                When you need to get help for a control character command\
+&colon;help &lt;C-h&gt;                By default, the help system displays the normal-mode commands\
+&colon;help i_&lt;C-h&gt;              If you want the help for the insert-mode version of a command, use "i_"\
+&colon;help -t                         When you start the Vim editor, you can use several command-line arguments\
+&colon;help 'number'                   The Vim editor has a number of options that enable you to configure and customize the editor\
+&colon;help i_&lt;Up&gt;               Special keys are enclosed in angle brackets\
+&colon;help E37                        You can use the error ID at the start to find help about
+
+##### &ast;usr_03.txt&ast; Moving around
+
+###### &ast;03.1&ast; Word movement
+
+&lt;w&gt;     To move the cursor forward one word\
+&lt;b&gt;     command moves backward to the start of the previous word\
+&lt;e&gt;     command that moves to the next end of a word\
+&lt;ge&gt;    which moves to the previous end of a word
+
+###### &ast;03.2&ast; Moving to the start or end of a line
+
+&lt;&dollar;&gt;, &lt;End&gt;    command moves the cursor to the end of a line\
+&lt;&Hat;&gt;                    command moves to the first non-blank character of the line\
+&lt;0&gt;, &lt;Home&gt;          command (zero) moves to the very first character of the line
+
+###### &ast;03.3&ast; Moving to a character
+
+&lt;f&gt;      stands for "Find"\
+&lt;fh&gt;     Just execute the command "fh" and the cursor will be positioned over the h\
+&lt;fy&gt;     This also shows that the command "fy" moves to the end of the word really\
+&lt;3fl&gt;    You can specify a count; therefore, you can go to the third "l"\
+&lt;F&gt;      command searches to the left\
+&lt;t&gt;      command works like the "f" command, except it stops one character\
+&lt;T&gt;      The backward version of this command is before the searched character
+
+###### &ast;03.4&ast; Matching a parenthesis
+
+&lt;&percnt;&gt;    It moves to the matching paren
+
+###### &ast;03.5&ast; Moving to a specific line
+
+&lt;G&gt;     positions you at the end of the file\
+&lt;gg&gt;    quick way to go to the start of a file\
+&lt;1G&gt;    will do the same, but is a tiny bit more typing\
+&lt;H&gt;     stands for Home\
+&lt;M&gt;     for Middle\
+&lt;L&gt;     for Last
+
+###### &ast;03.6&ast; Telling where you are
+
+&lt;C-g&gt;            This shows the name of the file you are editing, the line number where the cursor is, the total number of lines, the percentage of the way through the file and the column of the cursor\
+&colon;set number      This will display a line number in front of every line\
+&colon;set nonumber    To switch this off again\
+&colon;set riler       This will display the cursor position in the lower right corner of the Vim window
+
+###### &ast;03.7&ast; Scrolling around
+
+&lt;C-u&gt;    command scrolls down half a screen of text\
+&lt;C-d&gt;    command moves the viewing window down half a screen in the file, thus scrolls the text up half a screen\
+&lt;C-e&gt;    scroll up one line at a time\
+&lt;C-y&gt;    scroll down one line at a time. If you use MS-Windows compatible key mappings &lt;C-y&gt; will redo a change instead of scroll\
+&lt;C-f&gt;    To scroll forward by a whole screen (except for two lines)\
+&lt;C-b&gt;    To scroll backwards\
+&lt;zz&gt;     You would like to see the context of the line with the cursor\
+&lt;zt&gt;     command puts the cursor line at the top\
+&lt;zb&gt;     command puts the cursor line at the bottom
+
+###### &ast;03.8&ast; Simple searches
+
+&vert;&sol;string&vert;           To search for a string\
+&lt;n&gt;                         To find the next occurrence of the same string\
+&lt;&quest;&gt;                   command works like "&sol;" but searches backwards\
+&colon;set ignorecase             If you don't care about upper or lowercase in a word, set the 'ignorecase' option\
+&colon;set noignorecase           To match case again\
+&vert;&sol;the&bsol;&gt;&vert;    To only find words that end in "the"\
+&colon;set nohlsearch             To switch highlight all matches off\
+&colon;set hlsearch               highlight all matches\
+&colon;nohlsearch                 If you only want to remove the highlighting\
+&colon;set nowrapscan             the essential searching\
+&colon;set noinsearch             stops the search at the start of the file
+
+###### &ast;03.9&ast; Simple search patterns
+
+###### &ast;03.10&ast; Using marks
+
+&vert;&grave;&grave;&vert;    To go back where you came from\
+&lt;C-o&gt;                   command jumps to older position\
+&lt;C-i&gt;                   jumps back to newer positions\
+&colon;jumps                  command gives a list of positions you jumped to\
+&grave;a                      The command "'mark" (single quotation mark, or apostrophe) moves you to the beginning of the line containing the mark\
+&lt;ms&gt;                    Move to the text at the start and place the s (start) mark\
+&lt;me&gt;                    Then move to the text you want to work on and put the e (end) mark\
+&grave;s                      Now you can move around, and when you want to look at the start of the file\
+&colon;marks                  You can use this command to get a list of marks
+
 |usr_04.txt|                                      : Making small changes
 |usr_05.txt|                                      : Set your settings
 |usr_06.txt|                                      : Using syntax highlighting
