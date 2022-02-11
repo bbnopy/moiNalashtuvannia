@@ -1400,7 +1400,22 @@ To be able to see what mode you are in, type this command&colon;\
 &grave;s                      Now you can move around, and when you want to look at the start of the file\
 &colon;marks                  You can use this command to get a list of marks
 
-|usr_04.txt|                                      : Making small changes
+##### &ast;usr_04.txt&ast; Making small changes
+
+###### &ast;04.1&ast; Operators and motions
+
+&lt;dw&gt;     command deletes a word\
+&lt;d4w&gt;    command deletes four words\
+
+|04.2|	Changing text
+|04.3|	Repeating a change
+|04.4|	Visual mode
+|04.5|	Moving text
+|04.6|	Copying text
+|04.7|	Using the clipboard
+|04.8|	Text objects
+|04.9|	Replace mode
+|04.10|	Conclusion
 |usr_05.txt|                                      : Set your settings
 |usr_06.txt|                                      : Using syntax highlighting
 |usr_07.txt|                                      : Editing more than one file
